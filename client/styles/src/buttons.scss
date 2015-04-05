@@ -1,0 +1,23 @@
+//
+// Additional Positioning
+//  md-button.md-fab
+//
+.md-button {
+
+  .md-fab {
+
+
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    &.md-fab {
+      &-top {     top: 20;    }
+      &-right {   right: 20;  }
+      &-left {    left: 20;   }
+      &-bottom {  bottom: 20; }
+    }
+  }
+}

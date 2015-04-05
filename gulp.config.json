@@ -1,0 +1,16 @@
+{
+  "client":         "./client/",
+  "html":           "./client/**/*.html",
+  "htmltemplates":  "./client/app/**/*.html",
+  "css":            "./client/styles/*.css",
+  "sass":           "./client/styles/src/**/*.scss",
+  "js": [
+                    "./client/app/app.module.js",
+                    "./client/app/**/*module*.js",
+                    "./client/app/**/*.js"
+  ],
+  "images":         "./client/assets/images/**/*",
+  "build": {
+    "css":          "./client/styles/build/"
+  }
+}

@@ -1,0 +1,96 @@
+<md-sidenav sidenav-class="md-sidenav-left md-whiteframe-z2"
+            md-component-id="left"><!--
+            md-is-locked-open="$mdMedia('gt-lg')">-->
+  <md-toolbar class="md-warn">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Menu">
+        <md-icon class="fa fa-bars"></md-icon>
+      </md-button>
+      <span><h3>poppyGP</h3></span>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+  <md-content flex>
+  
+    <md-list>
+      <md-item>
+        <div class="md-item-text">
+          <p>Help</p>
+        </div>
+      </md-item>
+      <md-item>
+        <div class="md-item-text">
+          <p>About</p>
+        </div>
+      <md-item>
+        <div class="md-item-text">
+          <p>Contact</p>
+        </div>
+      </md-item>
+
+      <md-divider md-inset ng-if="!$last"></md-divider>
+
+      <md-item><md-icon class="fa fa-reddit"></md-icon><p>Reddit</p></md-item>
+      <md-item><md-icon class="fa fa-github"></md-icon><p>GitHub</p></md-item>
+    </md-list>
+
+    <md-divider ng-if="!$last"></md-divider>
+
+    <md-list>
+      <md-subheader class="md-no-sticky">Donate</md-subheader>
+      <md-item><md-icon class="fa fa-paypal"></md-icon><p>PayPal</p></md-item>
+      <md-item><md-icon class="fa fa-btc"></md-icon><p>Bitcoin</p></md-item>
+      <md-item><md-icon class="fa fa-gratipay"></md-icon><p>Gratipay (Gittip)</p></md-item>
+    </md-list>
+
+    <md-divider md-inset ng-if="!$last"></md-divider>
+
+    <md-list>
+      <md-subheader class="md-no-sticky">Controls</md-subheader>
+      <md-item><md-icon class="fa fa-film"></md-icon><p>Cinema Mode</p><md-switch class="md-secondary"></md-item>
+      <md-item><md-icon class="fa fa-comments"></md-icon><p>Webchat</p><md-switch class="md-secondary"></md-item>
+      <md-item><md-icon class="fa fa-bullhorn"></md-icon><p>Announce</p><md-switch class="md-secondary"></md-item>
+    </md-list>
+
+  
+
+  </md-content>
+
+</md-sidenav>
+
+
+<!--
+<md-sidenav sidenav-class="md-sidenav-left md-whiteframe-z7" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button data-ng-click="vm.closeSidenav()" aria-label="Close Sidenav" hide-gt-lg>
+                <md-icon class="fa fa-arrow-left"></md-icon>
+                <md-tooltip>Close Sidenav</md-tooltip>  
+            </md-button>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <md-content flex>
+        <md-list>
+            <md-item data-ng-repeat="item in vm.items">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <h3 data-ng-bind="item">Track</h3>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </md-content>
+</md-sidenav>
+
+
+          <md-button class="md-icon-button" aria-label="PayPal">
+            <md-icon class="fa fa-paypal"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Bitcoin">
+            <md-icon class="fa fa-btc"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Gratipay (Gittip)">
+            <md-icon class="fa fa-gratipay"></md-icon>
+          </md-button>
+-->

@@ -1,0 +1,14 @@
+.md-button .md-fab {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto; }
+  .md-button .md-fab.md-fab-top {
+    top: 20; }
+  .md-button .md-fab.md-fab-right {
+    right: 20; }
+  .md-button .md-fab.md-fab-left {
+    left: 20; }
+  .md-button .md-fab.md-fab-bottom {
+    bottom: 20; }
