@@ -4,19 +4,16 @@
     /**
      * Main Module File
      *
-     * @module  cvApp.core
-     * @module  cvApp.layout
-     * @module  cvApp.resume
+     * @module  pgp.core
+     * @module  pgp.layout
+     * @module  pgp.resume
      */
     angular
-        .module('cvApp', [
+        .module('pgp', [
 
             // Core Modules
-            'cvApp.core', 'cvApp.layout',
-        //,   'cvApp.widgets'
+            'pgp.core', 'pgp.layout'
 
             // Feature Area Modules
-        //,   'cvApp.resume'
-              'cvApp.playlist'
         ]);
 })();

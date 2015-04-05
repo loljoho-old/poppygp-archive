@@ -1,165 +1,96 @@
+<div layout="row" layout-sm="column" layout-align="center start" layout-align-sm="start center" layout-wrap tabIndex="-1" flex>
+  <!-- BEGIN: Webchat Card Section -->
+  <section layout="column" flex="40">
+    <md-toolbar class="md-warn">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Menu" data-ng-click="vm.toggleSidenav()">
+          <md-icon class="fa fa-bars"></md-icon>
+        </md-button>
+        <span><h3>poppyGP</h3></span>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-content flex layout-fill layout-align="center start" style="background-color:transparent; overflow:hidden;">
+      <md-card flex class="card-embed md-whiteframe-z5">
+        <md-card-embed class="embed-4by3">
+          <iframe src="https://kiwiirc.com/client/irc.snoonet.org/?nick=poppygp|?&theme=mini#f1" width="100%" height="100%" style="left:1px; background-color:#000;">
+          </iframe>
+        </md-card-embed>
+      </md-card>
+    </md-content>
+  </section>
+  <!-- ENDOF: Webchat Card Section -->
 
-  <!-- BEGIN: Main Row Div -->
-  <div layout="row" tabIndex="-1" flex>
+  <!-- BEGIN: Video Card Section -->
+  <section layout="column" flex="60">
+    <md-content layout-fill>
+      <md-card class="card-embed md-whiteframe-z2">
+        <md-card-embed class="embed-16by9">
+        <!--
+          <md-toolbar style="background-color:transparent; position:absolute; top:0; right:0; width:100%; z-index:255;">
+            <div class="md-toolbar-tools">
+              <span flex></span>
+              <md-button class="md-icon-button" aria-label="Cinema Mode">
+                <md-icon class="fa fa-film"></md-icon>
+              </md-button>
+            </div>
+          </md-toolbar>
+          -->
+          <iframe src="http://www.ustream.tv/embed/18630657?wmode=direct&showtitle=false" webkitallowfullscreen allowfullscreen width="100%" height="100%"></iframe>
+        </md-card-embed>
+      </md-card>
+    </md-content>
+  </section>
+  <!-- ENDOF: Video Card Section -->
 
-    <md-button hide-gt-sm class="md-fab md-fab-bottom-right md-warn">
-      <md-icon></md-icon>
-    </md-button>
-
-    <div data-ng-include="'app/layout/sidenav.html'"></div>
-
-    <!-- BEGIN: Left Column Section -->
-    <section layout="column" layout-align="start start" flex="40">
-
-      <!-- BEGIN: Top Toolbar -->
+  <!-- BEGIN: Left Content Section -->
+  <section layout="column" flex="40">
+    <md-content layout-fill flex class="md-whiteframe-z2 md-padding">
       <md-toolbar class="md-warn">
         <div class="md-toolbar-tools">
-          <md-button class="md-icon-button" aria-label="Menu" data-ng-click="vm.toggleSidenav()">
-            <md-icon class="fa fa-bars"></md-icon>
-          </md-button>
-          <span><h3>poppyGP</h3></span>
-          <span flex></span>
+          <h2 class="md-flex">Playlist</h2>
         </div>
       </md-toolbar>
-      <!-- ENDOF: Top Toolbar -->
-
-      <!-- BEGIN: Webchat Card -->
-      <md-content flex layout-fill layout-align="center start" style="background-color:transparent; overflow:hidden;">
-        <md-card flex class="card-embed md-whiteframe-z7">
-          <md-card-embed class="embed-5by4">
-            <iframe width="100%" height="100%" style="left:1px; background-color:#000;">
-            </iframe>
-          </md-card-embed>
-        </md-card>
-      </md-content>
-      <!-- ENDOF: Webchat Card -->
-
-      <md-content layout-fill flex class="md-padding md-whiteframe-z2" layout-fill>
-        <md-toolbar class="md-warn">
-          <div class="md-toolbar-tools">
-            <h2 class="md-flex">Donations</h2>
-          </div>
-        </md-toolbar>
-        <md-content class="md-padding">
-          <p>Donations are very much appreciated to keep the server running (not to mention the surprising amount of time and effort it takes to maintain and update all of this).  Thank you all!  :)</p>
-      </md-content>
 
 
-          <!-- TODO: 
-                  WORLD CLOCK 
-                              -->
-    </section>
-    <!-- ENDOF: Left Column Section -->
+    </md-content>
+  </section>
+  <!-- ENDOF: Left Content Section -->
 
-
-
-
-
-    <!-- BEGIN: Right Column Section -->
-    <section layout="column" layout-align="start start" flex="60">
-
-      <!-- BEGIN: Video Card -->
-      <md-content layout-fill>
-        <md-card class="card-embed md-whiteframe-z2">
-          <md-card-embed class="embed-16by9">
-            <md-toolbar style="background-color:transparent; position:absolute; top:0; right:0; width:100%; z-index:255;">
-              <div class="md-toolbar-tools">
-
-                <span flex></span>
-                
-                <md-button class="md-icon-button" aria-label="Cinema Mode">
-                  <md-icon class="fa fa-film"></md-icon>
-                </md-button>
-                
-              </div>
-            </md-toolbar>
-            <iframe webkitallowfullscreen allowfullscreen width="100%" height="100%" style="background-color:#000000;"></iframe>
-          </md-card-embed>
-        </md-card>
-      </md-content>
-      <!-- ENDOF: Video Card -->
-
-      <!-- BEGIN: Content Area -->
-      <md-content layout="row" layout-fill flex class="md-whiteframe-z2 md-padding">
-
-        <md-list flex="33">
-          <md-subheader class="md-no-sticky">Now Playing</md-subheader>
-          <md-item class="md-3-line">
-            <img style="height:40px; width:40px;" class="md-avatar">
-            <div class="md-item-text">
-              <h3>Track Name</h3>
-              <h4>01:23:45</h4>
-              <ul>
-                <li>Track Info: Data</li>
-                <li>Track Info: Data</li>
-                <li>Track Info: Data</li>q
-              </ul>
-            </div>
-          </md-item>
-        </md-list>
-
-        <md-list flex="33">
-          <md-subheader class="md-no-sticky">Next</md-subheader>
-          <md-item class="md-2-line">
-            <img style="height:40px; width:40px;" class="md-avatar">
-            <div class="md-item-text">
-              <h3>Track Name</h3>
-              <p>01:23:45</p>
-            </div>
-          </md-item>
-          <md-item class="md-2-line">
-            <img style="height:40px; width:40px;" class="md-avatar">
-            <div class="md-item-text">
-              <h3>Mystery Track</h3>
-              <p>00:54:32</p>
-            </div>
-          </md-item>
-        </md-list>
-
-        <md-list flex="33">
-          <md-subheader class="md-no-sticky">Previous</md-subheader>
-          <md-item class="md-2-line">
-            <img style="height:40px; width:40px;" class="md-avatar">
-            <div class="md-item-text">
-              <h3>Track Name</h3>
-              <p>01:23:45</p>
-            </div>
-          </md-item>
-          <md-item class="md-2-line">
-            <img style="height:40px; width:40px;" class="md-avatar">
-            <div class="md-item-text">
-              <h3>Track Name</h3>
-              <p>01:23:45</p>
-            </div>
-          </md-item>
-        </md-list>
-        
-      </md-content>
-      <!-- ENDOF: Content Area -->
-
-    </section>
-    <!-- ENDOF: Right column Section -->
-
-  </div>
-  <!-- ENDOF: Main Row Div -->
-
-
-      <!-- BEGIN: Toolbar -->
-      <md-toolbar>
+  <!-- BEGIN: Right Column Section -->
+  <section layout="column" flex="60">
+    <md-content layout-fill flex class="md-whiteframe-z2 md-padding">
+      <md-toolbar class="md-warn">
         <div class="md-toolbar-tools">
-          <span flex></span>
-          <md-button class="md-icon-button" aria-label="Bookmark">
-            <md-icon class="fa fa-bookmark"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="GitHub">
-            <md-icon class="fa fa-github"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Twitter">
-            <md-icon class="fa fa-twitter"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Reddit">
-            <md-icon class="fa fa-reddit"></md-icon>
-          </md-button>
+          <h2 class="md-flex">Donations</h2>
         </div>
       </md-toolbar>
-      <!-- ENDOF: Toolbar -->
+      <md-content class="md-padding">
+        <p>Donations are very much appreciated to keep the server running (not to mention the surprising amount of time and effort it takes to maintain and update all of this).  Thank you all!  :)</p>
+      </md-content>
+    </md-content>
+  </section>
+  <!-- ENDOF: Right Content Section -->
+
+</div>
+
+
+    <!-- BEGIN: Toolbar -->
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Bookmark">
+          <md-icon class="fa fa-bookmark"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="GitHub">
+          <md-icon class="fa fa-github"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Twitter">
+          <md-icon class="fa fa-twitter"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Reddit">
+          <md-icon class="fa fa-reddit"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <!-- ENDOF: Toolbar -->

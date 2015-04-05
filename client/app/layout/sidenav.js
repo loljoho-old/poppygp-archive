@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('cvApp.layout')
+        .module('pgp.layout')
         .controller('Sidenav', Sidenav);
 
     Sidenav.$inject = ['dataservice', '$mdSidenav', '$log'];

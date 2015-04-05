@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('cvApp.core')
+        .module('pgp.core')
         .config(ThemeConfig)
         .run(IconFetch)
         .value('config', config);

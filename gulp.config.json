@@ -2,7 +2,6 @@
   "client":         "./client/",
   "html":           "./client/**/*.html",
   "htmltemplates":  "./client/app/**/*.html",
-  "css":            "./client/styles/*.css",
   "sass":           "./client/styles/src/**/*.scss",
   "js": [
                     "./client/app/app.module.js",

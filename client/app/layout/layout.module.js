@@ -5,5 +5,5 @@
      * Layout Module File
      */
     angular
-        .module('cvApp.layout', []);
+        .module('pgp.layout', []);
 })();

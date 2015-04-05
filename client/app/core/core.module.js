@@ -10,7 +10,7 @@
      * @module  ngRoute
      * @module  ngMaterial
      */
-    angular.module('cvApp.core', [
+    angular.module('pgp.core', [
             // Angular Modules
             'ngAnimate', 
             'ngAria', 

@@ -5,7 +5,7 @@
      * Layout Controller
      */
     angular
-        .module('cvApp.layout')
+        .module('pgp.layout')
         .controller('Shell', Shell);
         
     Shell.$inject = ['dataservice', '$mdSidenav', '$mdBottomSheet'];
@@ -13,7 +13,6 @@
         var vm = this;
         vm.colours = [];
         vm.toggleSidenav = toggleSidenav;
-        vm.togglePlaylist = togglePlaylist;
 
         activate();
 
@@ -43,13 +42,9 @@
 
 
         /**
-         * Toggle Playlist mdSidenav Element
+         * Toggle Cinema Mode
          */
-        function togglePlaylist() {
-            //var pending = $mdBottomSheet.hide() || $q.when(true);
-            //pending.then(function() {
-                $mdSidenav('right').toggle();
-            //});
+        function modeCinema() {
         }
 
     }

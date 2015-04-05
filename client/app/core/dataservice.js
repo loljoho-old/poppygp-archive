@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('cvApp.core')
+    angular.module('pgp.core')
         .factory('dataservice', dataservice);
 
     dataservice.$inject = ['$resource', '$log'];

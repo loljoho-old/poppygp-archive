@@ -1,0 +1,16 @@
+{
+    "playStart": {
+        "datetime": "2015-04-01T00:00:00-0500",
+        "track_no": "0"
+    },
+    "tracks": [
+        {   "filename": "Formula1.2012.Round01.Australia.Race.SkySportsF1HD.x264.English-opiates.mp4",
+            "duration": 97319  },
+        {   "filename": "Formula1.1996.Round01.Australia.Race.BBC.x264.English-opiates.mp4",
+            "duration": 81480  },
+        {   "filename": "Formula1.2012.Round20.Brazil.Race.SkySportsF1HD.x264.English-opiates.mp4",
+            "duration": 61094  },
+        {   "filename": "2005 USA",
+            "duration": 90014  }
+    ]
+}
