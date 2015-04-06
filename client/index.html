@@ -1,4 +1,4 @@
-<html lang="en" data-ng-app="gpApp">
+<html lang="en" data-ng-app="gpApp" data-ng-controller="View as vm">
 
 <head>
     <title>poppyGP</title>
@@ -13,12 +13,99 @@
     <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <link href="./styles/build/main.css" rel="stylesheet" />
+    <link href="./styles/build/icons.css" rel="stylesheet" />
     <link href="./styles/build/iframe.css" rel="stylesheet" />
     <link href="./styles/build/sidenav.css" rel="stylesheet" />
 </head>
 
-<body layout="column" data-ng-controller="View as vm" layout-align="start center">
+<body layout="column">
 
+<header layout="row">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Sidenav" data-ng-click="vm.toggleSidenav('left');" hide-gt-md>
+                <md-icon class="fa fa-bars"></md-icon>
+            </md-button>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+</header>
+
+
+<main layout="row" layout-align="center start" flex>
+
+
+    <!-- BEGIN: MD-SIDENAV-LEFT -->
+    <md-sidenav flex layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-content data-ng-controller="Left as vm">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <span flex></span>
+                </div>
+                <div class="md-toolbar-tools-bottom">
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+        </md-content>
+    </md-sidenav>
+
+
+    <!-- BEGIN: SECTION -->
+    <section layout="column" flex hide-sm>
+      <md-content>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <span flex></span>
+            </div>
+        </md-toolbar>
+      </md-content>
+    </section>
+
+
+    <!-- BEGIN: MAIN SECTION -->
+    <section layout="column" flex="50" flex-gt-lg="60" flex-sm="100">
+        <md-card class="card-embed md-whiteframe-z4">
+            <md-card-embed class="embed-16by9">
+                <iframe src="http://www.ustream.tv/embed/18630657?wmode=direct&showtitle=false" webkitallowfullscreen allowfullscreen width="100%" height="100%"></iframe>
+            </md-card-embed>
+        </md-card>
+        <md-card class="card-embed md-whiteframe-z4">
+            <md-card-embed class="embed-21by9">
+               <iframe src="https://kiwiirc.com/client/irc.snoonet.org/?&theme=mini#f1" style="border:0; width:100%; height:320px;"></iframe>
+            </md-card-embed>
+        </md-card>
+    </section>
+
+
+    <!-- BEGIN: SECTION -->
+    <section layout="column" flex="10" flex-md="15" hide-sm hide-gt-lg>
+        <md-toolbar>
+            <div class="md-toolbar-tools" style="flex-flow:column; -webkit-flex-flow:column; -ms-flex-flow:column;">
+                <span flex="50"></span>
+                <span flex>
+                    <md-button class="md-fab md-warn" aria-label="HEY!" data-ng-click="vm.toggleSidenav('right');">
+                      <md-icon style="height:100%; width:100%;"></md-icon>
+                    </md-button>
+                </span>
+            </div>
+        </md-toolbar>
+    </section>
+
+
+    <!-- BEGIN: MD-SIDENAV-RIGHT -->
+    <md-sidenav flex layout="column" class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-lg')">
+        <md-content data-ng-controller="Right as vm">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+        </md-content>
+    </md-sidenav>
+
+</main>
+<!--
     <md-toolbar layout="row" flex>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" data-ng-click="vm.toggleSidenav('left')">
@@ -74,7 +161,7 @@
         </md-sidenav>
 
     </div>
-
+-->
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
