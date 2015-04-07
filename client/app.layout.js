@@ -38,6 +38,7 @@
     Left.$inject = ['$mdSidenav', '$log', '$q'];
     function Left($mdSidenav, $log, $q) {
         var vm = this;
+        vm.toggle = toggle;
 
         activate();
 
@@ -59,6 +60,7 @@
     Right.$inject = ['$mdSidenav', '$log', '$q'];
     function Right($mdSidenav, $log, $q) {
         var vm = this;
+        vm.toggle = toggle;
 
         activate();
 
