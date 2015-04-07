@@ -39,7 +39,7 @@ gulp.task('serve', function() {
     browserSync({
         server: ['./client'],   //, './server'],
         notify: false,
-        reloadDelay: 2500
+        reloadDelay: 1000
     });
 });
 
@@ -55,8 +55,7 @@ gulp.task('watch', ['sass', 'lint'], function() {
         .on('change', reload);
 
     gulp
-        .watch(paths.sass, ['sass'])
-        .on('change', reload);
+        .watch(paths.sass, ['sass']);
 
     gulp
         .watch(paths.js, ['lint'])

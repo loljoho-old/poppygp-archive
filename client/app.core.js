@@ -5,7 +5,7 @@
      * Core Module
      */
     angular
-        .module('gpApp.core', ['ngMaterial'])
+        .module('gpApp.core', ['ngMaterial', 'ngSanitize'])
         .factory('Coreservice', Coreservice)
         .config(mdIconConfig);
 
