@@ -25,7 +25,7 @@
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Sidenav" data-ng-click="vm.toggleSidenav('left');" hide-gt-md>
-                <md-icon class="fa fa-bars"></md-icon>
+                <md-icon md-svg-icon="assets/icons/navbars.svg" class="s36" style="color:#fff;"></md-icon>
             </md-button>
             <span flex></span>
         </div>
@@ -41,6 +41,9 @@
         <md-content data-ng-controller="Left as vm">
             <md-toolbar>
                 <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Collapse" data-ng-click="vm.toggle();" hide-gt-md>
+                        <md-icon md-svg-icon="assets/icons/arrow-left.svg" class="s36" style="color:#fff;"></md-icon>
+                    </md-button>
                     <span flex></span>
                 </div>
                 <div class="md-toolbar-tools-bottom">
@@ -52,14 +55,16 @@
 
 
     <!-- BEGIN: SECTION -->
-    <section layout="column" flex hide-sm>
-      <md-content>
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <span flex></span>
-            </div>
-        </md-toolbar>
-      </md-content>
+    <section layout="column" flex="15" hide-sm>
+        <md-content>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+        </md-content>
+        <md-content class="md-padding" flex>
+        </md-content>
     </section>
 
 
@@ -85,7 +90,7 @@
                 <span flex="50"></span>
                 <span flex>
                     <md-button class="md-fab md-warn" aria-label="HEY!" data-ng-click="vm.toggleSidenav('right');">
-                      <md-icon style="height:100%; width:100%;"></md-icon>
+                        <md-icon md-svg-icon="assets/icons/more-h.svg" class="s36" style="color:#fff;"></md-icon>
                     </md-button>
                 </span>
             </div>
@@ -98,6 +103,9 @@
         <md-content data-ng-controller="Right as vm">
             <md-toolbar>
                 <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Collapse" data-ng-click="vm.toggle();" hide-gt-lg>
+                        <md-icon md-svg-icon="assets/icons/arrow-right.svg" class="s36" style="color:#fff;"></md-icon>
+                    </md-button>
                     <span flex></span>
                 </div>
             </md-toolbar>
