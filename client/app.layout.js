@@ -8,7 +8,8 @@
         .module('gpApp.layout', [])
         .controller('View', View)
         .controller('Left', Left)
-        .controller('Right', Right);
+        .controller('Right', Right)
+        .controller('Tabs', Tabs);
 
     /**
      * View Controller
@@ -70,6 +71,27 @@
                 $log.debug('Sidenav right toggled.');
             });
         }
+    }
+
+
+    /**
+     * Tabs Controller
+     */
+    function Tabs() {
+        var vm = this;
+        vm.currentTab = 0;
+        vm.tabs = {
+            
+        };
+
+        activate();
+
+        ////////////
+
+        function activate() {
+
+        }
+
     }
     
 })();
