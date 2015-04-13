@@ -1,7 +1,44 @@
 (function() {
     'use strict';
 
-    angular.module('pgp.core')
+    angular.module('gpApp.core')
+        .factory('dataservice', dataservice);
+
+    dataservice.$inject = ['$resource', '$log', '$q'];
+    function dataservice($resource, $log, $q) {
+        
+        // service raw promise to return
+        var service = {
+            laps     : getLaps,
+            pitStops : getPitStops
+        };
+        return service;
+
+        // *********************************
+        // Internal methods
+        // *********************************
+
+        function getLaps() {
+            return $resource('../data/laps.json').get().$promise
+                .then(function(response) {
+                    return response.MRData.RaceTable.Races[0].Laps;
+                }, function (errorMsg) {
+                    return errorMsg;
+                });
+        }
+
+        function getPitStops() {
+            return $resource('../data/pitstops.json').get().$promise
+                .then(function(response) {
+                    return response.MRData.RaceTable.Races[0].PitStops;
+                }, function (errorMsg) {
+                    return errorMsg;
+                });
+        }
+    }
+
+})();
+    /*
         .factory('dataservice', dataservice);
 
     dataservice.$inject = ['$resource', '$log'];
@@ -28,7 +65,7 @@
 
 })();
 
-/*
+
 function dataService() {
     var someValue = '';
     var service = {
@@ -95,58 +132,6 @@ function dataService() {
                 }, function(errorMsg) {
                     return errorMsg;
                 });
-        }
-    }
-
-})();
-
-    **
-     * Application Core Data Service
-     *
-     * Shared data service for $resource
-     *
-     * @param   $resource
-     * @param   $log
-     *
-    function dataservice($resource, $log) {
-
-        var urlDir = '../data/';
-        var params = {};
-        var actions = {
-            'get': {method: 'GET'}
-        };
-        
-        var service = {
-            getResume : getResume,
-            getBasics : getBasics
-        };
-        return service;
-
-        // *********************************
-        // Internal methods
-        // *********************************
-
-        function getResume() {
-            var url = urlDir + 'resume.json';
-            var resource = $resource(url, params, actions);
-            return resource.get()
-                .$promise.then(function(response) {
-                    return response;
-                }, function(error) {
-                    return error;
-                });
-        }
-
-        function getBasics() {
-            var url = urlDir + 'resume.json';
-            var resource = $resource(url, params, actions);
-            return resource.get()
-                .$promise.then(function(response) {
-                    return response.basics;
-                }, function(error) {
-                    return error;
-                });
-    
         }
     }
 

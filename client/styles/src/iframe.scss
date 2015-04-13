@@ -22,3 +22,25 @@ md-card.card-embed {
     }
   }
 }
+
+.responsive-container {
+    .responsive-video {
+
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        //margin-bottom: 25px;
+
+        iframe {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+    }
+}

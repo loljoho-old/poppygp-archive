@@ -4,8 +4,6 @@ var browserSync = require('browser-sync');
 var runSequence = require('run-sequence');
 var reload      = browserSync.reload;
 var $           = require('gulp-load-plugins')({lazy:true});
-
-var cfg         = require('./package.json');
 var paths       = require('./gulp.config.json');
 
 /**
@@ -27,7 +25,7 @@ gulp.task('sass', function() {
     return gulp
         .src(paths.sass)
         .pipe($.sass())
-        .pipe(gulp.dest(paths.build.css))
+        .pipe(gulp.dest(paths.css))
         .pipe(reload({stream: true}));
 });
 
@@ -39,7 +37,7 @@ gulp.task('serve', function() {
     browserSync({
         server: ['./client'],   //, './server'],
         notify: false,
-        reloadDelay: 1000
+        reloadDelay: 1500
     });
 });
 
@@ -55,7 +53,8 @@ gulp.task('watch', ['sass', 'lint'], function() {
         .on('change', reload);
 
     gulp
-        .watch(paths.sass, ['sass']);
+        .watch(paths.sass, ['sass'])
+        .on('change', reload);
 
     gulp
         .watch(paths.js, ['lint'])

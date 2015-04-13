@@ -5,3 +5,8 @@ html, body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden; }
+
+main {
+  background-color: #f0f0f0; }
+  main section {
+    background-color: #f0f0f0; }

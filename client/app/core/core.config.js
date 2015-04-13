@@ -1,16 +1,16 @@
 (function() {
     'use strict';
 
-    angular
-        .module('pgp.core')
-        .config(ThemeConfig)
-        .run(IconFetch)
-        .value('config', config);
+    var core = angular.module('gpApp.core');
 
+    core
+        .config(ThemeConfig)
+        .config(IconConfig);
 
     var config = {
         title: 'Page Title'   
     };
+    core.value('config', config);
     
     /**
      * Configuration for Angular Material
@@ -48,20 +48,17 @@
             .defaultIconSet('./bower_components/ionicons/fonts/ionicons.svg');
     }
 
-    function IconFetch($http, $templateCache) {
-        var baseUrl = './bower_components/ionicons/';
-        var fontUrl = 'fonts/ionicons.svg';
-        var iconUrl = 'src/';
-        var icons = [
-            iconUrl + 'ion-android-expand.svg',
-            iconUrl + 'ion-android-open.svg',
-            iconUrl + 'ion-android-more-horizontal.svg',
-            iconUrl + 'ion-android-more-vertical.svg'];
-        var urls = [fontUrl];
-        urls.concat(icons);
-        angular.forEach(urls, function(url) {
-            $http.get(baseUrl + url, {cache: $templateCache});
-        });
+    function IconConfig($mdIconProvider) {
+        $mdIconProvider
+            .icon('more-h',         'client/assets/icons/more-h.svg')
+            .icon('more-v',         'client/assets/icons/more-v.svg')
+            .icon('webchat',        'client/assets/icons/webchat.svg')
+            .icon('grid',           'client/assets/icons/grid.svg')
+            .icon('navbar',         'client/assets/icons/navbar-icon.svg')
+            .icon('chevron-left',   'client/assets/icons/chevron-left.svg')
+            .icon('chevron-right',  'client/assets/icons/chevron-right.svg')
+            .icon('arrow-left',     'client/assets/icons/arrow-left.svg')
+            .icon('arrow-right',    'client/assets/icons/arrow-right.svg');
     }
         
 })();
