@@ -4,6 +4,10 @@
 *ignore*
 *data/*.json
 
+# Server-Side Testing #
+#######################
+server/parser
+
 # bower and npm #
 #################
 bower_components

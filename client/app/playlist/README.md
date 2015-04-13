@@ -1,7 +1,12 @@
 # Playlist Module
 
-## Controllers
+## PSEUDOCODE
 
-### `current`
+### PLAYLIST-PARSE
 
-### `schedule`
+
+ - Practice
+ - Warmup
+ - Qualifying
+ - Race
+ - Highlights

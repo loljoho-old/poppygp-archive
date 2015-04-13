@@ -8,8 +8,9 @@
         .module('gpApp', [
 
             // Core Modules
-            'gpApp.core', 'gpApp.layout'
+            'gpApp.core', 'gpApp.layout',
 
             // Feature Area Modules
+            'gpApp.playlist'
         ]);
 })();
