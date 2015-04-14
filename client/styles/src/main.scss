@@ -5,6 +5,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #f0f0f0;
 }
 
 main {
@@ -13,8 +14,20 @@ main {
 
     section {
 
-        background-color: #f0f0f0;
+    background-color: #f0f0f0;
 
     }
 
+}
+
+
+md-tabs .md-tabs-content .md-tab-content {
+    background-color: #ffffff;
+    height: auto;
+    min-height:256px;
+}
+
+md-content.md-default-theme,
+md-card.md-default-theme {
+    background-color:#f0f0f0;
 }

@@ -1,3 +1,8 @@
+md-sidenav  {
+    background-color: #f0f0f0; 
+}
+
+
 @mixin flex-properties-for-name($name: null) {
   $flexName: 'flex';
   @if $name != null {

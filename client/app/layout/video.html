@@ -1,8 +1,18 @@
 
 <md-content>
     <div class="responsive-container">
-        <div class="responsive-video">
+        <div class="responsive-video 16by9">
             <iframe src="http://www.ustream.tv/embed/18630657?wmode=direct&showtitle=false" frameborder="0" allowfullscreen webkitallowfullscreen></iframe>
         </div>
     </div>
+    <md-tabs md-border-bottom>
+        <md-tab data-ng-repeat="tab in vm.tabs">
+            <md-tab-label data-ng-cloak>
+                <!--<md-icon class="s36"></md-icon>-->
+                {{tab.title}}
+            </md-tab-label>
+            <md-tab-template data-ng-include="tab.templateUrl">
+            </md-tab-template>
+        </md-tab>
+    </md-tabs>
 </md-content>

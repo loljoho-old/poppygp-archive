@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic">
-    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.css">
 
     <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -21,55 +21,63 @@
     <link href="./styles/build/sidenav.css" rel="stylesheet" />
 </head>
 
-<body layout="column" style="background-color:#f0f0f0;">
+<body layout="column">
 
 <header data-ng-include="'./app/layout/toolbar.html'">
 </header>
 
 
     <!-- BEGIN: MAIN PAGE ROW -->
-    <main layout="row">
+    <main layout="row" layout-wrap>
 
         <section flex hide-sm
                 data-ng-include="'./app/layout/col-left.html'"></section>
 
-        <section flex="60" flex-sm="100"
+        <section flex="60" flex-md="50" flex-sm="100"
                 data-ng-include="'./app/layout/video.html'"></section>
 
         <!-- BEGIN: PLAYLIST SIDENAV-RIGHT -->
-        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25" style="background-color:#f0f0f0;">
+        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25" flex-md="15">
             <md-toolbar>
                 <div class="md-toolbar-tools">
                     <span flex></span>
                 </div>
             </md-toolbar>
-            <md-content style="background-color:#f0f0f0;">
-                <md-card style="background-color:#ffffff;">
+            <md-content>
+                <md-card>
                     <md-card-content>
                         <h2 class="md-title">Now Playing</h2>
                         <p>Lorem ipsum blah blah blah.</p>
                     </md-card-content>
+
                 </md-card>
             </md-content>
         </md-sidenav>
 
     </main>
+    
 
-    <div layout="row" style="background-color:#f0f0f0;" flex></div>
-    <div layout="row" style="background-color:#333333;" flex></div>
-    <div layout="row" style="background-color:#1a1a1a; height:32px;">
+    <div layout="row" style="background-color:#f0f0f0;" flex>
+
+        <section flex hide-md hide-sm></section>
+        <section flex="60" flex-md="100" flex-sm="100" layout="column">
+        </section>
+        <section flex="25"></section>
     </div>
 
+<!--
+    <div layout="row" hide-sm hide-md style="background-color:#1a1a1a; height:32px;"></div>
+
+    <div layout="row" hide-sm hide-md style="background-color:#333333;"></div>
+-->
 
 
-
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-aria.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-animate.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-aria.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-resource.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-sanitize.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
 
     <script src="./app/app.module.js"></script>

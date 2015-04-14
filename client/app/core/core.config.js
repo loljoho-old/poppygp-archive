@@ -18,7 +18,7 @@
      * @param   $mdThemingProvider
      * @param   $mdIconProvider
      */
-    function ThemeConfig($mdThemingProvider, $mdIconProvider) {
+    function ThemeConfig($mdThemingProvider) {
         $mdThemingProvider.definePalette('gpqueryPalette', {
             '50':   '2a2a2a',
             '100':  '2a2a2a',
@@ -43,22 +43,20 @@
             .accentPalette('orange')
             // Shades: 500, 300, 800, A100
             .warnPalette('red');
-
-        $mdIconProvider
-            .defaultIconSet('./bower_components/ionicons/fonts/ionicons.svg');
     }
 
     function IconConfig($mdIconProvider) {
         $mdIconProvider
-            .icon('more-h',         'client/assets/icons/more-h.svg')
-            .icon('more-v',         'client/assets/icons/more-v.svg')
-            .icon('webchat',        'client/assets/icons/webchat.svg')
-            .icon('grid',           'client/assets/icons/grid.svg')
-            .icon('navbar',         'client/assets/icons/navbar-icon.svg')
-            .icon('chevron-left',   'client/assets/icons/chevron-left.svg')
-            .icon('chevron-right',  'client/assets/icons/chevron-right.svg')
-            .icon('arrow-left',     'client/assets/icons/arrow-left.svg')
-            .icon('arrow-right',    'client/assets/icons/arrow-right.svg');
+            .icon('more-h',         './assets/icons/more-h.svg')
+            .icon('more-v',         './assets/icons/more-v.svg')
+            .icon('webchat',        './assets/icons/webchat.svg')
+            .icon('donate',         './assets/icons/donate.svg')
+            .icon('grid',           './assets/icons/grid.svg')
+            .icon('navbar',         './assets/icons/navbar-icon.svg')
+            .icon('chevron-left',   './assets/icons/chevron-left.svg')
+            .icon('chevron-right',  './assets/icons/chevron-right.svg')
+            .icon('arrow-left',     './assets/icons/arrow-left.svg')
+            .icon('arrow-right',    './assets/icons/arrow-right.svg');
     }
         
 })();

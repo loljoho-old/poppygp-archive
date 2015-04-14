@@ -1,8 +1,6 @@
 
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <span flex hide-gt-sm></span>
-        <h2>poppyGP</h2>
         <span flex hide-sm></span>
         <span hide-sm>
             <!-- Mercedes -->
@@ -25,6 +23,24 @@
             <svg height="32" width="30">
               <polygon points="30,0 10,32 0,32 20,0" style="fill:#0005c1"/>
             </svg>
+        </span>
+        <h2>poppyGP</h2>
+        <md-button class="md-icon-button" aria-label="Menu" hide-gt-sm data-ng-click="vm.toggleSidenav('right');">
+            <md-icon md-svg-icon="navbar"></md-icon>
+        </md-button>
+        <span hide-sm>
+            <!-- Mercedes 
+            <svg height="32" width="30">
+              <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+            </svg>-->
+            <!-- Ferrari 
+            <svg height="32" width="30">
+              <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+            </svg>-->
+            <!-- Williams 
+            <svg height="32" width="30">
+              <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+            </svg>-->
             <!-- RBR -->
             <svg height="32" width="30">
               <polygon points="30,0 10,32 0,32 20,0" style="fill:#4f1aab;"/>
@@ -46,5 +62,6 @@
               <polygon points="30,0 10,32 0,32 20,0" style="fill:#6e0000"/>
             </svg>
         </span>
+        <span flex hide-sm></span>
     </div>
 </md-toolbar>

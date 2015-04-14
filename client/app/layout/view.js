@@ -8,8 +8,10 @@
     View.$inject = ['$mdSidenav', '$sce', '$log', '$q'];
     function View($mdSidenav, $sce, $log, $q) {
         var vm = this;
+        vm.showDonate = true;
         vm.tabs = [];
         vm.toggleSidenav = toggleSidenav;
+        vm.showDonate = showDonate;
 
         activate();
 
@@ -18,24 +20,28 @@
         function activate() {
             vm.tabs = [
                 {
-                    title: 'Webchat',
+                    title: 'Home',
+                    icon: 'home',
+                    templateUrl: 'assets/partials/tabs-home.html'
+                    // action: home
+                },
+                {
+                    title: 'Chat',
                     icon: 'webchat',
-                    templateUrl: 'assets/partials/tabs-webchat.html'
+                    templateUrl: 'assets/partials/tabs-chat.html'
+                    // communication: chat
                 },
                 {
-                    title: 'Reddit',
-                    icon: 'reddit',
-                    templateUrl: 'assets/partials/tabs-reddit.html'
-                },
-                {
-                    title: 'Request',
+                    title: 'Help',
                     icon: 'request',
-                    templateUrl: 'assets/partials/tabs-request.html'
+                    templateUrl: 'assets/partials/tabs-help.html'
+                    // action: help
                 },
                 {
-                    title: 'Settings',
+                    title: 'About',
                     icon: 'settings',
-                    templateUrl: 'assets/partials/tabs-settings.html'
+                    templateUrl: 'assets/partials/tabs-about.html'
+                    // action: settings
                 }
             ];
             return vm.tabs;
@@ -45,6 +51,11 @@
             $mdSidenav(id).toggle().then(function() {
                 $log.debug('Sidenav ' + id + ' toggled.');
             });
+        }
+
+        function showDonate() {
+
+
         }
     }
 })();
