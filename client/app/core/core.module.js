@@ -10,13 +10,13 @@
      * @module  ngRoute
      * @module  ngMaterial
      */
-    angular.module('pgp.core', [
+    angular.module('gpApp.core', [
             // Angular Modules
             'ngAnimate', 
             'ngAria', 
             'ngResource',
-            'ngRoute',
-            'ngMaterial'
+            'ngMaterial',
+            'ngSanitize'
 
             // Third-Party Modules
         //    'ng-mfb'

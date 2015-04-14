@@ -3,17 +3,14 @@
 
     /**
      * Main Module File
-     *
-     * @module  pgp.core
-     * @module  pgp.layout
-     * @module  pgp.resume
      */
     angular
-        .module('pgp', [
+        .module('gpApp', [
 
             // Core Modules
-            'pgp.core', 'pgp.layout'
+            'gpApp.core', 'gpApp.layout',
 
             // Feature Area Modules
+            'gpApp.playlist', 'gpApp.content'
         ]);
 })();

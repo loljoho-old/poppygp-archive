@@ -1,0 +1,164 @@
+
+<html lang="en" data-ng-app="gpApp" data-ng-controller="View as vm">
+
+<head>
+    <title data-ng-bind="config.title"></title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic">
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">
+
+    <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <link href="./styles/build/main.css" rel="stylesheet" />
+    <link href="./styles/build/icons.css" rel="stylesheet" />
+    <link href="./styles/build/iframe.css" rel="stylesheet" />
+    <link href="./styles/build/toolbar.css" rel="stylesheet" />
+    <link href="./styles/build/sidenav.css" rel="stylesheet" />
+</head>
+
+<body layout="column" style="background-color:#f0f0f0;">
+
+    <!-- BEGIN: TOP PAGE TOOLBAR -->
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Sidenav" data-ng-click="vm.toggleSidenav('left');" hide-gt-md>
+                <md-icon md-svg-icon="assets/icons/navbars.svg" class="s36" style="color:#fff;"></md-icon>
+            </md-button>
+            <h2>poppyGP</h2>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <!-- ENDOF: TOP PAGE TOOLBAR -->
+
+
+    <!-- BEGIN: MAIN PAGE ROW -->
+    <div layout="row" flex layout-fill>
+
+        <!-- BEGIN: MAIN MENU SIDENAV-LEFT -->
+        <md-sidenav layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"
+                    flex-gt-md="20"
+                    style="background-color:#f0f0f0;">
+            <md-content data-ng-controller="Left as vm">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Collapse" data-ng-click="vm.toggle();" hide-gt-md>
+                            <md-icon md-svg-icon="assets/icons/arrow-left.svg" class="s36" style="color:#fff;"></md-icon>
+                        </md-button>
+                        <span flex></span>
+                    </div>
+                    <div class="md-toolbar-tools-bottom">
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-content>
+        </md-sidenav>
+
+        <!-- BEGIN: WHITESPACE SECTION -->
+        <section layout="column"
+                 hide-sm
+                 flex-md="30"
+                 flex-gt-md
+                 style="background-color:#f0f0f0;">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+        </section>
+
+        <!-- BEGIN: MAIN CONTENT SECTION -->
+        <section layout="column"
+                 flex="60"
+                 flex-md="55"
+                 flex-gt-md="55"
+                 flex-sm="100"
+                 style="background-color:#f0f0f0;">
+            <md-card class="card-embed md-whiteframe-z4">
+                <md-card-embed class="embed-16by9">
+                    <iframe src="http://www.ustream.tv/embed/18630657?wmode=direct&showtitle=false" webkitallowfullscreen allowfullscreen width="100%" height="100%"></iframe>
+                </md-card-embed>
+
+<!--                <md-card-content style="height:66vh; padding:0; background-color:#fff;">-->
+                <md-content style="height:40vh; padding-bottom:32px; background-color:#fff;">
+                    <md-tabs md-border-bottom>
+                        <md-tab data-ng-repeat="tab in vm.tabs">
+                            <md-tab-label data-ng-cloak>
+                                <!--<md-icon class="s36"></md-icon>-->
+                                {{tab.title}}
+                            </md-tab-label>
+                            <md-tab-template data-ng-include="tab.templateUrl">
+                            </md-tab-template>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+           </md-card>
+        </section>
+
+
+        <!-- BEGIN: WHITESPACE SECTION -->
+        <section layout="column"
+                 hide-sm
+                 flex-md="15"
+                 flex-gt-md="15"
+                 hide-gt-lg
+                 style="background-color:#f0f0f0;">
+            <md-toolbar layout="row">
+                <div class="md-toolbar-tools">
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+
+            <md-button class="md-fab md-warn md-fab-top-right" aria-label="HEY!" data-ng-click="vm.toggleSidenav('right');">
+                <md-icon style="height:100%; width:100%;"></md-icon>
+            </md-button>
+        </section>
+
+
+        <!-- BEGIN: PLAYLIST SIDENAV-RIGHT -->
+        <md-sidenav id="playlist" layout="column" class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-lg')"
+                    flex-gt-lg="15"
+                    style="background-color:#f0f0f0;">
+            <md-content data-ng-controller="Right as vm">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Collapse" data-ng-click="vm.toggle();" hide-gt-lg>
+                            <md-icon md-svg-icon="assets/icons/arrow-right.svg" class="s36" style="color:#fff;"></md-icon>
+                        </md-button>
+                        <h3>Sidenav</h3>
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-content>
+        </md-sidenav>
+
+    </div>
+    <!-- ENDOF: MAIN PAGE ROW -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-aria.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
+
+    <script src="./app/app.module.js"></script>
+
+    <script src="./app/core/core.module.js"></script>
+    <script src="./app/core/core.config.js"></script>
+    <script src="./app/core/dataservice.js"></script>
+
+    <script src="./app/layout/layout.module.js"></script>
+    <script src="./app/layout/view.js"></script>
+    <script src="./app/layout/navleft.js"></script>
+    <script src="./app/layout/navright.js"></script>
+    <script src="./app/layout/tabs.js"></script>
+
+</body>
+
+</html>

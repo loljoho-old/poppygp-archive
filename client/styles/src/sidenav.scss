@@ -1,0 +1,107 @@
+md-sidenav  {
+    background-color: #f0f0f0; 
+    &.md-locked-open {
+
+    width: auto;
+    }
+}
+
+md-sidenav.md-locked-open[flex="10"],
+md-sidenav.md-locked-open[flex-sm="10"],
+md-sidenav.md-locked-open[flex-md="10"],
+md-sidenav.md-locked-open[flex-lg="10"],
+md-sidenav.md-locked-open[flex-gt-sm="10"],
+md-sidenav.md-locked-open[flex-gt-md="10"],
+md-sidenav.md-locked-open[flex-gt-lg="10"] {
+    flex: 0 0 10%;
+    width:    10%;
+    min-width:10%;
+    max-width:10%;
+}
+
+md-sidenav.md-locked-open[flex="15"],
+md-sidenav.md-locked-open[flex-sm="15"],
+md-sidenav.md-locked-open[flex-sm="15"],
+md-sidenav.md-locked-open[flex-md="15"],
+md-sidenav.md-locked-open[flex-lg="15"],
+md-sidenav.md-locked-open[flex-gt-sm="15"],
+md-sidenav.md-locked-open[flex-gt-md="15"],
+md-sidenav.md-locked-open[flex-gt-lg="15"] {
+    flex: 0 0 15%;
+    width:    15%;
+    min-width:15%;
+    max-width:15%;
+}
+
+
+md-sidenav.md-locked-open[flex="20"],
+md-sidenav.md-locked-open[flex-sm="20"],
+md-sidenav.md-locked-open[flex-md="20"],
+md-sidenav.md-locked-open[flex-lg="20"],
+md-sidenav.md-locked-open[flex-gt-sm="20"],
+md-sidenav.md-locked-open[flex-gt-md="20"],
+md-sidenav.md-locked-open[flex-gt-lg="20"] {
+    flex: 0 0 20%;
+    width:    20%;
+    min-width:20%;
+    max-width:20%;
+}
+
+md-sidenav.md-locked-open[flex="25"],
+md-sidenav.md-locked-open[flex-sm="25"],
+md-sidenav.md-locked-open[flex-md="25"],
+md-sidenav.md-locked-open[flex-lg="25"],
+md-sidenav.md-locked-open[flex-gt-sm="25"],
+md-sidenav.md-locked-open[flex-gt-md="25"],
+md-sidenav.md-locked-open[flex-gt-lg="25"]{
+    flex: 0 0 25%;
+    width:    25%;
+    min-width:25%;
+    max-width:25%;
+}
+
+@mixin flex-properties-for-name($name: null) {
+  $flexName: 'flex';
+  @if $name != null {
+    $flexName: 'flex-#{$name}';
+  }
+
+  md-sidenav,
+  .md-sidenav-right,
+  .md-sidenav-left {
+
+    &.md-locked-open {
+
+      [#{$flexName}] {
+        box-sizing: border-box;
+        flex: 1;
+      }
+
+
+      // (0-20) * 5 = 0-100%
+      @for $i from 0 through 20 {
+        [#{$flexName}="#{$i * 5}"] {
+          flex: 0 0 #{$i * 5 + '%'};
+          width:    #{$i * 5 + '%'};
+          min-width:#{$i * 5 + '%'};
+          max-width:#{$i * 5 + '%'};
+
+        }
+      }
+
+      [#{$flexName}="33"], [#{$flexName}="34"] {
+        flex: 0 0 33.33%;
+        width:    33.33%;
+        min-width:33.33%;
+        max-width:33.33%;
+      }
+      [#{$flexName}="66"], [#{$flexName}="67"] {
+        flex: 0 0 66.66%;
+        width:    66.66%;
+        min-width:66.66%;
+        max-width:66.66%;
+      }
+    }
+  }
+
+}
