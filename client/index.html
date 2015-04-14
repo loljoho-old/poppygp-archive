@@ -31,10 +31,10 @@
     <main layout="row" layout-wrap>
 
         <section flex hide-sm
-                data-ng-include="'./app/layout/col-left.html'"></section>
+                data-ng-include="'./app/layout/col.html'"></section>
 
         <section flex="60" flex-md="50" flex-sm="100"
-                data-ng-include="'./app/layout/video.html'"></section>
+                data-ng-include="'./app/layout/main.html'"></section>
 
         <!-- BEGIN: PLAYLIST SIDENAV-RIGHT -->
         <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25" flex-md="15">
@@ -43,14 +43,18 @@
                     <span flex></span>
                 </div>
             </md-toolbar>
-            <md-content>
-                <md-card>
-                    <md-card-content>
-                        <h2 class="md-title">Now Playing</h2>
-                        <p>Lorem ipsum blah blah blah.</p>
-                    </md-card-content>
-
-                </md-card>
+            <md-content data-ng-controller="Schedule as vm" class="md-padding">
+                <md-list>
+                    <md-list-item class="md-2-line" data-ng-repeat="track in vm.schedule">
+                        <div class="md-list-item-text">
+                            <h4 data-ng-cloak>
+                                {{track.year}} {{track.name}} {{track.type}}
+                            </h4>
+                            <p data-ng-bind="track.time"></p>
+                        </div>
+                        <md-divider data-ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
             </md-content>
         </md-sidenav>
 
@@ -93,6 +97,11 @@
 
     <!-- Playlist Module -->
     <script src="./app/playlist/playlist.module.js"></script>
+    <script src="./app/playlist/schedule.ctrl.js"></script>
+
+    <!-- Content Module -->
+    <script src="./app/content/content.module.js"></script>
+    <script src="./app/content/tabs.ctrl.js"></script>
 
 </body>
 

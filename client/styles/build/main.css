@@ -13,9 +13,11 @@ main {
     background-color: #f0f0f0; }
 
 md-tabs .md-tabs-content .md-tab-content {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   height: auto;
   min-height: 256px; }
+  md-tabs .md-tabs-content .md-tab-content md-content {
+    background-color: #ffffff; }
 
 md-content.md-default-theme, md-card.md-default-theme {
   background-color: #f0f0f0; }

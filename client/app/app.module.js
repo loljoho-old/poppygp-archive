@@ -11,6 +11,6 @@
             'gpApp.core', 'gpApp.layout',
 
             // Feature Area Modules
-            'gpApp.playlist'
+            'gpApp.playlist', 'gpApp.content'
         ]);
 })();

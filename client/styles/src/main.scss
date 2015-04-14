@@ -22,9 +22,12 @@ main {
 
 
 md-tabs .md-tabs-content .md-tab-content {
-    background-color: #ffffff;
+    background-color:#f0f0f0;
     height: auto;
     min-height:256px;
+    md-content {
+        background-color: #ffffff;
+    }
 }
 
 md-content.md-default-theme,
