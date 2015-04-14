@@ -3,6 +3,7 @@
 ####################
 *ignore*
 *data/*.json
+client/assets/styles/build/
 
 # Server-Side Testing #
 #######################
