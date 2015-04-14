@@ -5,6 +5,16 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color:#333333;
+
+    section {
+        background-color:#333333;
+
+    }
 }
 
 main {
@@ -17,4 +27,24 @@ main {
 
     }
 
+}
+
+
+md-tabs .md-tabs-content .md-tab-content {
+    background-color:#f0f0f0;
+    height: auto;
+    min-height:256px;
+    md-content {
+        background-color: #ffffff;
+    }
+}
+
+main md-content.md-default-theme,
+main md-card.md-default-theme {
+    background-color:#f0f0f0;
+}
+
+footer md-content.md-default-theme,
+footer md-card.md-default-theme {
+    background-color:#333333;
 }

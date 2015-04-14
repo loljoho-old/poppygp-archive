@@ -8,78 +8,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
+    <!-- CDNs -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic">
-    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">
-
     <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+    <!-- Compiled Stylesheets -->
     <link href="./styles/build/main.css" rel="stylesheet" />
     <link href="./styles/build/icons.css" rel="stylesheet" />
     <link href="./styles/build/iframe.css" rel="stylesheet" />
     <link href="./styles/build/toolbar.css" rel="stylesheet" />
     <link href="./styles/build/sidenav.css" rel="stylesheet" />
+    <link href="./styles/build/components.css" rel="stylesheet" />
 </head>
 
-<body layout="column" style="background-color:#f0f0f0;">
+<body layout="column">
+    <header data-ng-include="'./app/layout/toolbar.html'"></header>
 
-<header data-ng-include="'./app/layout/toolbar.html'">
-</header>
+    <main layout="row" layout-wrap>
 
+        <section flex hide-md 
+            data-ng-include="'./app/layout/col.html'">
+        </section>
 
-    <!-- BEGIN: MAIN PAGE ROW -->
-    <main layout="row">
+        <section flex="60" flex-md="75" flex-sm="100" 
+            data-ng-include="'./app/layout/main.html'">
+        </section>
+        
+        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25">
 
-        <section flex hide-sm
-                data-ng-include="'./app/layout/col-left.html'"></section>
-
-        <section flex="60" flex-sm="100"
-                data-ng-include="'./app/layout/video.html'"></section>
-
-        <!-- BEGIN: PLAYLIST SIDENAV-RIGHT -->
-        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25" style="background-color:#f0f0f0;">
             <md-toolbar>
-                <div class="md-toolbar-tools">
+                <div class="md-toolbar-tools" data-ng-click="vm.toggleSidenav('right');">
+
+                    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.close();" aria-label="Hide">
+                        <md-icon md-svg-icon="arrow-right"></md-icon>
+                    </md-button>
+
                     <span flex></span>
+
+                    <h3>Schedule</h3>
+                    
                 </div>
             </md-toolbar>
-            <md-content style="background-color:#f0f0f0;">
-                <md-card style="background-color:#ffffff;">
-                    <md-card-content>
-                        <h2 class="md-title">Now Playing</h2>
-                        <p>Lorem ipsum blah blah blah.</p>
-                    </md-card-content>
-                </md-card>
+
+            <md-content id="playlist" class="md-padding" 
+                data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
+
+            <md-toolbar></md-toolbar>
+
+            <md-content class="md-padding">
+            </md-content>
+
         </md-sidenav>
+
 
     </main>
 
-    <div layout="row" style="background-color:#f0f0f0;" flex></div>
-    <div layout="row" style="background-color:#333333;" flex></div>
-    <div layout="row" style="background-color:#1a1a1a; height:32px;">
-    </div>
-
-
-
-
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-aria.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-animate.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-aria.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-resource.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.4.0-rc.0/angular-sanitize.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
 
     <script src="./app/app.module.js"></script>
 
+    <!-- Core Module -->
     <script src="./app/core/core.module.js"></script>
     <script src="./app/core/core.config.js"></script>
     <script src="./app/core/dataservice.js"></script>
 
+    <!-- Layout Module -->
     <script src="./app/layout/layout.module.js"></script>
     <script src="./app/layout/view.js"></script>
+
+    <!-- Playlist Module -->
+    <script src="./app/playlist/playlist.module.js"></script>
+    <script src="./app/playlist/schedule.ctrl.js"></script>
+
+    <!-- Content Module -->
+    <script src="./app/content/content.module.js"></script>
+    <script src="./app/content/tabs.ctrl.js"></script>
 
 </body>
 

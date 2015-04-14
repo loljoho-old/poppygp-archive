@@ -8,6 +8,10 @@
     Current.$inject = ['dataservice', '$log', '$q'];
     function Current(dataservice, $log, $q) {
         var vm = this;
+        // obtain from core dataservice
+        //  current track
+        //  next track
+        //  previous track
 
         activate();
 

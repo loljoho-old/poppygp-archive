@@ -2,6 +2,15 @@
 
 > Community-centered video stream and webchat single-page application in AngularJS.
 
+## IMPORTANT
+
+> Pseudocode for M3U(8) parser:
+
+```
+REPLACE     "#EXTM3U\n",   ""
+REPLACE     "#EXTINF:"  ""
+EXPLODE     "," EVERY 3
+
 
 ## Directory Structure ##
 ```
