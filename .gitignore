@@ -7,6 +7,7 @@
 # Server-Side Testing #
 #######################
 server/parser
+client/parser
 
 # bower and npm #
 #################

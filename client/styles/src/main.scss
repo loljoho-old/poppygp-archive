@@ -8,13 +8,22 @@ html, body {
     background-color: #f0f0f0;
 }
 
+footer {
+    background-color:#333333;
+
+    section {
+        background-color:#333333;
+
+    }
+}
+
 main {
 
     background-color: #f0f0f0;
 
     section {
 
-    background-color: #f0f0f0;
+        background-color: #f0f0f0;
 
     }
 
@@ -30,7 +39,12 @@ md-tabs .md-tabs-content .md-tab-content {
     }
 }
 
-md-content.md-default-theme,
-md-card.md-default-theme {
+main md-content.md-default-theme,
+main md-card.md-default-theme {
     background-color:#f0f0f0;
+}
+
+footer md-content.md-default-theme,
+footer md-card.md-default-theme {
+    background-color:#333333;
 }

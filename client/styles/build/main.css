@@ -7,6 +7,11 @@ html, body {
   overflow-x: hidden;
   background-color: #f0f0f0; }
 
+footer {
+  background-color: #333333; }
+  footer section {
+    background-color: #333333; }
+
 main {
   background-color: #f0f0f0; }
   main section {
@@ -19,5 +24,8 @@ md-tabs .md-tabs-content .md-tab-content {
   md-tabs .md-tabs-content .md-tab-content md-content {
     background-color: #ffffff; }
 
-md-content.md-default-theme, md-card.md-default-theme {
+main md-content.md-default-theme, main md-card.md-default-theme {
   background-color: #f0f0f0; }
+
+footer md-content.md-default-theme, footer md-card.md-default-theme {
+  background-color: #333333; }

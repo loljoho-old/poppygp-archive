@@ -10,21 +10,21 @@
         var vm = this;
         vm.schedule = [
             {   year: '1994',
-                name: 'San Marino Grand Prix',
+                name: 'San Marino',
                 type: 'Race',
-                time: '14:45'   },
+                time: '14:45 Tue 14/04'   },
             {   year: '1984',
-                name: 'Monaco Grand Prix',
+                name: 'Monaco',
                 type: 'Race',
-                time: '17:21'   },
+                time: '17:21 Tue 14/04'   },
             {   year: '2007',
-                name: 'European Grand Prix',
+                name: 'European',
                 type: 'Qualifying',
-                time: '18:01'   },
+                time: '18:01 Tue 14/04'   },
             {   year: '2007',
-                name: 'European Grand Prix',
+                name: 'European',
                 type: 'Race',
-                time: '20:41'   }];
+                time: '20:41 Tue 14/04'   }];
 
         //activate();
 
