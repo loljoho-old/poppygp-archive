@@ -25,6 +25,7 @@
 
 <body layout="column">
     <header data-ng-include="'./app/layout/toolbar.html'"></header>
+
     <main layout="row" layout-wrap>
 
         <section flex hide-md 
@@ -47,6 +48,7 @@
                     <span flex></span>
 
                     <h3>Schedule</h3>
+                    
                 </div>
             </md-toolbar>
 
@@ -54,13 +56,13 @@
                 data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
 
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <span flex></span>
-                </div>                
-            </md-toolbar>
+            <md-toolbar></md-toolbar>
+
+            <md-content class="md-padding">
+            </md-content>
 
         </md-sidenav>
+
 
     </main>
 
