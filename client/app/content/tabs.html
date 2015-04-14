@@ -1,0 +1,11 @@
+
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab data-ng-repeat="tab in vm.tabs">
+            <md-tab-label data-ng-cloak>
+                <!--<md-icon class="s36"></md-icon>-->
+                {{tab.title}}
+            </md-tab-label>
+            <md-tab-template data-ng-include="tab.templateUrl">
+            </md-tab-template>
+        </md-tab>
+    </md-tabs>
