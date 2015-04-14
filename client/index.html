@@ -1,20 +1,18 @@
-
-<html lang="en" data-ng-app="gpApp" data-ng-controller="View as vm">
+<!DOCTYPE html>
+<html lang="en" data-ng-app="gpApp">
 
 <head>
-    <title data-ng-bind="config.title"></title>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
-    <!-- CDNs -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic">
-    <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <title data-ng-bind="title"></title>
 
-    <!-- Compiled Stylesheets -->
+    <!-- Style à la CDN -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic" rel="stylesheet" />
+    <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
+
+    <!-- Style à la Compiled Scss -->
     <link href="./styles/build/main.css" rel="stylesheet" />
     <link href="./styles/build/icons.css" rel="stylesheet" />
     <link href="./styles/build/iframe.css" rel="stylesheet" />
@@ -23,7 +21,7 @@
     <link href="./styles/build/components.css" rel="stylesheet" />
 </head>
 
-<body layout="column">
+<body layout="column" data-ng-controller="View as vm">
     <header data-ng-include="'./app/layout/toolbar.html'"></header>
 
     <main layout="row" layout-wrap>

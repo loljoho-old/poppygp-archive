@@ -1,4 +1,6 @@
-# poppyGP `client/`
+# poppyGP
+
+> A community-centered video stream and webchat single-page AngularJS web application.
 
 ## TODO
 
