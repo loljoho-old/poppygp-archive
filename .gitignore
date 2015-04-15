@@ -4,6 +4,8 @@
 *ignore*
 *data/*.json
 client/assets/styles/build/
+client/assets/md-icons/
+clients/assets/icons/
 
 # Server-Side Testing #
 #######################
