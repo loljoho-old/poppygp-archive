@@ -47,16 +47,26 @@
 
     function IconConfig($mdIconProvider) {
         $mdIconProvider
+
+            // Navigation Icons
             .icon('more-h',         './assets/icons/more-h.svg')
             .icon('more-v',         './assets/icons/more-v.svg')
             .icon('webchat',        './assets/icons/webchat.svg')
-            .icon('donate',         './assets/icons/donate.svg')
             .icon('grid',           './assets/icons/grid.svg')
             .icon('navbar',         './assets/icons/navbar-icon.svg')
+
+            // Arrow & Chevrons
             .icon('chevron-left',   './assets/icons/chevron-left.svg')
             .icon('chevron-right',  './assets/icons/chevron-right.svg')
             .icon('arrow-left',     './assets/icons/arrow-left.svg')
-            .icon('arrow-right',    './assets/icons/arrow-right.svg');
+            .icon('arrow-right',    './assets/icons/arrow-right.svg')
+
+            // Video Controls
+
+            // Tabs Icons
+
+            // Donation Icons
+            .icon('donate',         './assets/icons/donate.svg');
     }
         
 })();
