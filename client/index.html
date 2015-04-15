@@ -26,7 +26,7 @@
 
     <main layout="row" layout-wrap>
 
-        <section flex hide-md 
+        <section flex hide-md class="md-whiteframe-z5"
             data-ng-include="'./app/layout/col.html'">
         </section>
 
@@ -43,9 +43,9 @@
                         <md-icon md-svg-icon="arrow-right"></md-icon>
                     </md-button>
 
-                    <span flex></span>
-
+                    <span flex hide-gt-sm></span>
                     <h3>Schedule</h3>
+                    <span flex hide-sm></span>
                     
                 </div>
             </md-toolbar>
@@ -54,7 +54,8 @@
                 data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
 
-            <md-toolbar></md-toolbar>
+            <md-toolbar>
+            </md-toolbar>
 
             <md-content class="md-padding">
             </md-content>
