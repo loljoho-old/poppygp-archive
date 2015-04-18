@@ -18,6 +18,16 @@
         // Internal methods
         // *********************************
 
+        function getSchedule() {
+            return $resource('../parser/index.ignore.html').get().$promise
+                .then(function(response) {
+                    return response;
+                }, function(errorMsg) {
+                    return errorMsg;
+                });
+
+        }
+
         function getLaps() {
             return $resource('../data/laps.json').get().$promise
                 .then(function(response) {
