@@ -10,7 +10,13 @@
     var config = {
         title: 'Page Title'   
     };
+
     core.value('config', config);
+
+    var angularMomentConfig = {
+        timezone: 'America/New_York'
+    };
+    core.constant('angularMomentConfig', angularMomentConfig);
     
     /**
      * Configuration for Angular Material
@@ -47,7 +53,6 @@
 
     function IconConfig($mdIconProvider) {
         $mdIconProvider
-
             // Navigation Icons
             .icon('more-h',         './assets/icons/more-h.svg')
             .icon('more-v',         './assets/icons/more-v.svg')
@@ -62,7 +67,6 @@
             .icon('arrow-right',    './assets/icons/arrow-right.svg')
 
             // Video Controls
-
             // Tabs Icons
 
             // Donation Icons
