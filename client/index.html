@@ -54,11 +54,12 @@
             data-ng-include="'./app/layout/col.html'">
         </section>
 
-        <section flex="66" flex-md="75" flex-sm="100" 
+        <!--<section flex="66" flex-md="75" flex-sm="100" -->
+        <section flex="65" flex-md="70" flex-sm="100" 
             data-ng-include="'./app/layout/main.html'">
         </section>
         
-        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25">
+        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="30">
             <md-toolbar>
                 <div class="md-toolbar-tools" data-ng-click="vm.toggleSidenav('right');">
                     <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.close();" aria-label="Hide">
