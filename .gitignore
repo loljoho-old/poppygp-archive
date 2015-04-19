@@ -3,6 +3,8 @@
 ####################
 *ignore*
 data/
+server/
+client/app/playlist/README.md
 
 client/assets/styles/build/
 client/assets/md-icons/

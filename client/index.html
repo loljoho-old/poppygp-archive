@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="gpApp">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -22,7 +21,32 @@
 </head>
 
 <body layout="column" data-ng-controller="View as vm">
-    <header data-ng-include="'./app/layout/toolbar.html'"></header>
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span flex hide-gt-sm></span>
+            <span>
+                <!-- Mercedes -->
+                <svg height="32" width="30">
+                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+                </svg>
+                <!-- Ferrari -->
+                <svg height="32" width="30">
+                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+                </svg>
+                <!-- Williams -->
+                <svg height="32" width="30">
+                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+                </svg>
+            </span>
+            <h2>poppyGP</h2>
+            <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.toggleSidenav('right');" aria-label="Menu">
+                <md-icon md-svg-icon="navbar"></md-icon>
+            </md-button>
+            <span flex hide-sm></span>
+        </div>
+    </md-toolbar>
+
 
     <main layout="row" layout-wrap>
 
@@ -30,40 +54,28 @@
             data-ng-include="'./app/layout/col.html'">
         </section>
 
-        <section flex="60" flex-md="75" flex-sm="100" 
+        <section flex="66" flex-md="75" flex-sm="100" 
             data-ng-include="'./app/layout/main.html'">
         </section>
         
         <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="25">
-
             <md-toolbar>
                 <div class="md-toolbar-tools" data-ng-click="vm.toggleSidenav('right');">
-
                     <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.close();" aria-label="Hide">
                         <md-icon md-svg-icon="arrow-right"></md-icon>
                     </md-button>
-
                     <span flex hide-gt-sm></span>
                     <h3>Schedule</h3>
                     <span flex hide-sm></span>
-                    
                 </div>
             </md-toolbar>
-
             <md-content id="playlist" class="md-padding" 
                 data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
-
-            <md-toolbar>
-            </md-toolbar>
-
-            <md-content class="md-padding">
-            </md-content>
-
         </md-sidenav>
 
-
     </main>
+
 
     <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
     <script src="//code.angularjs.org/1.4.0-rc.0/angular-animate.min.js"></script>
@@ -93,5 +105,51 @@
     <script src="./app/content/tabs.ctrl.js"></script>
 
 </body>
-
 </html>
+
+
+
+
+<!--
+<span hide-sm> -->
+    <!-- Mercedes 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+    </svg>-->
+    <!-- Ferrari 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+    </svg>-->
+    <!-- Williams 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+    </svg>-->
+    <!-- Sauber
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#0063ff"/>
+    </svg> -->
+    <!-- STR
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#0005c1"/>
+    </svg> -->
+    <!-- RBR
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#4f1aab;"/>
+    </svg> -->
+    <!-- Force India 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#ff5f0f;"/>
+    </svg> -->
+    <!-- McLaren 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#808080;"/>
+    </svg> -->
+    <!-- Lotus 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffb800"/>
+    </svg> -->
+    <!-- Marussia 
+    <svg height="32" width="30">
+      <polygon points="30,0 10,32 0,32 20,0" style="fill:#6e0000"/>
+    </svg> 
+</span> -->
