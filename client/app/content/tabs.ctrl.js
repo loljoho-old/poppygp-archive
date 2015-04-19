@@ -18,25 +18,25 @@
             vm.tabs = [
                 {
                     title: 'Home',
-                    icon: 'home',
+                    icon: './assets/icons/home.svg',
                     templateUrl: './app/content/tab1.html'
                     // action: home
                 },
                 {
                     title: 'Chat',
-                    icon: 'chat',
+                    icon: './assets/icons/webchat.svg',
                     templateUrl: './app/content/tab2.html'
                     // communication: chat
                 },
                 {
                     title: 'Help',
-                    icon: 'help',
+                    icon: './assets/icons/help.svg',
                     templateUrl: './app/content/tab3.html'
                     // action: help
                 },
                 {
                     title: 'About',
-                    icon: 'about',
+                    icon: './assets/icons/about.svg',
                     templateUrl: './app/content/tab4.html'
                     // action: settings
                 }

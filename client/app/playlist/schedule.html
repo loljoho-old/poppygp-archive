@@ -3,13 +3,13 @@
     <md-list-item class="md-3-line" data-ng-repeat="track in vm.schedule">
         <div class="md-list-item-text">
             <h3>
-                {{track.time}}
+                {{track.year}} {{track.round}}
             </h3>
             <h4>
-                {{track.name}} {{track.year}}
+                {{track.title}}
             </h4>
             <p>
-                {{track.type}}
+                {{track.length}}
             </p>
         </div>
         <md-divider data-ng-if="!$last"></md-divider>
