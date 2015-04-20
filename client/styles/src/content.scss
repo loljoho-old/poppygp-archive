@@ -1,0 +1,22 @@
+//
+// md-tabs > md-tabs-wrapper md-tabs-canvas md-pagination-wrapper > md-tab-item > span
+//         > md-
+md-tabs {
+    // Tabs
+    md-tabs-wrapper {
+        md-tabs-canvas {
+            md-pagination-wrapper {
+                md-tab-item {
+                    > span {
+                        
+                    }
+                }
+            }
+        }
+    }
+    md-tabs-content-wrapper {
+        md-tab-content {
+
+        }
+    }
+}
