@@ -1,8 +1,7 @@
 md-sidenav  {
     background-color: #f0f0f0; 
     &.md-locked-open {
-
-    width: auto;
+      width: auto;
     }
 }
 
@@ -60,48 +59,41 @@ md-sidenav.md-locked-open[flex-gt-lg="25"]{
     max-width:25%;
 }
 
-@mixin flex-properties-for-name($name: null) {
-  $flexName: 'flex';
-  @if $name != null {
-    $flexName: 'flex-#{$name}';
-  }
+md-sidenav.md-locked-open[flex="30"],
+md-sidenav.md-locked-open[flex-sm="30"],
+md-sidenav.md-locked-open[flex-md="30"],
+md-sidenav.md-locked-open[flex-lg="30"],
+md-sidenav.md-locked-open[flex-gt-sm="30"],
+md-sidenav.md-locked-open[flex-gt-md="30"],
+md-sidenav.md-locked-open[flex-gt-lg="30"]{
+    flex: 0 0 30%;
+    width:    30%;
+    min-width:30%;
+    max-width:30%;
+}
 
-  md-sidenav,
-  .md-sidenav-right,
-  .md-sidenav-left {
+md-sidenav.md-locked-open[flex="35"],
+md-sidenav.md-locked-open[flex-sm="35"],
+md-sidenav.md-locked-open[flex-md="35"],
+md-sidenav.md-locked-open[flex-lg="35"],
+md-sidenav.md-locked-open[flex-gt-sm="35"],
+md-sidenav.md-locked-open[flex-gt-md="35"],
+md-sidenav.md-locked-open[flex-gt-lg="35"]{
+    flex: 0 0 35%;
+    width:    35%;
+    min-width:35%;
+    max-width:35%;
+}
 
-    &.md-locked-open {
-
-      [#{$flexName}] {
-        box-sizing: border-box;
-        flex: 1;
-      }
-
-
-      // (0-20) * 5 = 0-100%
-      @for $i from 0 through 20 {
-        [#{$flexName}="#{$i * 5}"] {
-          flex: 0 0 #{$i * 5 + '%'};
-          width:    #{$i * 5 + '%'};
-          min-width:#{$i * 5 + '%'};
-          max-width:#{$i * 5 + '%'};
-
-        }
-      }
-
-      [#{$flexName}="33"], [#{$flexName}="34"] {
-        flex: 0 0 33.33%;
-        width:    33.33%;
-        min-width:33.33%;
-        max-width:33.33%;
-      }
-      [#{$flexName}="66"], [#{$flexName}="67"] {
-        flex: 0 0 66.66%;
-        width:    66.66%;
-        min-width:66.66%;
-        max-width:66.66%;
-      }
-    }
-  }
-
+md-sidenav.md-locked-open[flex="33"],
+md-sidenav.md-locked-open[flex-sm="33"],
+md-sidenav.md-locked-open[flex-md="33"],
+md-sidenav.md-locked-open[flex-lg="33"],
+md-sidenav.md-locked-open[flex-gt-sm="33"],
+md-sidenav.md-locked-open[flex-gt-md="33"],
+md-sidenav.md-locked-open[flex-gt-lg="33"]{
+    flex: 0 0 33%;
+    width:    33%;
+    min-width:33%;
+    max-width:33%;
 }

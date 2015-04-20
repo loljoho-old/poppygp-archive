@@ -9,7 +9,7 @@
                 {{track.title}}
             </h4>
             <p>
-                {{track.length}}
+                {{track.length | amDurationFormat: 'HH:mm:ss'}}
             </p>
         </div>
         <md-divider data-ng-if="!$last"></md-divider>
