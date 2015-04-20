@@ -19,13 +19,13 @@
                 {
                     title: 'Home',
                     icon: './assets/icons/home.svg',
-                    templateUrl: './app/content/tab1.html'
+                    templateUrl: './app/content/tabHome.html'
                     // action: home
                 },
                 {
                     title: 'Chat',
                     icon: './assets/icons/webchat.svg',
-                    templateUrl: './app/content/tab2.html'
+                    templateUrl: './app/content/tabChat.html'
                     // communication: chat
                 },
                 {
@@ -37,7 +37,7 @@
                 {
                     title: 'About',
                     icon: './assets/icons/about.svg',
-                    templateUrl: './app/content/tab4.html'
+                    templateUrl: './app/content/tabAbout.html'
                     // action: settings
                 }
             ];

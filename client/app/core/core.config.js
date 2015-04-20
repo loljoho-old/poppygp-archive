@@ -2,15 +2,21 @@
     'use strict';
 
     var core = angular.module('gpApp.core');
-
-    core
-        .config(ThemeConfig)
-        .config(IconConfig);
+    core.config(ThemeConfig)
+        .config(IconConfig)
+        .constant('angularMomentConfig', angularMomentConfig);
 
     var config = {
         title: 'Page Title'   
     };
     core.value('config', config);
+
+    /**
+     * Configuration for Angular Moment
+     */
+    var angularMomentConfig = {
+        //timezone:   'Europe/London'
+    };
     
     /**
      * Configuration for Angular Material
@@ -47,7 +53,6 @@
 
     function IconConfig($mdIconProvider) {
         $mdIconProvider
-
             // Navigation Icons
             .icon('more-h',         './assets/icons/more-h.svg')
             .icon('more-v',         './assets/icons/more-v.svg')
@@ -62,7 +67,6 @@
             .icon('arrow-right',    './assets/icons/arrow-right.svg')
 
             // Video Controls
-
             // Tabs Icons
 
             // Donation Icons
