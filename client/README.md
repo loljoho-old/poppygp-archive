@@ -7,32 +7,17 @@
 ### Features
 
  - [ ] Playlist Parser
-     - [ ] Server-side parsing
-     - [ ] Core module `dataservice` method
+     - [x] Server-side parser for `.m3u` and `.m3u8` playlists
      - [ ] `data-ng-repeat` with `md-list`
- - [ ] PayPal API
- - [ ] CoinBase or Mycelium API
+ - [ ] Donations
  - [ ] Announcements
-     - [ ] MongoDB or `*.json`?
-     - [ ] Core module `dataservice` method
 
 ### Chores
 
  - [ ] Replace `link` and `script` CDNs
- - [ ] Consolidate and restructure `*.scss` files:
-     - [ ] `styles/src/core/`
-         - [ ] `layout.scss`
-         - [ ] `mixins.scss`
-         - [ ] `structure.scss`
-         - [ ] `typography.scss`
-         - [ ] `variables.scss`
-     - [ ] `styles/src/components/`
-         - [ ] `icons.scss`
-         - [ ] `sidenav.scss`
-         - [ ] `toolbar.scss`
-         - [ ] `iframe.scss`
+ - [ ] Consolidate and restructure stylesheets
      - [ ] Replace all inline HTML `style` attributes
- - [ ] Split `index.html` into component template files
+ - [x] Split `index.html` into component template files
 
 ### Research
 

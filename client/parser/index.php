@@ -122,32 +122,4 @@ foreach($farray as $key=>$string) {
     $tracks[] = $track;
 }
 
-// Remove whitespace
-
-echo json_encode($tracks);
-
-
-/*
- * TEST
- *
-echo '<table><thead><tr>';
-    echo '<th>#</th>';
-    echo '<th>Year</th>';
-    echo '<th>Rnd</th>';
-    echo '<th>Track</th>';
-    echo '<th>Duration</th>';
-echo '</tr></thead><tbody>';
-$i = 1;
-foreach($tracks as $track) {
-    echo '<tr>';
-        echo '<td>' . $i . '</td>';
-        echo '<td>' . $track['year'] . '</td>';
-        echo '<td>' . $track['round'] . '</td>';
-        echo '<td>' . $track['title'] . '</td>';
-        echo '<td>' . $track['length'] . '</td>';
-    echo '</tr>';
-    $i++;
-}
-echo '</tbody></table>';
-*/
-// ENDOF
+echo json_encode($playlist, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);

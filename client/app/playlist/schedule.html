@@ -1,16 +1,9 @@
 
 <md-list data-ng-cloak data-ng-controller="Schedule as vm">
-    <md-list-item class="md-3-line" data-ng-repeat="track in vm.schedule">
+    <md-list-item class="md-2-line" data-ng-repeat="track in vm.schedule">
         <div class="md-list-item-text">
-            <h3>
-                {{track.year}} {{track.round}}
-            </h3>
-            <h4>
-                {{track.title}}
-            </h4>
-            <p>
-                {{track.length | amDurationFormat: 'HH:mm:ss'}}
-            </p>
+            <h3>{{ track.year }} {{ track.round }} {{ track.title }} </h3>
+            <p>{{ track.time | date:'HH:mm:ss - EEE dd MMM' }}</p>
         </div>
         <md-divider data-ng-if="!$last"></md-divider>
     </md-list-item>

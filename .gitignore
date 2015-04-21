@@ -5,6 +5,9 @@
 data/
 server/
 client/parser/README.MD
+client/styles/build/
+client/parser/test.json
+client/README.md
 
 # bower and npm #
 #################

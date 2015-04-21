@@ -7,9 +7,8 @@
             'ngAria', 
             'ngResource',
             'ngMaterial',
-            'ngSanitize',
+            'ngSanitize'
 
             // Third-Party Modules
-            'angularMoment'
         ]); 
 })();

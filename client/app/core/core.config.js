@@ -3,20 +3,12 @@
 
     var core = angular.module('gpApp.core');
     core.config(ThemeConfig)
-        .config(IconConfig)
-        .constant('angularMomentConfig', angularMomentConfig);
+        .config(IconConfig);
 
     var config = {
         title: 'Page Title'   
     };
     core.value('config', config);
-
-    /**
-     * Configuration for Angular Moment
-     */
-    var angularMomentConfig = {
-        //timezone:   'Europe/London'
-    };
     
     /**
      * Configuration for Angular Material

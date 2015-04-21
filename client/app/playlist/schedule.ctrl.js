@@ -9,9 +9,6 @@
     function Schedule(dataservice, $log, $q) {
         var vm = this;
         vm.schedule = [];
-        vm.timeNow = moment();
-        vm.playTime = vm.timeNow;
-        vm.setTime = setTime;
 
         activate();
 
@@ -23,11 +20,6 @@
                 vm.schedule = response;
                 return vm.schedule;
             });
-        }
-
-        function setTime(duration) {
-            vm.playTime = vm.timeNow.add(duration, 'seconds');
-            return vm.playTime;
         }
 
         //activate();
