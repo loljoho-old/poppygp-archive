@@ -4,17 +4,10 @@
 *ignore*
 data/
 server/
-client/app/playlist/README.md
+client/parser/README.MD
 client/styles/build/
-client/assets/styles/build/
-client/assets/md-icons/
-clients/assets/icons/
-
-# Server-Side Testing #
-#######################
-server/parser
-server/seeder
-client/parser
+client/parser/test.json
+client/README.md
 
 # bower and npm #
 #################
