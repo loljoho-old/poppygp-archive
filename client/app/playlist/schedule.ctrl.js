@@ -15,7 +15,8 @@
         ////////////
 
         function activate() {
-            return dataservice.schedule()
+            //return dataservice.schedule()
+            return dataservice.test()
             .then(function(response) {
                 vm.schedule = response;
                 return vm.schedule;
