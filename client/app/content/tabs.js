@@ -19,31 +19,31 @@
                 {
                     title: 'Home',
                     icon: './assets/icons/home.svg',
-                    templateUrl: './app/content/tabHome.html'
+                    templateUrl: './assets/partials/tabs/Home.html'
                     // action: home
                 },
                 {
                     title: 'Chat',
                     icon: './assets/icons/webchat.svg',
-                    templateUrl: './app/content/tabChat.html'
+                    templateUrl: './assets/partials/tabs/Chat.html'
                     // communication: chat
                 },
                 {
                     title: 'Help',
                     icon: './assets/icons/help.svg',
-                    templateUrl: './app/content/tabHelp.html'
+                    templateUrl: './assets/partials/tabs/Help.html'
                     // action: help
                 },
                 {
                     title: 'Contact',
                     icon: './assets/icons/contact.svg',
-                    templateUrl: './app/content/tabContact.html'
+                    templateUrl: './assets/partials/tabs/Contact.html'
                     // action: settings
                 },
                 {
                     title: 'About',
                     icon: './assets/icons/about.svg',
-                    templateUrl: './app/content/tabAbout.html'
+                    templateUrl: './assets/partials/tabs/About.html'
                     // action: settings
                 }
             ];

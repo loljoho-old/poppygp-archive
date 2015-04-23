@@ -38,7 +38,7 @@
             // Shades: 500, 300, 800, A100
             .primaryPalette('gpqueryPalette')
             // Shades: 400, 300, 800, A100
-            .accentPalette('orange')
+            .accentPalette('deep-purple')
             // Shades: 500, 300, 800, A100
             .warnPalette('red');
     }

@@ -37,14 +37,5 @@
                 $log.debug('Sidenav opened.');
             });
         }
-
-        function lockedSidenav() {
-            if($mdMedia('gt-sm') && vm.showSidenav) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
     }
 })();

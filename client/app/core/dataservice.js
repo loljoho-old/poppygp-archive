@@ -10,7 +10,6 @@
         // service raw promise to return
         var service = {
             schedule : getSchedule,
-            //schedule : getScheduleTest,
             laps     : getLaps,
             pitStops : getPitStops
         };
@@ -21,7 +20,7 @@
         // *********************************
 
         function getSchedule() {
-            return $resource('./parser/').get().$promise
+            return $resource('./data/playlist/').get().$promise
                 .then(function(response) {
                     return response;
                 }, function(errorMsg) {
