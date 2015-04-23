@@ -31,8 +31,14 @@
                 {
                     title: 'Help',
                     icon: './assets/icons/help.svg',
-                    templateUrl: './app/content/tab3.html'
+                    templateUrl: './app/content/tabHelp.html'
                     // action: help
+                },
+                {
+                    title: 'Contact',
+                    icon: './assets/icons/contact.svg',
+                    templateUrl: './app/content/tabContact.html'
+                    // action: settings
                 },
                 {
                     title: 'About',

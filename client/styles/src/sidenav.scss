@@ -8,10 +8,6 @@ md-sidenav  {
     }
 }
 
-md-sidenav.md-locked-open[flex] {
-    flex: 0 0 
-}
-
 md-sidenav.md-locked-open[flex="10"],
 md-sidenav.md-locked-open[flex-sm="10"],
 md-sidenav.md-locked-open[flex-md="10"],

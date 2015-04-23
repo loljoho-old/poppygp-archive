@@ -5,6 +5,7 @@
 data/
 server/
 client/parser/README.MD
+client/parser/index.html
 client/styles/build/
 client/parser/test.json
 client/README.md

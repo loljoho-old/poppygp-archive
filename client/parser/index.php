@@ -80,6 +80,10 @@ foreach($farray as $key=>$string) {
     // ENDOF
 
     /**
+     * Attempt to extract a country code
+     */
+
+    /**
      * Format DateTime as string
      */
     $datetime = date_format($datetrack, DATE_ISO8601);
@@ -92,7 +96,8 @@ foreach($farray as $key=>$string) {
             'round'     =>  $round,         // Race Round
             'title'     =>  $line,          // Track Title
             'seconds'   =>  $duration,      // Track Length (sec)
-            'time'      =>  $datetime       // Playback DateTime 
+            'time'      =>  $datetime,      // Playback DateTime 
+            'flag'      =>  $country        // Country Code
         );
 
         // Remove whitespace from all elements
@@ -107,7 +112,8 @@ foreach($farray as $key=>$string) {
                 'round'     =>  $round,         // Race Round
                 'title'     =>  $line,          // Track Title
                 'seconds'   =>  $duration,      // Track Length (sec)
-                'time'      =>  $datetime       // Playback DateTime 
+                'time'      =>  $datetime,      // Playback DateTime 
+                'flag'      =>  $country        // Country Code
             );
 
         // Remove whitespace from all elements
