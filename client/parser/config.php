@@ -3,10 +3,13 @@
 /**
  * Start Date/Time Creation
  */
-$date       = "2015-04-21";
-$time       = "20:00:00";
+$date       = "2015-04-22";
+$time       = "15:19:22";
 $datestart  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
 $datetrack  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
+$datecheck  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
+$datenow    = date_create('now', timezone_open('America/New_York'));
+//echo date_format($datenow, DATE_ISO8601) . '<br/><br/>';
 
 /**
  * Common substrings to remove from strings.
@@ -61,8 +64,8 @@ $removal = array(
     'Master', 'Chief', 'joho', 'LEGENDS THE BEST', 'snk-1', 'snk',
     'i5vv', 'AFG', 'LOL',
 
-    /* 
-        Miscellaneous
+    /*
+         Miscellaneous
     */
     'Full', 'Session', 'English', '(', ')', 
     'Hghlights', 'Highlights', 'Part', 'cd',

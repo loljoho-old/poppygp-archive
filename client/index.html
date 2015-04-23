@@ -12,55 +12,40 @@
     <link href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css" rel="stylesheet" />
 
     <!-- Style à la Compiled Scss -->
-    <link href="./styles/build/main.css" rel="stylesheet" />
-    <link href="./styles/build/icons.css" rel="stylesheet" />
-    <link href="./styles/build/iframe.css" rel="stylesheet" />
-    <link href="./styles/build/toolbar.css" rel="stylesheet" />
-    <link href="./styles/build/sidenav.css" rel="stylesheet" />
-    <link href="./styles/build/components.css" rel="stylesheet" />
-    <link href="./styles/build/content.css" rel="stylesheet" />
+    <link href="./styles/build/main.css"        rel="stylesheet" />
+    <link href="./styles/build/icons.css"       rel="stylesheet" />
+    <link href="./styles/build/iframe.css"      rel="stylesheet" />
+    <link href="./styles/build/toolbar.css"     rel="stylesheet" />
+    <link href="./styles/build/sidenav.css"     rel="stylesheet" />
+    <link href="./styles/build/components.css"  rel="stylesheet" />
+    <link href="./styles/build/content.css"     rel="stylesheet" />
 </head>
 
 <body layout="column" data-ng-controller="View as vm">
 
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <span flex hide-gt-sm></span>
-            <span>
-                <svg height="32" width="30">
-                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
-                </svg>
-                <svg height="32" width="30">
-                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
-                </svg>
-                <svg height="32" width="30">
-                  <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
-                </svg>
-            </span>
-            <h2>poppyGP</h2>
-            <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.toggleSidenav('right');" aria-label="Menu">
-                <md-icon md-svg-icon="navbar"></md-icon>
-            </md-button>
-            <span flex hide-sm></span>
-        </div>
-    </md-toolbar>
+    <header layout="row" 
+        data-ng-controller="Toolbar as vm" 
+        data-ng-include="'./app/layout/toolbar.html'">
+    </header>
 
-
-    <main layout="row" layout-wrap>
+    <main layout="row">
 
         <section flex hide-md
             data-ng-include="'./app/layout/col.html'">
         </section>
 
-        <!--<section flex="66" flex-md="75" flex-sm="100" -->
         <section flex="65" flex-md="70" flex-sm="100" 
             data-ng-include="'./app/layout/main.html'">
         </section>
         
-        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" flex="30">
+        <md-sidenav class="md-sidenav-right" 
+                    md-component-id="right" 
+                    md-is-locked-open="$mdMedia('gt-sm')"
+                    flex="30"
+                    layout="column">
             <md-toolbar>
-                <div class="md-toolbar-tools" data-ng-click="vm.toggleSidenav('right');">
-                    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.close();" aria-label="Hide">
+                <div class="md-toolbar-tools" data-ng-click="vm.toggleSidenav();">
+                    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.toggleSidenav();" aria-label="Hide">
                         <md-icon md-svg-icon="arrow-right"></md-icon>
                     </md-button>
                     <span flex hide-gt-sm></span>
@@ -105,15 +90,15 @@
     <!-- Layout Module -->
     <script src="./app/layout/layout.module.js"></script>
     <script src="./app/layout/view.js"></script>
+    <script src="./app/layout/toolbar.js"></script>
 
     <!-- Playlist Module -->
     <script src="./app/playlist/playlist.module.js"></script>
-    <script src="./app/playlist/schedule.ctrl.js"></script>
-    <script src="./app/playlist/trackFilter.js"></script>
+    <script src="./app/playlist/schedule.js"></script>
 
     <!-- Content Module -->
     <script src="./app/content/content.module.js"></script>
-    <script src="./app/content/tabs.ctrl.js"></script>
+    <script src="./app/content/tabs.js"></script>
 
 </body>
 </html>

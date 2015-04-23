@@ -78,48 +78,49 @@ foreach($farray as $key=>$string) {
     $extra = array($year, $round);
     $line = str_ireplace(array($year, $round), '', $line);
     // ENDOF
-    
-/*
-    echo $year;
-    echo ' - ';
-    echo $round;
-    echo ' ';
-    echo ' - ';
-    echo $line;
-    echo ' (' . $duration . ' sec)';
 
-    // Extract round (01-09 or 1-20) via RegEx
-    $pattern = "([Round|Rnd|R][012]\d|[012]\d|\d)";
-    $pattern = "";
-    preg_match_all($pattern, $string, $matches);
-    $track_round    = $matches[0];
-    print_r($matches);
-    echo $track_round . '  -  ' . $string;
-*/
-
-    
-    //$playlist = array_map('trim', $tracks);
-
-/**
- * Format DateTime as string
- */
+    /**
+     * Format DateTime as string
+     */
     $datetime = date_format($datetrack, DATE_ISO8601);
 
-    $track = array(
-        'year'      =>  $year,          // Race Year
-        'round'     =>  $round,         // Race Round
-        'title'     =>  $line,          // Track Title
-        'seconds'   =>  $duration,      // Track Length (sec)
-        'time'      =>  $datetime       // Playback DateTime 
-    );
+    // Create track array only if in future
+    if($datenow <= $datetrack) {
+
+        $track = array(
+            'year'      =>  $year,          // Race Year
+            'round'     =>  $round,         // Race Round
+            'title'     =>  $line,          // Track Title
+            'seconds'   =>  $duration,      // Track Length (sec)
+            'time'      =>  $datetime       // Playback DateTime 
+        );
+
+        // Remove whitespace from all elements
+        $track = array_map('trim', $track);
+
+        $tracks[] = $track;
+    }
+    
+    else {
+        $current = array(
+                'year'      =>  $year,          // Race Year
+                'round'     =>  $round,         // Race Round
+                'title'     =>  $line,          // Track Title
+                'seconds'   =>  $duration,      // Track Length (sec)
+                'time'      =>  $datetime       // Playback DateTime 
+            );
+
+        // Remove whitespace from all elements
+        $current = array_map('trim', $current);
+
+    }
 
     // Add DateInterval to DateTime pointer
     date_add($datetrack, $interval);
-
-    // Remove whitespace from all elements
-    $track = array_map('trim', $track);
-
-    $tracks[] = $track;
 }
 
-echo json_encode($playlist, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
+// Tack the current track onto beginning!
+array_unshift($tracks, $current);
+
+// Print JSON_ENCODE object
+echo json_encode($tracks, JSON_FORCE_OBJECT);

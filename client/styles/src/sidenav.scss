@@ -1,8 +1,15 @@
 md-sidenav  {
-    background-color: #f0f0f0; 
     &.md-locked-open {
       width: auto;
     }
+
+    #playlist {
+        background-color: #ffffff; 
+    }
+}
+
+md-sidenav.md-locked-open[flex] {
+    flex: 0 0 
 }
 
 md-sidenav.md-locked-open[flex="10"],
