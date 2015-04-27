@@ -2,7 +2,8 @@
     'use strict';
 
     var core = angular.module('gpApp.core');
-    core.config(ThemeConfig)
+    core
+        .config(ThemeConfig)
         .config(IconConfig);
 
     var config = {
@@ -10,12 +11,6 @@
     };
     core.value('config', config);
     
-    /**
-     * Configuration for Angular Material
-     *
-     * @param   $mdThemingProvider
-     * @param   $mdIconProvider
-     */
     function ThemeConfig($mdThemingProvider) {
         $mdThemingProvider.definePalette('gpqueryPalette', {
             '50':   '2a2a2a',

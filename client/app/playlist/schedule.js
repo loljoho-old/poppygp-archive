@@ -15,32 +15,10 @@
         ////////////
 
         function activate() {
-            return dataservice.schedule()
-            //return dataservice.test()
-            .then(function(response) {
+            return dataservice.schedule().then(function(response) {
                 vm.schedule = response;
                 return vm.schedule;
             });
         }
-
-        //activate();
-
-        ////////////
-
-/*
-        function activate() {
-            return getSchedule.then(function() {
-                $log.info('Activated Schedule view...');
-            });
-        }
-
-        function getSchedule() {
-            return dataservice.getSchedule().then(function(response) {
-                vm.schedule = response;
-                return vm.schedule;
-            })
-        }
-*/
-
     }
 })();

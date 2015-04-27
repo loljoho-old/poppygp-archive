@@ -3,12 +3,7 @@
 
     angular.module('gpApp.core', [
             // Angular Modules
-            'ngAnimate', 
-            'ngAria', 
-            'ngResource',
-            'ngMaterial',
-            'ngSanitize'
-
+            'ngAnimate', 'ngAria', 'ngResource', 'ngMaterial'
             // Third-Party Modules
         ]); 
 })();

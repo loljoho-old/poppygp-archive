@@ -3,8 +3,8 @@
 /**
  * Start Date/Time Creation
  */
-$date       = "2015-04-22";
-$time       = "15:19:22";
+$date       = "2015-04-27";
+$time       = "13:39:26";
 $datestart  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
 $datetrack  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
 $datecheck  = date_create($date . 'T' . $time, timezone_open('America/New_York'));
@@ -15,6 +15,11 @@ $datenow    = date_create('now', timezone_open('America/New_York'));
  * Common substrings to remove from strings.
  */ 
 $removal = array(
+    /*
+        Weird Stuff
+    */
+    'adatbazis com', 'SuperS',
+
     /*
         General Stuff
     */
@@ -43,6 +48,7 @@ $removal = array(
     'VHSRip', 'VHS-Rip', 'VHS',
     'DVDRip', 'DVD-Rip', 'DVD',
     'WebRip', 'Web-Rip', 'Web',
+    'HDTV', 'PDTV', '1080p', '720p', '1080i',
     'Rip', 'Live', 
         
     /*
@@ -54,20 +60,20 @@ $removal = array(
     'SkySportsF1HD', 'SkySportsF1', 'SkySportsHD', 
     'SkySports', 'Sky', 'Sports', 'SportHD', 'SporHD',
     'Canal+', 'Canal', 'ORM', 'CH9',
-    'TSN', 'NBCSport', 'NBC', 'Setanta',
-    'FOM', 'FOF', 'FIA',
+    'TSN', 'NBCSport', 'NBC', 'Setanta', 'RTL',
+    'FOM', 'FOF', 'FIA', 
         
     /*
         Encoders
      */
     'DaRmEtH', 'opiates', 'Veetle', 'Nub', 
     'Master', 'Chief', 'joho', 'LEGENDS THE BEST', 'snk-1', 'snk',
-    'i5vv', 'AFG', 'LOL',
+    'i5vv', 'AFG', 'LOL', 'lightspeed',
 
     /*
          Miscellaneous
     */
-    'Full', 'Session', 'English', '(', ')', 
+    'Full', 'Session', 'English', '(', ')', 'German',
     'Hghlights', 'Highlights', 'Part', 'cd',
     'Round', 'Rnd'
 

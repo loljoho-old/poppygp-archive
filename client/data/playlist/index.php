@@ -3,6 +3,7 @@
 /**
  * Simple parser script for m3u and m3u8 playlists.
  */
+
 require 'config.php';
 
 $filename = 'playlist.m3u';
@@ -19,9 +20,6 @@ array_shift($farray);
 // Initialise array for tracks
 $tracks = array();
 
-// Create DateTime pointer from current DateTime
-//$datetime = $datestart->format("Y-m-d\THis\-0500");
-
 // Iterate
 foreach($farray as $key=>$string) {
 
@@ -34,9 +32,8 @@ foreach($farray as $key=>$string) {
     /**
      * Create DateInterval from extracted duration
      */
-    //$interval = DateInterval::createFromDateString($duration . ' seconds');
     $interval = date_interval_create_from_date_string($duration . ' seconds');
-    //$interval = date_interval_format($interval, "Y-m-d\THis\-0500");
+    // ENDOF
 
     /**
      * Use string functions to retrieve video title
@@ -87,8 +84,11 @@ foreach($farray as $key=>$string) {
      * Format DateTime as string
      */
     $datetime = date_format($datetrack, DATE_ISO8601);
+    // ENDOF
 
-    // Create track array only if in future
+    /**
+     * Create track array only if in future
+     */
     if($datenow <= $datetrack) {
 
         $track = array(
@@ -105,7 +105,11 @@ foreach($farray as $key=>$string) {
 
         $tracks[] = $track;
     }
+    // ENDOF
     
+    /**
+     * Keep track of last past race--this'll be the current track
+     */
     else {
         $current = array(
                 'year'      =>  $year,          // Race Year
@@ -118,8 +122,8 @@ foreach($farray as $key=>$string) {
 
         // Remove whitespace from all elements
         $current = array_map('trim', $current);
-
     }
+    // ENDOF
 
     // Add DateInterval to DateTime pointer
     date_add($datetrack, $interval);

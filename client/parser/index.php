@@ -128,5 +128,7 @@ foreach($farray as $key=>$string) {
 // Tack the current track onto beginning!
 array_unshift($tracks, $current);
 
+print_r($tracks);
+
 // Print JSON_ENCODE object
 echo json_encode($tracks, JSON_FORCE_OBJECT);
