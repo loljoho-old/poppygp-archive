@@ -19,27 +19,27 @@
                 {
                     title: 'Home',
                     icon: './assets/icons/home.svg',
-                    templateUrl: './assets/partials/tabs/Home.html'
+                    templateUrl: './assets/partials/tabs/home.html'
                 },
                 {
                     title: 'Chat',
                     icon: './assets/icons/webchat.svg',
-                    templateUrl: './assets/partials/tabs/Chat.html'
+                    templateUrl: './assets/partials/tabs/chat.html'
                 },
                 {
                     title: 'Help',
                     icon: './assets/icons/help.svg',
-                    templateUrl: './assets/partials/tabs/Help.html'
+                    templateUrl: './assets/partials/tabs/help.html'
                 },
                 {
                     title: 'Contact',
                     icon: './assets/icons/contact.svg',
-                    templateUrl: './assets/partials/tabs/Contact.html'
+                    templateUrl: './assets/partials/tabs/contact.html'
                 },
                 {
                     title: 'About',
                     icon: './assets/icons/about.svg',
-                    templateUrl: './assets/partials/tabs/About.html'
+                    templateUrl: './assets/partials/tabs/about.html'
                 }
             ];
             return vm.tabs;
