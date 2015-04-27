@@ -5,10 +5,10 @@
         .module('gpApp.layout')
         .controller('View', View);
 
-    View.$inject = ['$mdSidenav', '$sce', '$log', '$q'];
-    function View($mdSidenav, $sce, $log, $q) {
+    View.$inject = ['$mdSidenav', 'dataservice', '$log', '$q'];
+    function View($mdSidenav, dataservice, $log, $q) {
         var vm = this;
-        vm.showSidenav = true;
+        vm.title         = '';
         vm.toggleSidenav = toggleSidenav;
         vm.closeSidenav  = closeSidenav;
         vm.openSidenav   = openSidenav;
@@ -17,7 +17,10 @@
 
         ////////////
         function activate() {
-            
+            return dataservice.current().then(function(response) {
+                vm.title = response.year + ' ' + response.title;
+                return vm.title;
+            });
         }
 
         function toggleSidenav() {
