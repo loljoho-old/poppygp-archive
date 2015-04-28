@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "0.12"
+  - "0.11"
+  - "0.10"
+
+braches:
+  only:
+    - develop
+
+before_install:
+  - npm install bower -g
+  - npm install gulp -g
+
+script:
+  - npm install
+  - gulp
+
+cache:
+  directories:
+    - app/bower_components
+    - node_modules
+
+notifications:
+  email:
+    - joho1710@gmail.com
