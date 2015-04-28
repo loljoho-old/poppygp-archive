@@ -3,9 +3,9 @@
 ####################
 *ignore*
 server/
-client/parser/
+client/assets/partials/*/
+client/data/
 client/styles/build/
-client/README.md
 
 # bower and npm #
 #################

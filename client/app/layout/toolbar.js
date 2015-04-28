@@ -7,7 +7,7 @@
     Toolbar.$inject = ['$mdSidenav', '$mdDialog', '$log', '$q'];
     function Toolbar($mdSidenav, $mdDialog, $log, $q) {
         var vm = this;
-        vm.toggleSidenav = toggleSidenav;
+        vm.openSidenav  = openSidenav;
 
         activate();
 
@@ -15,10 +15,12 @@
 
         }
 
-        function toggleSidenav() {
-            $mdSidenav('right').toggle().then(function() {
-                $log.debug('Sidenav right toggled.');
-            });
+        function openSidenav() {
+            $mdSidenav('right')
+                .open()
+                .then(function() {
+                    $log.debug('Sidenav opened.');
+                });
         }
     }
 })();

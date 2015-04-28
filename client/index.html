@@ -23,26 +23,20 @@
 
 <body layout="column">
 
-    <header layout="row" 
-        data-ng-controller="Toolbar as vm" 
-        data-ng-include="'./app/layout/toolbar.html'">
+    <header layout="row" data-ng-controller="Toolbar as vm" data-ng-include="'./app/layout/toolbar.html'">
     </header>
 
     <main layout="row">
 
-        <section flex hide-md
-            data-ng-include="'./app/layout/col.html'">
+        <section flex hide-sm data-ng-include="'./app/layout/col.html'">
         </section>
 
-        <section flex="65" flex-md="70" flex-sm="100" 
-            data-ng-include="'./app/layout/main.html'">
+        <section flex="65" flex-md="70" flex-sm="100" data-ng-include="'./app/layout/main.html'">
         </section>
         
-        <md-sidenav class="md-sidenav-right" 
-                    md-component-id="right" 
-                    md-is-locked-open="$mdMedia('gt-sm')"
-                    flex="30"
-                    layout="column">
+        <!-- START: MD-SIDENAV -->
+        <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+
             <md-toolbar>
                 <div class="md-toolbar-tools" data-ng-click="vm.closeSidenav();">
                     <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.closeSidenav();" aria-label="Hide Schedule">
@@ -52,10 +46,12 @@
                     <h3>Schedule<small> (local time)</small></h3>
                 </div>
             </md-toolbar>
-            <md-content id="playlist" class="md-padding" 
-                data-ng-include="'./app/playlist/schedule.html'">
+
+            <md-content id="playlist" class="md-padding" data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
+
         </md-sidenav>
+        <!-- ENDOF: MD-SIDENAV -->
 
     </main>
 
