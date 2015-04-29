@@ -10,19 +10,17 @@ var paths       = require('./gulp.config.json');
  * Lint JavaScript
  */
 gulp.task('lint', function() {
-    return gulp
-        .src(paths.js)
+    return gulp.src(paths.js)
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
 /**
- * Compile/Inject Sass
+ * Compile Stylesheets
  */
 gulp.task('sass', function() {
-    return gulp
-        .src(paths.sass)
+    return gulp.src(paths.sass)
         .pipe($.sass())
         .pipe(gulp.dest(paths.css));
 });
