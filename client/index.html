@@ -19,7 +19,6 @@
     <link href="./styles/build/sidenav.css"     rel="stylesheet" />
     <link href="./styles/build/components.css"  rel="stylesheet" />
     <link href="./styles/build/content.css"     rel="stylesheet" />
-    <link href="./styles/build/buttons.css"     rel="stylesheet" />
 </head>
 
 <body layout="column">
@@ -37,17 +36,18 @@
         
         <!-- START: MD-SIDENAV -->
         <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+
             <md-toolbar>
-                <div class="md-toolbar-tools" data-ng-click="vm.closeSidenav()">
-                    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.closeSidenav()" aria-label="Hide Schedule">
+                <div class="md-toolbar-tools" data-ng-click="vm.closeSidenav();">
+                    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.closeSidenav();" aria-label="Hide Schedule">
                         <md-icon md-svg-icon="arrow-right"></md-icon>
                     </md-button>
                     <span flex></span>
-                    <h3>Schedule<small hide-md> (user time)</small></h3>
+                    <h3>Schedule<small> (local time)</small></h3>
                 </div>
             </md-toolbar>
 
-            <md-content id="playlist" class="md-whiteframe-z2 md-padding" data-ng-include="'./app/playlist/schedule.html'">
+            <md-content id="playlist" class="md-padding" data-ng-include="'./app/playlist/schedule.html'">
             </md-content>
 
         </md-sidenav>
