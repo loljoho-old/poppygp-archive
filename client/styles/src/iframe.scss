@@ -1,11 +1,10 @@
 
 .responsive-container {
 
-    .responsive-video {
+    .responsive-item {
 
         height: 0;
         overflow: hidden;
-        padding-bottom: 56.25%;
         position: relative;
 
     &.embed-21by9 { padding-bottom: 42.86%; }  
@@ -18,6 +17,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
             width: 100%;
             height: 100%;
 
