@@ -41,6 +41,9 @@
             'contrastDefaultColor': 'light',
             'contrastDarkColors'  : ['300', 'A100']
         });
+//      var gpWhiteMap  = $mdThemingProvider.extendPalette('grey', {
+//          'A100': ''
+//      })
 
         //
         // Register Colour Palette Maps
@@ -56,8 +59,8 @@
         $mdThemingProvider.theme('default')
             .primaryPalette('gpGrey')
             .accentPalette('gpRed')
-            .warnPalette('gpOrange')
-            .backgroundPalette('gpGrey');
+            .warnPalette('gpOrange');
+//          .backgroundPalette('gpWhite');
         /*
         $mdThemingProvider.definePalette('gpqueryPalette', {
             '50':   '2a2a2a',

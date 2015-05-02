@@ -12,7 +12,7 @@
     &.embed-4by3  { padding-bottom: 75.00%; }  
     &.embed-5by4  { padding-bottom: 80.00%; }  
         
-        iframe {
+        iframe, embed, object {
 
             position: absolute;
             top: 0;
