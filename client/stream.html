@@ -25,26 +25,53 @@
     <link href="./styles/build/buttons.css"     rel="stylesheet" />
 
     <style>
-        /*video { display: block; }*/
+    /*div.video-background-container {
+        position: relative;
+    }*/
+    .video.video-background {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+    }
     </style>
 
 </head>
 
-<body layout="column">
+<body layout="row">
 
+    <iframe class="video video-background" 
+        src="http://www.ustream.tv/embed/18630657?wmode=direct&showtitle=false" frameborder="0"></iframe>
+
+    <div layout="column" layout-fill layout-padding layout-margin flex="33">
+    </div>
+    <div layout="column" layout-fill layout-padding layout-margin flex>
+    </div>
+    <div layout="column" layout-fill layout-padding layout-margin flex="20">
+    </div>
+<!--
+    PAGE LAYOUT
+    row
+        col flex 33
+        col flex
+        col flex 20
+        
+
+
+
+<!--
     <header layout="row" data-ng-controller="Toolbar as vm" data-ng-include="'./app/layout/toolbar.html'">
     </header>
+-->
 
-    <main layout="row">
 
-        <section flex hide-sm data-ng-include="'./app/layout/col.html'">
-        </section>
 
-        <section flex="65" flex-md="70" flex-sm="100" data-ng-include="'./app/layout/main.html'">
-        </section>
-
-        
-        <!-- START: MD-SIDENAV -->
+<!--
         <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
             <md-toolbar>
                 <div class="md-toolbar-tools" data-ng-click="vm.closeSidenav()">
@@ -60,9 +87,9 @@
             </md-content>
 
         </md-sidenav>
-        <!-- ENDOF: MD-SIDENAV -->
+-->
 
-    </main>
+
 
     <!-- AngularJS Core -->
     <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
