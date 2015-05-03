@@ -32,7 +32,7 @@
         <section flex hide-sm data-ng-include="'./app/layout/col.html'">
         </section>
 
-        <section flex="65" flex-md="70" flex-sm="100" data-ng-include="'./app/layout/main.html'">
+        <section flex="65" flex-md="70" flex-sm="100" data-ng-controller="Video as vm" data-ng-include="'./app/layout/main.html'">
         </section>
 
         
@@ -90,6 +90,7 @@
     <script src="./app/layout/layout.module.js"></script>
     <script src="./app/layout/view.js"></script>
     <script src="./app/layout/toolbar.js"></script>
+    <script src="./app/layout/video.js"></script>
 
     <!-- Playlist Module -->
     <script src="./app/playlist/playlist.module.js"></script>
