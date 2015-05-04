@@ -2,28 +2,73 @@
     'use strict';
 
     var core = angular.module('gpApp.core');
-    core.config(ThemeConfig)
-        .config(IconConfig);
-
-    var config = {
-        title: 'Page Title'   
-    };
-    core.value('config', config);
+    core
+        .config(mdThemeConfig)
+        .config(mdIconConfig);
     
-    /**
-     * Configuration for Angular Material
-     *
-     * @param   $mdThemingProvider
-     * @param   $mdIconProvider
-     */
-    function ThemeConfig($mdThemingProvider) {
+    //
+    // Configure Angular-Material Theme
+    //
+    function mdThemeConfig($mdThemingProvider) {
+
+        //
+        // Extend Existing Colour Themes
+        //  http://paletton.com/
+        //
+        var gpGreyMap   = $mdThemingProvider.extendPalette('grey', {
+            '300':  'e5e5e5',
+            '500':  '333333',
+            '800':  '424242',
+            'A100': 'd3d3d3',
+            'contrastDefaultColor': 'light',
+            'contrastDarkColors'  : ['300', 'A100']
+        });
+        var gpRedMap    = $mdThemingProvider.extendPalette('red', {
+            '300':  'ff2e2e',
+            '500':  'e90000',
+            //'800':  'bb0000',
+            '800':  '910000',
+            'A100': 'ff5a5a',
+            'contrastDefaultColor': 'light',
+            'contrastDarkColors'  : ['300', 'A100']
+        });
+        var gpOrangeMap = $mdThemingProvider.extendPalette('orange', {
+            '300':  'feb360',
+            '500':  'e89538',
+            //'800':  'c87415',
+            '800':  '9f5605',
+            'A100': 'ffc889',
+            'contrastDefaultColor': 'light',
+            'contrastDarkColors'  : ['300', 'A100']
+        });
+//      var gpWhiteMap  = $mdThemingProvider.extendPalette('grey', {
+//          'A100': ''
+//      })
+
+        //
+        // Register Colour Palette Maps
+        //
+        $mdThemingProvider
+            .definePalette('gpGrey',    gpGreyMap   )
+            .definePalette('gpRed',     gpRedMap    )
+            .definePalette('gpOrange',  gpOrangeMap );
+
+        //
+        // Configure Default Theme Palettes
+        //
+        $mdThemingProvider.theme('default')
+            .primaryPalette('gpGrey')
+            .accentPalette('gpRed')
+            .warnPalette('gpOrange');
+//          .backgroundPalette('gpWhite');
+        /*
         $mdThemingProvider.definePalette('gpqueryPalette', {
             '50':   '2a2a2a',
             '100':  '2a2a2a',
             '200':  'e5e5e5',
             '300':  'e5e5e5',
             '400':  '333333',
-            '500':  '333333',
+            '500':  '333333',   // .md-default-theme
             '600':  '333333',
             '700':  '424242',
             '800':  '424242',
@@ -38,12 +83,13 @@
             // Shades: 500, 300, 800, A100
             .primaryPalette('gpqueryPalette')
             // Shades: 400, 300, 800, A100
-            .accentPalette('orange')
+            .accentPalette('deep-purple')
             // Shades: 500, 300, 800, A100
             .warnPalette('red');
+        */
     }
 
-    function IconConfig($mdIconProvider) {
+    function mdIconConfig($mdIconProvider) {
         $mdIconProvider
             // Navigation Icons
             .icon('more-h',         './assets/icons/more-h.svg')

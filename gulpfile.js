@@ -10,23 +10,19 @@ var paths       = require('./gulp.config.json');
  * Lint JavaScript
  */
 gulp.task('lint', function() {
-    return gulp
-        .src(paths.js)
+    return gulp.src(paths.js)
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
-        .pipe($.if(!browserSync.active, $.jshint.reporter('fail')))
-        .pipe(reload({stream: true, once: true}));
+        .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
 /**
- * Compile/Inject Sass
+ * Compile Stylesheets
  */
 gulp.task('sass', function() {
-    return gulp
-        .src(paths.sass)
+    return gulp.src(paths.sass)
         .pipe($.sass())
-        .pipe(gulp.dest(paths.css))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(paths.css));
 });
 
 /**
@@ -35,7 +31,7 @@ gulp.task('sass', function() {
 gulp.task('serve', function() {
 
     browserSync({
-        server: ['./client'],   //, './server'],
+        server: ['./client'],
         notify: false,
         reloadDelay: 1500
     });
@@ -47,18 +43,9 @@ gulp.task('serve', function() {
  */
 gulp.task('watch', ['sass', 'lint'], function() {
 
-
-    gulp
-        .watch(paths.html)
-        .on('change', reload);
-
-    gulp
-        .watch(paths.sass, ['sass'])
-        .on('change', reload);
-
-    gulp
-        .watch(paths.js, ['lint'])
-        .on('change', reload);
+    gulp.watch(paths.html, reload);
+    gulp.watch(paths.sass, ['sass', reload]);
+    gulp.watch(paths.js, ['lint', reload]);
 });
 
 /**

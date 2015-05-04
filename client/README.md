@@ -2,6 +2,13 @@
 
 > A community-centered video stream and webchat single-page AngularJS web application.
 
+## About
+
+ - [AngularJS](//angularjs.org)
+ - [Material Design for Angular](//material.angularjs.org)
+ - [Ergast Developer API](ergast.com/mrd/) 
+ - [KiwiIRC](//kiwiirc.com)
+
 ## TODO
 
 ### Features

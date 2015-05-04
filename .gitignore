@@ -2,12 +2,11 @@
 # GLOBAL GITIGNORE #
 ####################
 *ignore*
-data/
 server/
-client/parser/README.MD
-client/styles/build/
-client/parser/test.json
 client/README.md
+client/assets/partials/*/
+client/data/
+client/styles/build/
 
 # bower and npm #
 #################

@@ -5,10 +5,9 @@
             // Angular Modules
             'ngAnimate', 
             'ngAria', 
-            'ngResource',
-            'ngMaterial',
-            'ngSanitize'
-
+            'ngResource', 
+            //'ngRoute',
+            'ngMaterial'
             // Third-Party Modules
         ]); 
 })();

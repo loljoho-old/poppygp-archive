@@ -1,6 +1,7 @@
 {
    "client":            "./client/",
    "html":              "./client/**/*.html",
+   "php":               "./data/**/*.php",
    "htmltemplates":     "./client/app/**/*.html",
    "sass":              "./client/styles/src/*.scss",
    "css":               "./client/styles/build/",

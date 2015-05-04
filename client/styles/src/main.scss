@@ -1,25 +1,19 @@
 html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    height: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 0;
     overflow-x: hidden;
     background-color: #f0f0f0;
 }
-
-footer {
-    background-color:#333333;
-
-    section {
-        background-color:#333333;
-
-    }
+body {
 }
+
 
 main {
 
     background-color: #f0f0f0;
+    max-height: 100vh;
 
     section {
 

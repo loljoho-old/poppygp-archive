@@ -19,26 +19,27 @@
                 {
                     title: 'Home',
                     icon: './assets/icons/home.svg',
-                    templateUrl: './app/content/tabHome.html'
-                    // action: home
+                    templateUrl: './assets/partials/tabs/home.html'
                 },
                 {
                     title: 'Chat',
                     icon: './assets/icons/webchat.svg',
-                    templateUrl: './app/content/tabChat.html'
-                    // communication: chat
+                    templateUrl: './assets/partials/tabs/chat.html'
                 },
                 {
                     title: 'Help',
                     icon: './assets/icons/help.svg',
-                    templateUrl: './app/content/tab3.html'
-                    // action: help
+                    templateUrl: './assets/partials/tabs/help.html'
+                },
+                {
+                    title: 'Contact',
+                    icon: './assets/icons/contact.svg',
+                    templateUrl: './assets/partials/tabs/contact.html'
                 },
                 {
                     title: 'About',
                     icon: './assets/icons/about.svg',
-                    templateUrl: './app/content/tabAbout.html'
-                    // action: settings
+                    templateUrl: './assets/partials/tabs/about.html'
                 }
             ];
             return vm.tabs;

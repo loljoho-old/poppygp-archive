@@ -1,11 +1,12 @@
 md-sidenav  {
-    &.md-locked-open {
-      width: auto;
-    }
-
-    #playlist {
-        background-color: #ffffff; 
-    }
+  &.md-locked-open {
+    min-width: 128px;
+    max-width: 560px;
+    width: auto;
+  }
+  #playlist {
+    background-color: #ffffff; 
+  }
 }
 
 md-sidenav.md-locked-open[flex="10"],
@@ -15,10 +16,10 @@ md-sidenav.md-locked-open[flex-lg="10"],
 md-sidenav.md-locked-open[flex-gt-sm="10"],
 md-sidenav.md-locked-open[flex-gt-md="10"],
 md-sidenav.md-locked-open[flex-gt-lg="10"] {
-    flex: 0 0 10%;
-    width:    10%;
-    min-width:10%;
-    max-width:10%;
+  flex: 0 0 10%;
+  width:  10%;
+  min-width:10%;
+  max-width:10%;
 }
 
 md-sidenav.md-locked-open[flex="15"],
@@ -29,10 +30,10 @@ md-sidenav.md-locked-open[flex-lg="15"],
 md-sidenav.md-locked-open[flex-gt-sm="15"],
 md-sidenav.md-locked-open[flex-gt-md="15"],
 md-sidenav.md-locked-open[flex-gt-lg="15"] {
-    flex: 0 0 15%;
-    width:    15%;
-    min-width:15%;
-    max-width:15%;
+  flex: 0 0 15%;
+  width:  15%;
+  min-width:15%;
+  max-width:15%;
 }
 
 
@@ -43,10 +44,10 @@ md-sidenav.md-locked-open[flex-lg="20"],
 md-sidenav.md-locked-open[flex-gt-sm="20"],
 md-sidenav.md-locked-open[flex-gt-md="20"],
 md-sidenav.md-locked-open[flex-gt-lg="20"] {
-    flex: 0 0 20%;
-    width:    20%;
-    min-width:20%;
-    max-width:20%;
+  flex: 0 0 20%;
+  width:  20%;
+  min-width:20%;
+  max-width:20%;
 }
 
 md-sidenav.md-locked-open[flex="25"],
@@ -56,10 +57,10 @@ md-sidenav.md-locked-open[flex-lg="25"],
 md-sidenav.md-locked-open[flex-gt-sm="25"],
 md-sidenav.md-locked-open[flex-gt-md="25"],
 md-sidenav.md-locked-open[flex-gt-lg="25"]{
-    flex: 0 0 25%;
-    width:    25%;
-    min-width:25%;
-    max-width:25%;
+  flex: 0 0 25%;
+  width:  25%;
+  min-width:25%;
+  max-width:25%;
 }
 
 md-sidenav.md-locked-open[flex="30"],
@@ -69,10 +70,10 @@ md-sidenav.md-locked-open[flex-lg="30"],
 md-sidenav.md-locked-open[flex-gt-sm="30"],
 md-sidenav.md-locked-open[flex-gt-md="30"],
 md-sidenav.md-locked-open[flex-gt-lg="30"]{
-    flex: 0 0 30%;
-    width:    30%;
-    min-width:30%;
-    max-width:30%;
+  flex: 0 0 30%;
+  width:  30%;
+  min-width:30%;
+  max-width:30%;
 }
 
 md-sidenav.md-locked-open[flex="35"],
@@ -82,10 +83,10 @@ md-sidenav.md-locked-open[flex-lg="35"],
 md-sidenav.md-locked-open[flex-gt-sm="35"],
 md-sidenav.md-locked-open[flex-gt-md="35"],
 md-sidenav.md-locked-open[flex-gt-lg="35"]{
-    flex: 0 0 35%;
-    width:    35%;
-    min-width:35%;
-    max-width:35%;
+  flex: 0 0 35%;
+  width:  35%;
+  min-width:35%;
+  max-width:35%;
 }
 
 md-sidenav.md-locked-open[flex="33"],
@@ -95,8 +96,8 @@ md-sidenav.md-locked-open[flex-lg="33"],
 md-sidenav.md-locked-open[flex-gt-sm="33"],
 md-sidenav.md-locked-open[flex-gt-md="33"],
 md-sidenav.md-locked-open[flex-gt-lg="33"]{
-    flex: 0 0 33%;
-    width:    33%;
-    min-width:33%;
-    max-width:33%;
+  flex: 0 0 33%;
+  width:  33%;
+  min-width:33%;
+  max-width:33%;
 }
