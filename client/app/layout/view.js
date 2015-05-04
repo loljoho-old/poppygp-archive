@@ -5,10 +5,14 @@
         .module('gpApp.layout')
         .controller('View', View);
 
-    View.$inject = ['$mdSidenav', 'dataservice', '$log', '$q'];
-    function View($mdSidenav, dataservice, $log, $q) {
+    View.$inject = ['$mdSidenav', '$mdMedia', 'dataservice', '$log', '$q'];
+    function View($mdSidenav, $mdMedia, dataservice, $log, $q) {
         var vm = this;
         vm.title         = '';
+        vm.isFullscreen  = false;
+        vm.sidenavLock   = sidenavLock;
+        vm.fullscreen    = toggleFullscreen;
+
         vm.toggleSidenav = toggleSidenav;
         vm.closeSidenav  = closeSidenav;
         vm.openSidenav   = openSidenav;
@@ -23,6 +27,17 @@
                     vm.title = response.year + ' ' + response.title;
                     return vm.title;
                 });
+        }
+
+        function sidenavLock() {
+            return $mdMedia('gt-sm') && !vm.isFullscreen ? true : false;
+        }
+        function toggleFullscreen() {
+            var pending = vm.isFullscreen = !vm.isFullscreen || $q.when(true);
+            pending.then(function() {
+                $mdSidenav('right').close();
+            });
+            return vm.isfullscreen;
         }
 
         function toggleSidenav() {
