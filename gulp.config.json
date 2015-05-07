@@ -3,7 +3,7 @@
    "html":              "./client/**/*.html",
    "php":               "./data/**/*.php",
    "htmltemplates":     "./client/app/**/*.html",
-   "sass":              "./client/styles/src/*.scss",
+   "sass":              "./client/styles/src/**/*.scss",
    "css":               "./client/styles/build/",
    "js": [
                         "./client/app/app.module.js",
