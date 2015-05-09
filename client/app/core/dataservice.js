@@ -8,7 +8,7 @@
     function dataservice($resource) {
         var service = {
             schedule    : getSchedule,
-            current     : getCurrentTrack
+            current     : getCurrent
         };
         return service;
 
@@ -19,9 +19,16 @@
                 return errorMsg;
             });
         }
-        function getCurrentTrack() {
+        function getCurrent() {
             return $resource('./data/playlist/').get().$promise.then(function(response) {
                 return response[0];
+            }, function(errorMsg) {
+                return errorMsg;
+            });
+        }
+        function getPrevious() {
+            return $resource('./data/playlist/').get().$promise.then(function(response) {
+                return response[-1];
             }, function(errorMsg) {
                 return errorMsg;
             });

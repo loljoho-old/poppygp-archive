@@ -16,6 +16,7 @@
         activate();
 
         ////////////
+
         function activate() {
             return dataservice
                 .current()
