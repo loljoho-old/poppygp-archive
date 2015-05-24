@@ -29,21 +29,39 @@
 
     <main layout="row">
 
-        <section flex hide-sm data-ng-include="'./app/layout/col.html'">
+        <section flex hide-sm data-ng-include="'./app/layout/col.html'"></section>
+
+        <section flex="60" flex-sm="100" data-ng-controller="Video as vm">
+            <md-content>
+                <div class="responsive-container">
+                    <div class="responsive-item embed-16by9" data-ng-include="'./assets/partials/iframe/video.html'">
+                    </div>
+                </div>
+                <md-toolbar class="video-toolbar" style="position:absolute; top:0; left:0; right:0; background-color:transparent; border:0 none transparent; box-shadow:none;">
+                    <div class="md-toolbar-tools">
+                        <span flex></span>
+                        <md-button class="md-icon-button" aria-label="Donate" data-ng-click="vm.openDonate($event)">
+                            <md-icon md-svg-src="./assets/icons/paypal.svg"></i>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+            </md-content>
         </section>
 
-        <section flex="65" flex-md="70" flex-sm="100" data-ng-controller="Video as vm" data-ng-include="'./app/layout/main.html'">
+        <section flex="33" hide-sm data-ng-controller="Tabs as vm">
+            <md-toolbar></md-toolbar>
+            <md-content data-ng-include="'./app/content/tabs.html'"></md-content>
         </section>
+<!--
+        <section flex="30" hide-sm data-ng-controller="Playlist as vm" data-ng-include="'./app/playlist/playlist.html'"></section>
+-->
+        <section flex hide-sm data-ng-include="'./app/layout/col.html'"></section>
 
-        <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+        <md-sidenav class="md-sidenav-right" md-component-id="right">
             <md-toolbar>
                 <div class="md-toolbar-tools" data-ng-click="vm.closeSidenav()">
                     <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.closeSidenav()" aria-label="Hide Schedule">
                         <md-icon md-svg-icon="arrow-right"></md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Twitter" href="//twitter.com/poppyGrandPrix" title="Twitter" target="_blank" class="md-icon-button launch">
-                        <md-tooltip>Stream Status/Updates</md-tooltip>
-                        <md-icon md-svg-src="./assets/icons/twitter.svg"></md-icon>
                     </md-button>
                     <span flex></span>
                     <h3>Schedule<small hide-md> (user time)</small></h3>
@@ -68,7 +86,6 @@
     <script src="//code.angularjs.org/1.4.0-rc.0/angular-aria.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
 
-    <!-- Moment.js -->
 
     <!-- Main App Module -->
     <script src="./app/app.module.js"></script>
@@ -91,6 +108,7 @@
     <!-- Playlist Module -->
     <script src="./app/playlist/playlist.module.js"></script>
     <script src="./app/playlist/schedule.js"></script>
+    <script src="./app/playlist/playlist.js"></script>
 
     <!-- Content Module -->
     <script src="./app/content/content.module.js"></script>

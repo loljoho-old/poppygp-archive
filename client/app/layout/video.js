@@ -4,9 +4,11 @@
     angular.module('gpApp.layout')
         .controller('Video', Video);
 
-    Video.$inject = ['$log', '$q'];
-    function Video($log, $q) {
+    Video.$inject = ['$mdDialog', '$log', '$q'];
+    function Video($mdDialog, $log, $q) {
         var vm = this;
+        vm.openDonate   = openDonate;
+        vm.hideDonate   = hideDonate;
         vm.openMenu     = openMenu;
         
         vm.menuOptions  = [
@@ -21,6 +23,17 @@
 
         }
 
+        function openDonate(event) {
+            $mdDialog.show({
+                controller: 'Donate',
+                controllerAs: 'vm',
+                templateUrl: './app/layout/donate.html',
+                targetEvent: event,
+            });
+        }
+        function hideDonate() {
+            $mdDialog.hide();
+        }
         
         function openMenu() {
             $log.debug('Hacked dropdown menu opened.');
