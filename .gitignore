@@ -4,6 +4,7 @@
 ignore/
 *ignore*
 dist/
+docs/
 
 # bower and npm #
 #################

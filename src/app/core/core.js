@@ -3,12 +3,15 @@
 
 angular
   .module('poppyGP.core', [
-    'ngAnimate', 
-    'ngCookies', 
-    'ngTouch', 
-    'ngResource', 
-    'ui.router', 
-    'ngMaterial'
+    // Angular Modules
+    'ngAnimate', 'ngResource', 'ngMaterial', //'ngCookies', 'ngTouch', 
+
+    // Cross-App Modules
+    
+
+    // Third-Party Modules
+    'ui.router'//, 'nvd3', 'angular-moment'
+
   ]);
   
 })();
