@@ -1,12 +1,9 @@
 ####################
 # GLOBAL GITIGNORE #
 ####################
+ignore/
 *ignore*
-server/
-client/README.md
-client/assets/partials/*/
-client/data/
-client/styles/build/
+dist/
 
 # bower and npm #
 #################
@@ -33,8 +30,9 @@ node_modules
 # Miscellaneous #
 #################
 !.gitkeep
-tmp
-.DS_STORE
+.sass-cache/
+.tmp/
+.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
@@ -44,3 +42,4 @@ Thumbs.db
 .idea
 app/jspm_packages
 *.lnk
+tmp
