@@ -4,7 +4,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('poppyGP.core'));
+  beforeEach(module('poppyGP.view'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();
@@ -13,7 +13,7 @@ describe('controllers', function(){
   it('should define more than 5 awesome things', inject(function($controller) {
     expect(scope.awesomeThings).toBeUndefined();
 
-    $controller('CoreCtrl', {
+    $controller('ViewCtrl', {
     });
 
     expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
