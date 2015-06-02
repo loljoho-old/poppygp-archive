@@ -5,7 +5,9 @@ angular
   .module('poppyGP', [
 
     'poppyGP.core',
-    'poppyGP.components'
+    'poppyGP.components',
+
+    'poppyGP.view'
 
   ]);
 

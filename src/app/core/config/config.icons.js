@@ -14,7 +14,7 @@
   core.run(iconRun);
 
   /* @ngInject */
-  function iconRun($http, $templateCache) {
+  function iconRun() {
 
   }
 
