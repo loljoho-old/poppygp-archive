@@ -6,6 +6,7 @@ angular.module('poppyGP.core', [
   'ngResource', 
   'ngMaterial', 
   'ui.router',
+  'firebase',
   'angularMoment'
   ]);
     //'ngCookies', 'ngTouch', 'nvd3', 'angular-moment']);

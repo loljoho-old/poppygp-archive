@@ -9,17 +9,24 @@ function coreService($resource) {
 
   // Default URL Template String
   // ------------------------
-  var url = 'assets/data/data.json';
+  var url = 'assets/data/:file.json';
 
   // Default URL Parameters
   // ------------------------
   var params  = { 
-    
+    file: '@file'
   };
 
   // Custom HTTP Actions
   // ------------------------
-  var actions = {};
+  var actions = {
+    'ustream': {
+      method: 'GET',
+      url: 'assets/data/streams.json',
+      isArray: false,
+      cache: false
+    }
+  };
 
   // Return
   // ------------------------
