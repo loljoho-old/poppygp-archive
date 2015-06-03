@@ -5,6 +5,7 @@ ignore/
 *ignore*
 dist/
 docs/
+src/assets/data/*.json
 
 # bower and npm #
 #################
