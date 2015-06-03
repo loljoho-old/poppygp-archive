@@ -1,91 +1,26 @@
-<header ng-include="'app/components/navbar/navbar.html'">
-</header>
+<div layout="column" flex>
+  <md-toolbar>
+  </md-toolbar>
+</div>
 
-<main layout="row">
-  <section layout="column" flex>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-      </div>
-    </md-toolbar>
-  </section>
-  <section layout="column" flex="75">
-
-  </section>
-  <section layout="column" flex>
-    <md-toolbar></md-toolbar>
-  </section>
-
-</main>
-<!--
-<header id="site-header"
-        ng-include="'app/components/navbar/navbar.html'">
-</header>
-
-<main id="site-main"
-      layout="row" layout-fill>
-
-  <section flex=>
-    <md-toolbar></md-toolbar>
-  </section>
-
-  <section id="wrap-video"
-           flex="60">
-  </section>
-  
-  <section flex>
-    <md-toolbar></md-toolbar>
-  </section>
-
-  <section id="wrap-chat"
-           flex="25">
-  </section>
-
-  <section flex>
-    <md-toolbar></md-toolbar>
-  </section>
-
+<main layout="column" flex="50">
+  <iframe class="site-player" src="http://www.ustream.tv/embed/20560397?wmode=direct&amp;showtitle=false" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe>
 </main>
 
-      layout="row" layout-fill
-      style="background-color:#222222;">
-x
+<div layout="column" flex>
+  <md-toolbar>
+  </md-toolbar>
+</div>
 
-  <div layout="vertical" layout-fill>
+<section layout="column" flex="15">
 
-    <md-content>
+</section>
 
-      <section class="jumbotron">
-        <h1>JUMBO</h1>
-        <p class="lead">
-          <img alt="J-J-J-JUMBO"><br>
-          ...tron.
-        </p>
-        <p><a class="btn" ng-href="#">Splendid!</a></p>
-      </section>
+<div layout="column" flex>
+  <md-toolbar>
+  </md-toolbar>
+</div>
 
-      <div class="techs" layout-align="center">
-        <md-card ng-repeat="awesomeThing in vm.awesomeThings | orderBy:'rank'">
-          <div class="thumbnail">
-            <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-            <div class="caption">
-              <h3>{{awesomeThing.title}}</h3>
-              <p>{{awesomeThing.description}}</p>
-              <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-            </div>
-          </div>
-        </md-card>
-      </div>
-      <footer>
-        <md-toolbar layout="row" layout-align="center center">
-          <p>Footer footer footer, footer footer; footer footer--footer, footer.</p>
-        </md-toolbar>
-      </footer>
-    </md-content>
-
-  </div>
-
-
-</main>
-<footer id="site-footer">
-</footer>
--->
+<nav layout="column"
+     ng-include="'app/components/sidebar/sidebar.html'">
+</nav>
