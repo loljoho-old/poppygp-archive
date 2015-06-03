@@ -1,28 +1,21 @@
-<md-content layout="column" layout-fill ng-controller="NavbarCtrl">
+<header ng-include="'app/components/navbar/navbar.html'">
+</header>
 
-  <md-toolbar md-scroll-shrink>
+<main layout="row">
+  <section layout="column" flex>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+      </div>
+    </md-toolbar>
+  </section>
+  <section layout="column" flex="75">
 
-    <div class="md-toolbar-tools">
+  </section>
+  <section layout="column" flex>
+    <md-toolbar></md-toolbar>
+  </section>
 
-      <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
-
-      <section>
-        <md-button href="#" class="md-raised">Home</md-button>
-        <md-button href="#" class="md-raised">About</md-button>
-        <md-button href="#" class="md-raised">Contact</md-button>
-      </section>
-
-      <md-button href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</md-button>
-
-    </div>
-
-  </md-toolbar>
-
-  <md-content style="height: 1024px; background-color: #222;">
-  </md-content>
-
-</md-content>
-
+</main>
 <!--
 <header id="site-header"
         ng-include="'app/components/navbar/navbar.html'">

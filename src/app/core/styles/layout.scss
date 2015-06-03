@@ -1,2 +1,17 @@
-// 
+// Layout
 // ------------------------------
+header {
+  padding: 8px 16px;
+  md-toolbar {
+    margin: 8px 16px;
+
+  }
+}
+
+.white-on-blue {
+  background-color: #002857;
+}
+
+.blue-on-white {
+  color: #002f5f;
+}

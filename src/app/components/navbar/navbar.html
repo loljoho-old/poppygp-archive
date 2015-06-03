@@ -1,20 +1,22 @@
 
-
-  <md-toolbar md-scroll-shrink ng-controller="NavbarCtrl">
-
-    <div class="md-toolbar-tools">
-
-    <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
-
-    <section>
-      <md-button href="#" class="md-raised">Home</md-button>
-      <md-button href="#" class="md-raised">About</md-button>
-      <md-button href="#" class="md-raised">Contact</md-button>
-    </section>
-
-    <md-button href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</md-button>
-
-    </div>
-
-  </md-toolbar>
-
+<md-toolbar ng-controller="NavbarCtrl">
+  <div class="md-toolbar-tools">
+    <span flex hide-gt-sm></span>
+    <span class="brand stripes">
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+        </svg>
+    </span>
+    <h2>poppyGP</h2>
+    <md-button class="md-icon-button" hide-gt-sm data-ng-click="vm.openSidenav()" aria-label="Show Schedule">
+        <md-icon md-svg-icon="navbar"></md-icon>
+    </md-button>
+    <span flex hide-sm></span>
+  </div>
+</md-toolbar>
