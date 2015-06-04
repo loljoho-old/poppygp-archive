@@ -1,0 +1,44 @@
+// Site Component Sizes
+// ------------------------
+$site-sidenav-width:  240;
+
+// Colours, National
+// ------------------------
+$rosso-corsa:     #cc0000;  // Red, Italy
+$red-rising-sun:  #c70025;  // Red, Japan
+$bleu-de-france:  #318ce7;  // Blue, France
+$silberpfeilgrau: #666666;  // Silver, Germany
+$silver-arrows:   #999999;  // Silver, Germany
+$brit-race-green: #014225;  // Green, GB
+$old-glory-blue:  #3c306e;  // Blue, USA
+
+// Colours, Constructors
+// ------------------------
+$stripe_mer : rgb(  42, 180, 164 );     // #2ab4a5 - mercedes
+$stripe_rbr : rgb(  79,  26, 171 );     // #4f1aab - red bull racing
+$stripe_mcl : rgb( 128, 128, 128 );     // #808080 - mclaren
+$stripe_wil : rgb( 255, 255, 255 );     // #ffffff - williams
+$stripe_sfi : rgb( 255,  95,  15 );     // #ff5f0f - sahara force india
+$stripe_fer : rgb( 195,   0,   0 );     // #c30000 - ferrari
+$stripe_str : rgb(   0,   5, 193 );     // #0005c1 - scuderia toro rosso
+$stripe_lot : rgb( 255, 184,   0 );     // #ffb800 - lotus
+$stripe_sau : rgb(   0,  99, 255 );     // #0063ff - sauber
+$stripe_mar : rgb( 110,   0,   0 );     // #6e0000 - marussia
+$stripe_cat : rgb(   0, 108,   0 );     // #006c00 - caterham
+ 
+// Table Typography Colours
+// ------------------------
+$table_posi : rgb(  20, 190, 150 );     // position, green/teal
+$table_drno : rgb( 255,   0,   0 );     // driver number, red
+$table_time : rgb( 255, 255,   0 );     // lap time, yellow
+$table_rowe : rgb(  80,  80,  80 );     // row background, even/darker
+$table_rowo : rgb(  36,  36,  36 );     // row background, odd/lighter
+$table_rowh : rgb(  80,  80,  80 );     // row background, hover
+
+// Data Typography Colours
+// ------------------------
+$data-red       : #ea0417;  // data font, red
+$data-yellow    : #f9cf00;  // data font, yellow
+$data-green     : #32ac05;  // data font, green
+$data-blue      : #5fb0e8;  // data font, blue
+$data-white     : #ffffff;  // data font, white

@@ -14,8 +14,13 @@ module.exports = function(options) {
     };
 
     var injectFiles = gulp.src([
-      options.src + '/app/**/*.scss',
-      '!' + options.src + '/app/index.scss',
+      options.src + '/app/core/styles/variables.scss',
+      options.src + '/app/core/styles/mixins.scss',
+      options.src + '/app/core/styles/structure.scss',
+      options.src + '/app/core/styles/layout.scss',
+      options.src + '/app/core/styles/typography.scss',
+      options.src + '/app/components/**/*.scss',
+      '!' + options.src + '/app/app.scss',
       '!' + options.src + '/app/vendor.scss'
     ], { read: false });
 
@@ -29,11 +34,11 @@ module.exports = function(options) {
       addRootSlash: false
     };
 
-    var indexFilter = $.filter('index.scss');
+    var indexFilter = $.filter('app.scss');
     var vendorFilter = $.filter('vendor.scss');
 
     return gulp.src([
-      options.src + '/app/index.scss',
+      options.src + '/app/app.scss',
       options.src + '/app/vendor.scss'
     ])
       .pipe(indexFilter)
