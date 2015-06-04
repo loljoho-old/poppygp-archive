@@ -18,7 +18,7 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/core/view/view.html',
+        templateUrl: 'app/core/shell.html',
         conroller: 'ViewCtrl',
         controllerAs: 'vm'
       });
