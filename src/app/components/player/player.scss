@@ -1,0 +1,46 @@
+.video-player {
+
+  >.video-frame {
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+
+    md-toolbar, md-toolbar.md-stack {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      opacity: 0.99;
+      z-index: 1;
+      border: 0 none transparent;
+      background: none;
+      background-color: transparent;
+      box-shadow: none;
+      
+      .md-toolbar-tools {
+        border: 0 none transparent;
+        background: none;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+
+    iframe, iframe.video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 0 none transparent;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.99;
+      line-height: 100%;
+
+    }
+  }
+
+}

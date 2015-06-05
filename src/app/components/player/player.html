@@ -2,12 +2,27 @@
      ng-controller="PlayerCtrl as pm">
 
   <div class="video-frame">
+
+    <md-toolbar class="md-stack">
+
+      <div class="md-toolbar-tools">
+
+        <span flex></span>
+
+        <md-button class="md-icon-button">
+          <md-icon md-svg-src="assets/icons/paypal.svg"></md-icon>
+        </md-button>
+
+      </div>
+
+    </md-toolbar>
+
     <iframe class="video" 
-            src="http://www.ustream.tv/embed/20560398?wmode=direct&showtitle=false"
-            style="border: 0 none transparent;"
+            src="http://ustream.tv/embed/20560398?wmode=direct&showtitle=false"
             webkitallowfullscreen allowfullscreen
             frameborder="no">
     </iframe>
+    
   </div>
 
 </div>
