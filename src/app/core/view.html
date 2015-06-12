@@ -1,0 +1,106 @@
+<header layout="row" 
+        class="site-header"
+        ng-include="'app/components/navbar/navbar.html'">
+</header>
+
+<section flex
+         layout="row" 
+         class="site-content">
+
+<!--
+  <div layout="column" flex hide-sm>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="vm.toggleLeft()">
+          <md-icon md-svg-icon="assets/icons/webchat.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </div>
+  <md-sidenav layout="column"
+              class="md-sidenav-left"
+              md-component-id="left">
+    <md-toolbar>
+    </md-toolbar>
+    <md-content layout-fill></md-content>
+  </md-sidenav>
+-->
+  <main layout="column" flex
+        ng-include="'app/components/player/player.html'">
+  </main>
+
+  <md-sidenav layout="column" 
+              md-is-locked-open="$mdMedia('gt-md')"
+              class="site-sidenav md-sidenav-right md-whiteframe-z2" 
+              md-component-id="right">
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" 
+                   ng-click="vm.openSidenav"
+                   aria-label="Show Full Schedule"
+                   hide-gt-sm>
+          <md-icon md-svg-icon="arrow-right"></md-icon>
+        </md-button>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+
+
+    <md-content>
+
+      <md-list>
+
+        <md-list-item class="md-3-line">
+
+          <md-icon class="flag-icon"></md-icon>
+
+          <div class="md-list-item-text">
+
+            <h3>2015 Monaco Grand Prix</h3>
+            <h4>Circuit de Monaco</h4>
+            <p>Monte-Carlo, Monaco</p>
+
+          </div>
+
+        </md-list-item>
+
+      </md-list>
+
+    </md-content>
+
+    <md-divider></md-divider>
+
+    <md-content class="sidebar-content">
+
+      <section>
+
+        <md-subheader>Playlist</md-subheader>
+
+        <md-list>
+
+          <md-list-item class="md-3-line">
+            <md-icon class="flag-icon"></md-icon>
+            <div class="md-list-item-text">
+              <h3>2015 Monaco Grand Prix</h3>
+              <h4>Circuit de Monaco</h4>
+              <p>Monte-Carlo, Monaco</p>
+            </div>
+          </md-list-item>
+
+        </md-list>
+
+      </section>
+
+    </md-content>
+
+  </md-sidenav>
+
+         
+</section>
+<!--
+<footer layout="row" 
+        class="site-footer"
+        ng-include="'app/components/footer/footer.html'">
+</footer>
+-->

@@ -6,9 +6,26 @@ md-sidenav.md-locked-open,
 md-sidenav.site-sidenav.md-locked-open,
 md-sidenav.md-closed.md-locked-open-add-active
 md-sidenav.site-sidenav.md-closed.md-locked-open-add-active {
-
+/*
   min-width:  $site-sidenav-width;
   max-width:  $site-sidenav-width;
   width:      $site-sidenav-width;
-  
+*/
+}
+
+md-list {
+  md-list-item {
+    md-icon.flag-icon,
+    img.flag-icon,
+    .flag-icon {
+      margin: 8px 8px 6px 0;
+      border: 1px solid #e3e3e3;
+      border-radius: 50%;
+
+    }
+  }
+}
+
+md-content.sidebar-content {
+  overflow-y: scroll;
 }

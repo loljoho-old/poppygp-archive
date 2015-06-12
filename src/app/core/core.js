@@ -9,6 +9,6 @@ angular.module('poppyGP.core', [
   'firebase',
   'angularMoment'
   ]);
-    //'ngCookies', 'ngTouch', 'nvd3', 'angular-moment']);
+    //'ngCookies', 'ngTouch', 'nvd3']);
   
 })();

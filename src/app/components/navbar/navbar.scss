@@ -1,0 +1,25 @@
+
+md-toolbar.site-navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.99;
+  z-index: 1;
+  border: 0 none transparent;
+  background: none;
+  background-color: transparent;
+  box-shadow: none;
+  
+  .md-toolbar-tools {
+    border: 0 none transparent;
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+
+    * {
+      z-index: 100;
+    }
+  }
+}
