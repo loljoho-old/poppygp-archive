@@ -17,15 +17,9 @@
   function routeConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         templateUrl: 'app/core/view.html',
         controller: 'ViewCtrl',
-        controllerAs: 'vm'
-      })
-      .state('cinema', {
-        url: '/',
-        templateUrl: 'app/core/cinema.html',
-        controller: 'Cinema',
         controllerAs: 'vm'
       });
 

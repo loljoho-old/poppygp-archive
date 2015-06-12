@@ -5,10 +5,10 @@ angular
   .module('poppyGP', [
 
     // Core Components
-    'poppyGP.core',
+    'poppyGP.core'
 
     // App Components
-    'poppyGP.components'
+    //'poppyGP.components'
 
   ]);
 

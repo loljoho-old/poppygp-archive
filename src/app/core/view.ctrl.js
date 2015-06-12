@@ -5,14 +5,14 @@ angular
   .module('poppyGP.core')
   .controller('ViewCtrl', ViewCtrl);
 
-  // @ngInject 
-  function ViewCtrl($mdSidenav) {
-    var self = this;
-    self.isSidenavOpen = true;
-    self.toggleLeft = toggleLeft;
+  /* @ngInject */
+  function ViewCtrl($log, $q) {
+    
+    activate();
 
-    function toggleLeft() {
-      $mdSidenav('left').toggle();
+    function activate() {
+      $log.info('Hi!');
+      return true;
     }
   }
 

@@ -10,7 +10,7 @@
     "angular-resource": "^1.4.0",
     "angular-touch": "^1.4.0",
     "angular-ui-router": "~0.2.13",
-    "angular-material": "~0.9.8",
+    "angular-material": "^0.10.0",
     "angular-moment": "~0.10.1",
     "angularfire": "~1.1.1"
   },
@@ -24,5 +24,8 @@
     "client/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "angular-material": "^0.10.0"
+  }
 }

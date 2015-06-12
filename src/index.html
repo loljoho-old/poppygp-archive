@@ -34,13 +34,36 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body layout="column">
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view>
-    </div>
+
+    <iframe class="video-background" 
+            src="http://ustream.tv/embed/20560398?wmode=direct&showtitle=false&autoplay=true&controls=false" 
+            seamless frameborder="no">
+    </iframe>
+
+    <md-toolbar class="ctrl ctrl-header" layout="row">
+      <div class="md-toolbar-tools">
+        <span flex></span>
+      </div>
+    </md-toolbar>
+
+    <md-content class="ctrl ctrl-content" layout="row" flex>
+
+        <div class="ctrl ctrl-fill" layout-fill>
+          
+        </div>
+
+    </md-content>
+
+    <md-toolbar class="ctrl ctrl-footer" layout="row">
+      <div class="md-toolbar-tools">
+        <span flex></span>
+      </div>
+    </md-toolbar>
     
     <!-- Google Analytics -->
     <script>
