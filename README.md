@@ -1,6 +1,9 @@
-# poppyGP
+poppyGP
+=======
 
 > A community-centered video stream and webchat single-page AngularJS web application.
+
+__This repository has since moved, and can now be found under its new name under [GPQuery/PoppyGP-Player](//github.com/GPQuery/poppyGP-player).  Please refer to the new documentation there.__
 
 
 ## OVERVIEW
