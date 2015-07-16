@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('gpApp.playlist')
+        .module('poppyGP.playlist')
         .controller('Schedule', Schedule);
 
     Schedule.$inject = ['dataservice', '$log', '$q'];

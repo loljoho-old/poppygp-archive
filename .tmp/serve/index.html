@@ -27,7 +27,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
   <!-- bower:css -->
-  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -128,7 +128,12 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js(src) scripts/vendor.js -->
   <!-- bower:js -->
-  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/angular-aria/angular-aria.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="../bower_components/angular-material/angular-material.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -136,7 +141,21 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
   <!-- inject:js -->
-  <!-- js files will be automatically insert here -->
+  <script src="app/components/playlist/playlist.module.js"></script>
+  <script src="app/components/playlist/schedule.js"></script>
+  <script src="app/components/playlist/playlist.js"></script>
+  <script src="app/components/layout/layout.module.js"></script>
+  <script src="app/components/layout/view.js"></script>
+  <script src="app/components/layout/video.js"></script>
+  <script src="app/components/layout/toolbar.js"></script>
+  <script src="app/components/layout/donate.js"></script>
+  <script src="app/components/content/content.module.js"></script>
+  <script src="app/components/content/tabs.js"></script>
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/dataservice.js"></script>
+  <script src="app/core/core.routes.js"></script>
+  <script src="app/core/core.config.js"></script>
+  <script src="app/index.module.js"></script>
   <!-- endinject -->
 
   <!-- Angular Partials

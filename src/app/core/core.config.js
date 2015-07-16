@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var core = angular.module('gpApp.core');
+    var core = angular.module('poppyGP.core');
     core
         .config(mdThemeConfig)
         .config(mdIconConfig);

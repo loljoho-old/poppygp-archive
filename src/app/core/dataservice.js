@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('gpApp.core')
+    angular.module('poppyGP.core')
         .factory('dataservice', dataservice);
 
     dataservice.$inject = ['$resource'];

@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('gpApp.content', []);
+        .module('poppyGP.content', []);
 })();

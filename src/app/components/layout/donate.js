@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('gpApp.layout')
+    angular.module('poppyGP.layout')
         .controller('Donate', Donate);
 
     Donate.$inject = ['$mdDialog', '$log', '$q'];

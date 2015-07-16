@@ -4,11 +4,13 @@
   "version": "1.1.0",
   "description": "Community-centered video stream and webchat single-page application in AngularJS.",
   "homepage": "https://github.com/gpquery/poppygp",
-  "authors": [{
+  "authors": [
+    {
       "name": "Jonathan Ho",
       "email": "joho@joho.io",
       "homepage": "http://joho.io"
-  }],
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gpquery/poppygp"
@@ -19,7 +21,8 @@
     "angular-aria": "~1.4.3",
     "angular-resource": "~1.4.3",
     "angular-material": "~0.10.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "modernizr": "~2.8.3"
   },
   "ignore": [
     "**/.*",
@@ -31,7 +34,5 @@
   ],
   "devDependencies": {
     "angular-mocks": "~1.4.3"
-  },
-  "resolutions": {
   }
 }

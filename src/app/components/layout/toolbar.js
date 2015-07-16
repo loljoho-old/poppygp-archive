@@ -1,7 +1,7 @@
 (function() {
 
     angular
-        .module('gpApp.layout')
+        .module('poppyGP.layout')
         .controller('Toolbar', Toolbar);
 
     Toolbar.$inject = ['$mdSidenav', '$mdDialog', '$mdSelect', '$log', '$q'];

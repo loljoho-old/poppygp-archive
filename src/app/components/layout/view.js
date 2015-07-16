@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('gpApp.layout')
+        .module('poppyGP.layout')
         .controller('View', View);
 
     View.$inject = ['$mdSidenav', '$mdMedia', 'dataservice', '$log', '$q'];

@@ -5,12 +5,12 @@
      * Main Module File
      */
     angular
-        .module('gpApp', [
+        .module('poppyGP', [
 
             // Core Modules
-            'gpApp.core', 'gpApp.layout',
+            'poppyGP.core', 'poppyGP.layout',
 
             // Feature Area Modules
-            'gpApp.playlist', 'gpApp.content'
+            'poppyGP.playlist', 'poppyGP.content'
         ]);
 })();

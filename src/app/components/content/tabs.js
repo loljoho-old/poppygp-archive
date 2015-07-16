@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('gpApp.content')
+        .module('poppyGP.content')
         .controller('Tabs', Tabs);
 
     Tabs.$inject = ['$log', '$q'];

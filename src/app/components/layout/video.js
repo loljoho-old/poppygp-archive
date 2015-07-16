@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('gpApp.layout')
+    angular.module('poppyGP.layout')
         .controller('Video', Video);
 
     Video.$inject = ['$mdDialog', '$log', '$q'];
@@ -27,7 +27,7 @@
             $mdDialog.show({
                 controller: 'Donate',
                 controllerAs: 'vm',
-                templateUrl: './app/layout/donate.html',
+                templateUrl: './app/components/layout/donate.html',
                 targetEvent: event,
             });
         }
