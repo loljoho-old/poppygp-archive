@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" 
+      ng-app="poppyGP" 
+      ng-controller="View as vm">
+
+<head>
+  <!-- Meta Meta Title Meta
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+  <title ng-bind-template="{{vm.title}} · poppyGP Player">poppyGP Player</title>
+
+  <!-- Favicons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Fonts & Icon Libraries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,400italic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Vendor Stylesheets
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- Compiled Stylesheets
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- Style à la Compiled Scss -->
+  <link href="./styles/build/page.css"    rel="stylesheet">
+  <link href="./styles/build/icons.css"     rel="stylesheet">
+  <link href="./styles/build/iframe.css"    rel="stylesheet">
+  <link href="./styles/build/toolbar.css"   rel="stylesheet">
+  <link href="./styles/build/sidenav.css"   rel="stylesheet">
+  <link href="./styles/build/components.css"  rel="stylesheet">
+  <link href="./styles/build/content.css"   rel="stylesheet">
+  <link href="./styles/build/buttons.css"   rel="stylesheet">
+
+  <!-- Modernizr
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:js(src) scripts/modernizr.js -->
+  <script src="../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body layout="column">
+  <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header layout="row" ng-controller="Toolbar as vm" ng-include="'./app/layout/toolbar.html'">
+  </header>
+
+  <main layout="row">
+
+    <section flex hide-sm ng-include="'./app/layout/col.html'">
+    </section>
+
+    <section flex="65" flex-md="70" flex-sm="100" ng-controller="Video as vm" ng-include="'./app/layout/main.html'">
+    </section>
+
+    <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+      <md-toolbar>
+        <div class="md-toolbar-tools" ng-click="vm.closeSidenav()">
+          <md-button class="md-icon-button" hide-gt-sm ng-click="vm.closeSidenav()" aria-label="Hide Schedule">
+            <md-icon md-svg-icon="arrow-right"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Twitter" href="//twitter.com/poppyGrandPrix" title="Twitter" target="_blank" class="md-icon-button launch">
+            <md-tooltip>Stream Status/Updates</md-tooltip>
+            <md-icon md-svg-src="./assets/icons/twitter.svg"></md-icon>
+          </md-button>
+          <span flex></span>
+          <h3>Schedule<small hide-md> (user time)</small></h3>
+        </div>
+      </md-toolbar>
+      <md-content id="playlist" class="md-whiteframe-z2 md-padding" ng-include="'./app/playlist/schedule.html'">
+      </md-content>
+    </md-sidenav>
+
+  </main>
+
+  <!-- AngularJS Core -->
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
+
+  <!-- Angular Component -->
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular-resource.min.js"></script>
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular-route.min.js"></script>
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular-sanitize.min.js"></script>
+
+  <!-- Angular-Material -->
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular-animate.min.js"></script>
+  <script src="//code.angularjs.org/1.4.0-rc.0/angular-aria.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
+
+  <!-- Moment.js -->
+
+  <!-- Main App Module -->
+  <script src="./app/app.module.js"></script>
+
+  <!-- Core Module -->
+  <script src="./app/core/core.module.js"></script>
+  <script src="./app/core/core.config.js"></script>
+  <!--
+  <script src="./app/core/core.routes.js"></script>
+  -->
+  <script src="./app/core/dataservice.js"></script>
+
+  <!-- Layout Module -->
+  <script src="./app/layout/layout.module.js"></script>
+  <script src="./app/layout/view.js"></script>
+  <script src="./app/layout/toolbar.js"></script>
+  <script src="./app/layout/video.js"></script>
+  <script src="./app/layout/donate.js"></script>
+
+  <!-- Playlist Module -->
+  <script src="./app/playlist/playlist.module.js"></script>
+  <script src="./app/playlist/schedule.js"></script>
+
+  <!-- Content Module -->
+  <script src="./app/content/content.module.js"></script>
+  <script src="./app/content/tabs.js"></script>
+
+
+  <!-- Vendor Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- Application Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+
+  <!-- Angular Partials
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</body>
+</html>
