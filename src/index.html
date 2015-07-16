@@ -38,17 +38,6 @@
   <!-- css files will be automatically insert here -->
   <!-- endinject -->
   <!-- endbuild -->
-
-  <!-- Style à la Compiled Scss 
-  <link href="./styles/build/page.css"    rel="stylesheet">
-  <link href="./styles/build/icons.css"     rel="stylesheet">
-  <link href="./styles/build/iframe.css"    rel="stylesheet">
-  <link href="./styles/build/toolbar.css"   rel="stylesheet">
-  <link href="./styles/build/sidenav.css"   rel="stylesheet">
-  <link href="./styles/build/components.css"  rel="stylesheet">
-  <link href="./styles/build/content.css"   rel="stylesheet">
-  <link href="./styles/build/buttons.css"   rel="stylesheet">
-  -->
   
   <!-- Modernizr
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -62,15 +51,20 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <header layout="row" ng-controller="Toolbar as vm" ng-include="'./app/components/layout/toolbar.html'">
+  <header layout="row" 
+          ng-controller="Toolbar as vmm" 
+          ng-include="'./app/components/layout/toolbar.html'">
   </header>
 
   <main layout="row">
 
-    <section flex hide-sm ng-include="'./app/components/layout/col.html'">
+    <section flex hide-sm 
+             ng-include="'./app/components/layout/col.html'">
     </section>
 
-    <section flex="65" flex-md="70" flex-sm="100" ng-controller="Video as vm" ng-include="'./app/components/layout/main.html'">
+    <section flex="65" flex-md="70" flex-sm="100" 
+             ng-controller="Video as vm" 
+             ng-include="'./app/components/layout/main.html'">
     </section>
 
     <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
@@ -93,36 +87,6 @@
 
   </main>
 
-  <!-- 
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular.min.js"></script>
-
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular-resource.min.js"></script>
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular-route.min.js"></script>
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular-sanitize.min.js"></script>
-
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular-animate.min.js"></script>
-  <script src="//code.angularjs.org/1.4.0-rc.0/angular-aria.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.8.3/angular-material.min.js"></script>
-
-  <script src="./app/app.module.js"></script>
-
-  <script src="./app/core/core.module.js"></script>
-  <script src="./app/core/core.config.js"></script>
-  <script src="./app/core/core.routes.js"></script>
-  <script src="./app/core/dataservice.js"></script>
-
-  <script src="./app/layout/layout.module.js"></script>
-  <script src="./app/layout/view.js"></script>
-  <script src="./app/layout/toolbar.js"></script>
-  <script src="./app/layout/video.js"></script>
-  <script src="./app/layout/donate.js"></script>
-
-  <script src="./app/playlist/playlist.module.js"></script>
-  <script src="./app/playlist/schedule.js"></script>
-
-  <script src="./app/content/content.module.js"></script>
-  <script src="./app/content/tabs.js"></script>
-  -->
 
   <!-- Vendor Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

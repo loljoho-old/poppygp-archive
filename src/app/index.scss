@@ -1,19 +1,20 @@
-
-
-@import 'core/style/foundation';    // Foundation Sass
-@import 'core/style/variables';     // Custom Variables
-@import 'core/style/mixins';        // Custom Mixins
-@import 'core/style/typography';    // Custom Typography
-@import 'core/style/structure';     // Structure
-
-/**
- *  DO NOT EDIT COMMENTS BELOW THIS LINE
- */
- 
+/* Bower Styles Dependencies
+   ========================================================================== */
 // run `gulp wiredep` to automatically populate bower styles dependencies
 // bower:scss
 // endbower
 
+
+/* Core Style 
+   ========================================================================== */
+@import 'core/style/variables';     // Variables
+@import 'core/style/mixins';        // Mixins
+@import 'core/style/typography';    // Typography
+@import 'core/style/structure';     // Structure
+ 
+
+/* Custom Compiled
+   ========================================================================== */
 // run `gulp inject` to automatically compile custom stylesheets
 // injector
 // endinjector
