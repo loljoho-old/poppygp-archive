@@ -28,6 +28,7 @@ node_modules
 #################
 !.gitkeep
 tmp
+.tmp/
 .DS_STORE
 .DS_Store?
 ._*

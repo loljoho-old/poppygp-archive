@@ -15,7 +15,7 @@ exports.paths = {
   src:  'src',    // source code directory
   dist: 'dist',   // build destination
   tmp:  '.tmp',   // temporary files
-  e2e:  'e2e'     // end-to-end testing
+  e2e:  'test'    // end-to-end testing
 };
 
 
