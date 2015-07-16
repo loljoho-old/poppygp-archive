@@ -18,7 +18,8 @@
     "angular-animate": "~1.4.3",
     "angular-aria": "~1.4.3",
     "angular-resource": "~1.4.3",
-    "angular-material": "~0.10.0"
+    "angular-material": "~0.10.0",
+    "angular-ui-router": "~0.2.15"
   },
   "ignore": [
     "**/.*",
@@ -32,6 +33,5 @@
     "angular-mocks": "~1.4.3"
   },
   "resolutions": {
-    "angular-moment": "~0.10.0"
   }
 }
