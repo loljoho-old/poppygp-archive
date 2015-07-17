@@ -1,9 +1,3 @@
-/* Bower Styles Dependencies
-   ========================================================================== */
-// run `gulp wiredep` to automatically populate bower styles dependencies
-// bower:scss
-// endbower
-
 
 /* Core Style 
    ========================================================================== */
@@ -12,6 +6,11 @@
 @import 'core/style/typography';    // Typography
 @import 'core/style/structure';     // Structure
  
+/* Bower Styles Dependencies
+   ========================================================================== */
+// run `gulp wiredep` to automatically populate bower styles dependencies
+// bower:scss
+// endbower
 
 /* Custom Compiled
    ========================================================================== */

@@ -11,6 +11,6 @@
             'poppyGP.core', 'poppyGP.layout',
 
             // Feature Area Modules
-            'poppyGP.playlist', 'poppyGP.content'
+            'poppyGP.playlist'
         ]);
 })();

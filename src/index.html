@@ -51,41 +51,110 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <header layout="row" 
-          ng-controller="Toolbar as vmm" 
-          ng-include="'./app/components/layout/toolbar.html'">
-  </header>
+  <md-toolbar class="md-medium" ng-controller="Toolbar as vmm">
 
-  <main layout="row">
+    <div class="md-toolbar-tools">
+      <span class="brand stripes">
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+        </svg>
+      </span>
+      <h2>poppyGP</h2>
+      <span flex></span>
+      <!--
+      <md-button class="md-icon-button"
+                 ng-click="vm.openSidenav()" 
+                 aria-label="Show Schedule"
+                 hide-gt-sm>
+        <md-icon md-svg-icon="navbar"></md-icon>
+      </md-button>
+      -->
+    </div>
 
-    <section flex hide-sm 
-             ng-include="'./app/components/layout/col.html'">
-    </section>
+  </md-toolbar>
 
-    <section flex="65" flex-md="70" flex-sm="100" 
-             ng-controller="Video as vm" 
-             ng-include="'./app/components/layout/main.html'">
-    </section>
 
-    <md-sidenav class="md-sidenav-right" flex="30" layout="column" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
-      <md-toolbar>
-        <div class="md-toolbar-tools" ng-click="vm.closeSidenav()">
-          <md-button class="md-icon-button" hide-gt-sm ng-click="vm.closeSidenav()" aria-label="Hide Schedule">
-            <md-icon md-svg-icon="arrow-right"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Twitter" href="//twitter.com/poppyGrandPrix" title="Twitter" target="_blank" class="md-icon-button launch">
-            <md-tooltip>Stream Status/Updates</md-tooltip>
-            <md-icon md-svg-src="./assets/icons/twitter.svg"></md-icon>
-          </md-button>
-          <span flex></span>
-          <h3>Schedule<small hide-md> (user time)</small></h3>
+  <main flex layout="column">
+
+    <md-content class="main" layout="row" flex>
+    
+      <div flex="5" hide-md hide-sm layout="column">
+        <md-toolbar class="md-small">
+          <div class="md-toolbar-tools">
+          </div>
+        </md-toolbar>
+        <md-content flex>
+        </md-content>
+      </div>
+      <!--
+      <section class="video-section" 
+               flex-sm="100" flex-md="80" flex-lg="75" flex-gt-lg="70">
+        <div class="video-wrapper">
+          <iframe class="video md-whiteframe-z4"
+                  ng-controller="Video as vm"
+                  src="http://www.ustream.tv/embed/20560398?wmode=direct&showtitle=false" 
+                  frameborder="0" 
+                  allowfullscreen mozallowfullscreen webkitAllowFullScreen>
+          </iframe>
         </div>
-      </md-toolbar>
-      <md-content id="playlist" class="md-whiteframe-z2 md-padding" ng-include="'./app/components/playlist/schedule.html'">
+      </section>
+      -->
+     
+      <iframe class="video md-whiteframe-z4"
+              flex-sm="100" flex-md="60" flex-gt-md="65"
+              ng-controller="Video as vm"
+              src="http://www.ustream.tv/embed/20560398?wmode=direct&showtitle=false" 
+              frameborder="0" 
+              allowfullscreen mozallowfullscreen webkitAllowFullScreen>
+      </iframe>        
+      
+
+      <md-content class="sidebar"
+                  flex-sm="100" flex
+                  layout="column">
+        <md-toolbar class="md-medium">
+          <div class="md-toolbar-tools" 
+               ng-click="vm.closeSidenav()">
+            <h3>Schedule<small hide-md> (user time)</small></h3>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+
+        <md-content class="md-whiteframe-z2 md-padding" flex
+                    ng-include="'./app/components/playlist/schedule.html'">
+        </md-content>
+
       </md-content>
-    </md-sidenav>
+    </md-content>
+
+    <md-content class="grid" layout="row" flex>
+
+    </md-content>
 
   </main>
+
+  <footer>
+    <md-toolbar class="md-medium">
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Webchat">
+          <md-icon class="fa fa-fw webchat">&#xf0c0;</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Twitter">
+          <md-icon class="fa fa-fw twitter">&#xf099;</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Reddit">
+          <md-icon class="fa fa-fw reddit">&#xf1a1;</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </footer>
 
 
   <!-- Vendor Scripts
