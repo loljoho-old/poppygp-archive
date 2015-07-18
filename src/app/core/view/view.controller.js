@@ -6,7 +6,7 @@
     .controller('View', View);
 
   // @ngInject
-  function View($mdSidenav, $mdMedia, dataservice) {
+  function View($mdSidenav, $mdMedia, $mdUtil, dataservice) {
     var vm = this;
     vm.title = '';
 

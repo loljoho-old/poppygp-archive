@@ -27,7 +27,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
   <!-- bower:css -->
-  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -35,7 +34,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:css({.tmp/serve,src}) styles/app.css -->
   <!-- inject:css -->
-  <!-- css files will be automatically insert here -->
   <!-- endinject -->
   <!-- endbuild -->
   
@@ -55,66 +53,54 @@
   <!-- Header Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <header ng-include="'app/components/layout/header.html'">
+  <header ng-include="'app/components/layout/header/header.html'">
   </header>
 
 
-  <!-- Body Container
+  <!-- Primary Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <md-content class="container" flex layout="column">
-
-
-    <!-- Primary Content
+  <md-content class="main" layout="row" layout-wrap flex>
+  
+    <!-- Left Column
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <md-content class="main" layout="row" layout-wrap flex>
+    <md-sidenav class="site-sidenav md-sidenav-left"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-md')"
+                layout="column" layout-fill
+                flex="15">
+      <md-toolbar class="md-medium">
+      </md-toolbar>
+      <md-content layout-fill>
+      </md-content>
+    </md-sidenav>
+
+    <!-- Video Iframe
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="video-col md-whiteframe-glow-z1"
+             layout="column"
+             flex-sm="100" flex-md="100" flex
+             ng-include="'app/components/video/video.html'">
+    </section>
     
-      <!-- Left Column
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div class="leftcol" hide show-gt-md
-           flex="5"
-           layout="column" 
-           ng-include="'app/components/layout/column.html'">
-      </div>
-     
-      <!--
-      <section class="video-container"
-               flex-sm="100" flex-md="100" flex
-               ng-include="'app/components/video/video.html'">       
-      </section>
-      -->
-
-      <!-- Video Iframe
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <iframe class="video md-whiteframe-z4"
-              flex-sm="100" flex-md="100" flex-lg="65" flex-gt-lg="70"
-              src="http://www.ustream.tv/embed/20560398?wmode=direct&showtitle=false" 
-              frameborder="0" allowfullscreen mozallowfullscreen webkitAllowFullScreen>
-      </iframe> 
-      
-      <!-- Sidebar
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <section class="sidebar"
-               layout="column"
-               ng-controller="SidebarController as vmm"
-               flex-sm="100" flex-md="66" flex-lg="30" flex-gt-lg="25"
-               ng-include="'app/components/sidebar/sidebar.html'">
-      </section>
+    <!-- Sidebar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="sidebar"
+             layout="column"
+             ng-controller="SidebarController as vmm"
+             flex-sm="100" flex-md="66" flex-lg="30" flex-gt-lg="25"
+             ng-include="'app/components/sidebar/sidebar.html'">
+    </section>
 
 
 
-      <!-- Playlist Row
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <section class="schedule"
-               layout-fill
-               flex-sm="100" flex-md="33" flex-gt-md="100">      
-        <md-content class="md-padding">
-        </md-content>
-      </section>
-
-    </md-content>
-
-
+    <!-- Playlist Row
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="schedule"
+             layout-fill
+             flex-sm="100" flex-md="33" flex-gt-md="100">      
+      <md-content class="md-padding">
+      </md-content>
+    </section>
 
   </md-content>
 
@@ -122,7 +108,7 @@
   <!-- Footer Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <footer ng-include="'app/components/layout/footer.html'">
+  <footer ng-include="'app/components/layout/footer/footer.html'">
   </footer>
 
 

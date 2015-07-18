@@ -1,0 +1,37 @@
+/*
+  @media(max-width: 959px) {
+    overflow-y: scroll;
+  }
+  @media(min-width: 960px) {
+    overflow-y: hidden;
+  }
+*/
+  .main {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    .site-sidenav {
+      @include absolute-width(15%);
+    }
+    .leftcol {
+
+    }
+    .video-col {
+      .video-frame {
+        .video {
+          border: 0.5px #333 solid;
+          position: relative;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    .sidebar {
+
+    }
+    .schedule {
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+  }

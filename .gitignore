@@ -1,6 +1,7 @@
 ####################
 # GLOBAL GITIGNORE #
 ####################
+*ignore*
 
 # bower and npm #
 #################
@@ -39,3 +40,4 @@ Thumbs.db
 .idea
 app/jspm_packages
 *.lnk
+*.sublime-workspace
