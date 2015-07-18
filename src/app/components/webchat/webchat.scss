@@ -1,0 +1,7 @@
+iframe {
+  &.chat {
+    border: none;
+    width: 100%;
+    //@include absolute-height();
+  }
+}

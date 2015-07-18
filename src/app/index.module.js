@@ -8,9 +8,11 @@
         .module('poppyGP', [
 
             // Core Modules
-            'poppyGP.core', 'poppyGP.layout',
+            'poppyGP.core', 
+            'poppyGP.layout',
 
             // Feature Area Modules
-            'poppyGP.playlist'
+            'poppyGP.playlist',
+            'poppyGP.sidebar'
         ]);
 })();

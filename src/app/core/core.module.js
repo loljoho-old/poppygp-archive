@@ -6,6 +6,7 @@
             'ngAnimate', 
             'ngAria', 
             'ngResource', 
+            'ngSanitize',
             //'ngRoute',
             'ngMaterial'
             // Third-Party Modules

@@ -4,22 +4,41 @@ body {
   min-height: 100%;
 }
 
-main {
-  overflow: hidden;
+.container {
+  overflow-x: hidden;
+  @media(max-width: 959px) {
+    overflow-y: scroll;
+  }
+  @media(min-width: 960px) {
+    overflow-y: hidden;
+  }
   
   .main {
     overflow-x: hidden;
     overflow-y: hidden;
-  }
-  .grid {
-    overflow-y: hidden;
-    overflow-x: scroll;
+    .leftcol {
+
+    }
+    .video {
+      border: 0.5px #333 solid;
+    }
+    .sidebar {
+
+    }
+    .schedule {
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
   }
 }
-
-
+.section {
+  overflow: hidden;
+}
+/*
+.video-container {
   .video-wrapper {
     padding-bottom: 56.34%;
+    margin-bottom: -13.83%;
     height: 0;
     position: relative;
     overflow: hidden;
@@ -35,15 +54,8 @@ main {
       height: 100%;
     }
   }
-
-
-iframe {
-  border: 0.5px #000 solid;
 }
-
-header {
-
-}
+*/
 
 
 md-toolbar {

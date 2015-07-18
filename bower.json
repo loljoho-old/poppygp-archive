@@ -1,5 +1,5 @@
 {
-  "name": "poppygp",
+  "name": "poppyGP",
   "private": true,
   "version": "1.4.0",
   "description": "Community-centered video stream and webchat single-page application in AngularJS.",
@@ -22,7 +22,8 @@
     "angular-resource": "~1.4.3",
     "angular-material": "~0.10.0",
     "angular-ui-router": "~0.2.15",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "angular-sanitize": "~1.4.3"
   },
   "ignore": [
     "**/.*",
