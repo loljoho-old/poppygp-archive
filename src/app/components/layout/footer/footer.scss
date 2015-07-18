@@ -14,12 +14,9 @@ footer {
       word-wrap: normal;
       -webkit-font-feature-settings: 'liga';
       -webkit-font-smoothing: antialiased;
-      &.twitter {
-        font-size: 1.66em;
-      }
-      &.webchat {
-        font-size: 1.25em;
-      }
+    }
+    .ion {
+      vertical-align: text-bottom;
     }
   }
 
