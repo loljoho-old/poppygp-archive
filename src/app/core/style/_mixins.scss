@@ -1,4 +1,12 @@
 
+// Foreground + Background
+// ------------------------------
+
+@mixin palette-primary() {
+  color: #fff;
+  background-color: $dark-primary;
+}
+
 // Sizing
 // ------------------------------
 
