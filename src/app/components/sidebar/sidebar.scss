@@ -3,8 +3,7 @@
     .tabs-container {
       md-tabs-wrapper {
         md-tabs-canvas {
-          background-color: #333333;
-          color: #fff;
+          @include palette-primary();
           md-pagination-wrapper {
           }
           md-tab-item.md-tab,

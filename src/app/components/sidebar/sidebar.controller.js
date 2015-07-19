@@ -3,11 +3,11 @@
 
   angular
     .module('poppyGP.sidebar')
-    .controller('SidebarController', SidebarController);
+    .controller('Sidebar', Sidebar);
 
 
     /** @ngInject */
-    function SidebarController($sce) {
+    function Sidebar($sce) {
 
       var vm  = this;
       vm.tabs         = [];

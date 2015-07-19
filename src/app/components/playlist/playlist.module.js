@@ -3,4 +3,5 @@
 
     angular
         .module('poppyGP.playlist', []);
+        
 })();

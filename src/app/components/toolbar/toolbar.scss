@@ -1,0 +1,9 @@
+.gp-toolbar {
+  background-color: $dark-primary;
+  >md-toolbar {
+    background-color: transparent;
+    >.md-toolbar-tools {
+      @extend md-toolbar;
+    }
+  }
+}

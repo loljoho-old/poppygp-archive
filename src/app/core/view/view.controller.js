@@ -6,7 +6,7 @@
     .controller('View', View);
 
   // @ngInject
-  function View($mdSidenav, $mdMedia, $mdUtil, dataservice) {
+  function View($mdSidenav, $mdMedia, $mdUtil, $log, dataservice) {
     var vm = this;
     vm.title = '';
 
@@ -16,6 +16,7 @@
     ////////////
 
     function activate() {
+      $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.');
       return dataservice.current().then(function(response) {
           vm.title = response.year + ' ' + response.title;
           return vm.title;
