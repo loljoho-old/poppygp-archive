@@ -3,12 +3,12 @@ footer {
   .md-small,
   .md-medium {
 
-    @include palette-primary(); 
+    @include palette-secondary(); 
     padding-bottom: 2px;
 
     .md-toolbar-tools {
 
-      @include palette-primary();  
+      @include palette-secondary();  
 
       .md-button.md-icon-button {
 
@@ -28,25 +28,4 @@ footer {
 
     }
   }
-/*
-  .md-icon-button {
-    .fa {
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      font-size: 1.33333333em;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      vertical-align: -7.5%;
-      display: inline-block;
-      word-wrap: normal;
-      -webkit-font-feature-settings: 'liga';
-      -webkit-font-smoothing: antialiased;
-    }
-    .ion {
-      vertical-align: text-bottom;
-    }
-  }
-*/
 }

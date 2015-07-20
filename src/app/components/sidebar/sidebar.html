@@ -1,56 +1,62 @@
+<aside>
+  <md-toolbar class="md-small">
+    <div class="md-toolbar-tools">
 
-<md-content class="sidebar-container"
-            layout="column" flex>
+    </div>
+  </md-toolbar>
 
-  <!-- Tabs Container Directive
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <md-tabs class="tabs-container" flex
-           md-selected="vmm.activeTab" 
-           md-stretch-tabs="always"
-           md-dynamic-height="false"
-           md-swipe-content="true">
+  <md-content class="sidebar-container"
+              layout="column" flex>
 
-    <!-- Video Iframe
+    <!-- Tabs Container Directive
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <md-tab ng-repeat="tab in vmm.tabs">
+    <md-tabs class="tabs-container" flex
+             md-selected="vmm.activeTab" 
+             md-stretch-tabs="always"
+             md-dynamic-height="false"
+             md-swipe-content="true">
 
-      <md-tab-label>
-        <md-icon class="fa fw fa-lg" ng-class="tab.icon"></md-icon>
-        <span hide-sm hide-md>{{tab.name}}</span>
-      </md-tab-label>
-      <md-tab-body layout="row" layout-fill>
-        <md-content class="tab-content"
-                    ng-bind-html="tab.body">
-        </md-content>
-      </md-tab-body>
+      <!-- Video Iframe
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <md-tab ng-repeat="tab in vmm.tabs">
 
-    </md-tab>
+        <md-tab-label>
+          <md-icon class="fa fw fa-lg" ng-class="tab.icon"></md-icon>
+          <span hide-sm hide-md>{{tab.name}}</span>
+        </md-tab-label>
+        <md-tab-body layout="row" layout-fill>
+          <md-content class="tab-content"
+                      ng-bind-html="tab.body">
+          </md-content>
+        </md-tab-body>
 
-  </md-tabs>
+      </md-tab>
 
-</md-content>
-<!--
-<md-toolbar class="md-medium">
-  <div class="md-toolbar-tools">
-    <md-button class="md-icon-button" aria-label="Webchat">
-      <md-icon class="fa fa-fw webchat">&#xf0c0;</md-icon>
-    </md-button>
-    <md-button class="md-icon-button" aria-label="Twitter">
-      <md-icon class="fa fa-fw twitter">&#xf099;</md-icon>
-    </md-button>
-    <md-button class="md-icon-button" aria-label="Reddit">
-      <md-icon class="fa fa-fw reddit">&#xf1a1;</md-icon>
-    </md-button>
-    <span flex></span>
-  </div>
-</md-toolbar>
+    </md-tabs>
 
-<md-content flex layout="column">
--->
-  <!--ng-include="'./app/components/playlist/schedule.html'">-->
-<!--
-  <iframe class="chat md-whiteframe-z5" flex
-          src="https://kiwiirc.com/client/irc.snoonet.org/?nick=poppyGP|?&theme=mini#f1">
-  </iframe>
--->
-      
+  </md-content>
+  <!--
+  <md-toolbar class="md-medium">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Webchat">
+        <md-icon class="fa fa-fw webchat">&#xf0c0;</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Twitter">
+        <md-icon class="fa fa-fw twitter">&#xf099;</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Reddit">
+        <md-icon class="fa fa-fw reddit">&#xf1a1;</md-icon>
+      </md-button>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+
+  <md-content flex layout="column">
+  -->
+    <!--ng-include="'./app/components/playlist/schedule.html'">-->
+  <!--
+    <iframe class="chat md-whiteframe-z5" flex
+            src="https://kiwiirc.com/client/irc.snoonet.org/?nick=poppyGP|?&theme=mini#f1">
+    </iframe>
+  -->
+</aside>

@@ -44,29 +44,23 @@
       }
     }
   }
-}
+  .md-actions {
+    @include absolute-height(48px);
+    .md-button {
+      line-height: 36px;
+      height: 32px;
+      width: 32px;
+      &:first-child {
+        margin-left: 8px;
+      }
+      &:last-child {
+        margin-right: 8px;
+      }
 
-
-
-.video-frame {
-  overflow: hidden;
-
-  .video {
-    border: 0.5px #333 solid;
-    position: relative;
-    
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+      >md-icon {
+        line-height: 18px;
+        overflow: visible;
+      }
+    }
   }
-}
-
-@media (max-width: 600px) {
-
-  .video-frame {
-    @include absolute-height(50vh);
-  }
-
 }

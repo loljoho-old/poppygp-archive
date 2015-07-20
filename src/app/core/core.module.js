@@ -22,6 +22,7 @@
     
       // Third Party & Cross-App Modules
       // ------------------------------
+      'firebase',
       'foundation.core',
       'foundation.common',
       'xml'

@@ -15,7 +15,7 @@
       // Core Modules
       // ------------------------------
 
-      'poppyGP.core', 
+      'poppyGP.core',
 
 
       // Feature Area Modules
@@ -23,7 +23,8 @@
 
       'poppyGP.playlist',
       'poppyGP.layout',
-      'poppyGP.sidebar'
+      'poppyGP.sidebar',
+      'poppyGP.panel'
 
     ]);
 

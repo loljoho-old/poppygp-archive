@@ -6,7 +6,7 @@
     .controller('View', View);
 
   /* @ngInject */
-  function View($mdUtil, $log) {
+  function View(firebaseService, $mdUtil, $log) {
     var vm = this;
     vm.title = '';
 
@@ -14,6 +14,7 @@
 
     function activate() {
       $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.');
+      firebaseService;
     }
       /*
       return dataservice.current().then(function(response) {
