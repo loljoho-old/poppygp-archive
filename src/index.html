@@ -50,19 +50,19 @@
 
 
   <!-- Header Bar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <gp-toolbar flex-order="1"></gp-toolbar>
 
 
   <!-- Primary Content
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <md-content class="main md-scroll-y" 
-              layout="row" layout-wrap 
+              layout="row"
               flex flex-order-sm="3" flex-order-gt-sm="2">
   
 
-    <!-- Left Column
-    –––––––––––––––––––––––––––––––––––––––––––––––––– 
+    <!--
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <md-sidenav class="site-sidenav md-sidenav-left"
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
@@ -73,13 +73,13 @@
       <md-content layout-fill>
       </md-content>
     </md-sidenav>
-    -->
+
 
     <!-- Video Iframe
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section class="video-col md-whiteframe-glow-z1"
-             layout="column" flex-sm="100" flex-md="100" 
-             flex-lg="60" flex-gt-lg="65"
+    <section class="video-col"
+             layout="column" flex-sm="100" 
+             flex="60"
              ng-include="'app/components/video/video.html'">
     </section>
     
@@ -88,21 +88,21 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section class="sidebar"
              ng-controller="Sidebar as vmm"
-             layout="column" flex-sm="100" flex-md="66"
-             flex-lg="30" flex-gt-lg="25"
+             layout="column" flex-sm="100" 
+             flex="30"
              ng-include="'app/components/sidebar/sidebar.html'">
     </section>
 
 
 
     <!-- Playlist Row
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– 
     <section class="schedule"
              ng-include="'app/components/playlist/schedule.html'"
              layout-fill
              flex-sm="100" flex-md="33" flex-gt-md="100">      
     </section>
-
+    -->
 
 
   </md-content>

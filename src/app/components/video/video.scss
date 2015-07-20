@@ -1,3 +1,53 @@
+.video-col {
+
+  overflow: visible;
+}
+
+.video-card {
+  margin: 0px;
+
+  .md-card-video {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+
+
+    .video {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      width: 100%;
+      height: 100%;
+      border-width: 0.5px;
+      border-style: solid;
+      border-color: $dark-primary;
+    }
+  }
+  md-card-content {
+    .md-list-item-text {
+      h3 {
+        font-size: 24px;
+        margin: 0 0 8px 0;
+        font-weight: 600;
+      }
+      h4 {
+        font-size: 16px;
+        margin: 4px 0;
+        color: $dark-secondary;
+      }
+      p {
+        font-size: 14px;
+        margin: 2px 0;
+      }
+    }
+  }
+}
+
+
+
 .video-frame {
   overflow: hidden;
 
