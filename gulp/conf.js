@@ -41,7 +41,7 @@ exports.files = {
 // ------------------------------
 
 exports.wiredep = {
-  //exclude: [/foundation\.js/, /foundation\.css/],
+  exclude: [/foundation-apps\.css/],
   directory: 'bower_components'
 };
 
