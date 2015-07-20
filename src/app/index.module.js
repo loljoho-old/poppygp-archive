@@ -1,18 +1,30 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    /**
-     * Main Module File
-     */
-    angular
-        .module('poppyGP', [
+  /** 
+   * @ngdoc module
+   * @name poppyGP
+   * @description
+   * Base module configures all submodules
+   *
+   */  
+  angular
+    .module('poppyGP', [
 
-            // Core Modules
-            'poppyGP.core', 
-            'poppyGP.layout',
 
-            // Feature Area Modules
-            'poppyGP.playlist',
-            'poppyGP.sidebar'
-        ]);
+      // Core Modules
+      // ------------------------------
+
+      'poppyGP.core', 
+
+
+      // Feature Area Modules
+      // ------------------------------
+
+      'poppyGP.playlist',
+      'poppyGP.layout',
+      'poppyGP.sidebar'
+
+    ]);
+
 })();

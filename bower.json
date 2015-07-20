@@ -1,7 +1,7 @@
 {
   "name": "poppyGP",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.10.0",
   "description": "Community-centered video stream and webchat single-page application in AngularJS.",
   "homepage": "https://github.com/gpquery/poppygp",
   "authors": [
@@ -25,7 +25,11 @@
     "modernizr": "~2.8.3",
     "angular-sanitize": "~1.4.3",
     "font-awesome": "~4.3.0",
-    "ionicons": "~2.0.1"
+    "ionicons": "~2.0.1",
+    "moment": "~2.10.3",
+    "angular-moment": "~0.10.1",
+    "angular-xml": "~2.1.1",
+    "animate.css": "~3.3.0"
   },
   "ignore": [
     "**/.*",

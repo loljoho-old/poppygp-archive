@@ -1,14 +1,29 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular.module('poppyGP.core', [
-            // Angular Modules
-            'ngAnimate', 
-            'ngAria', 
-            'ngResource', 
-            'ngSanitize',
-            //'ngRoute',
-            'ngMaterial'
-            // Third-Party Modules
-        ]); 
+  /** 
+   * @ngdoc module
+   * @name poppyGP.core
+   * @description
+   * Core module registers universal modules for app use.
+   *
+   */  
+  angular
+    .module('poppyGP.core', [
+
+      // AngularJS Modules
+      // ------------------------------
+      'ngAnimate', 
+      'ngAria', 
+      'ngMaterial',
+      'ngResource', 
+      'ngSanitize',
+      //'ngRoute',
+    
+      // Third Party & Cross-App Modules
+      // ------------------------------
+      'xml'
+      
+    ]); 
+
 })();

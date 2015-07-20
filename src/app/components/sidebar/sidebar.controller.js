@@ -27,11 +27,11 @@
         }, {
           name: 'Reddit',
           icon: 'ion-social-reddit',
-          body: ''
+          body: getHtmlTrust('<div flex class="gp-embed gp-embed-reddit"></div>')
         }, {
           name: 'Twitter',
           icon: 'ion-social-twitter',
-          body: ''
+          body: getHtmlTrust('<div flex class="gp-embed gp-embed-twitter"></div>')
         }];
       }
 

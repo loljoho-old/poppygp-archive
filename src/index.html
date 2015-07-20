@@ -59,34 +59,35 @@
   <md-content class="main" layout="row" layout-wrap flex>
   
 
-
     <!-- Left Column
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <md-sidenav class="site-sidenav md-sidenav-left"
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
                 layout="column" layout-fill
-                flex="15">
+                flex="10">
       <md-toolbar class="md-medium">
       </md-toolbar>
       <md-content layout-fill>
       </md-content>
     </md-sidenav>
 
+
     <!-- Video Iframe
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section class="video-col md-whiteframe-glow-z1"
-             layout="column"
-             flex-sm="100" flex-md="100" flex
+             layout="column" flex-sm="100" flex-md="100" 
+             flex-lg="60" flex-gt-lg="65"
              ng-include="'app/components/video/video.html'">
     </section>
     
+
     <!-- Sidebar
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section class="sidebar"
-             layout="column"
              ng-controller="Sidebar as vmm"
-             flex-sm="100" flex-md="66" flex-lg="30" flex-gt-lg="25"
+             layout="column" flex-sm="100" flex-md="66"
+             flex-lg="30" flex-gt-lg="25"
              ng-include="'app/components/sidebar/sidebar.html'">
     </section>
 
@@ -111,6 +112,7 @@
 
   <footer ng-include="'app/components/layout/footer/footer.html'">
   </footer>
+
 
 
   <!-- Vendor Scripts
