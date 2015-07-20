@@ -23,6 +23,7 @@
       // Third Party & Cross-App Modules
       // ------------------------------
       'foundation.core',
+      'foundation.common',
       'xml'
       
     ]); 

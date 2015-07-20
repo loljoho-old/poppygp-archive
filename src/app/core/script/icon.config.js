@@ -15,7 +15,6 @@
 
     /* @ngInject */
     function iconConfig($mdIconProvider) {
-
       // Icons
       // ------------------------------
 

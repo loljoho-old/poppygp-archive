@@ -1,8 +1,8 @@
 .schedule {
   background-color: #ffcfcf;
   max-height: 15vh;
-  md-content {
-
+  >.schedule-content {
    background-color: #cfcfcf;
+   height: 128px;
   }
 }

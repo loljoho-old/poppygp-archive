@@ -51,16 +51,18 @@
 
   <!-- Header Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <gp-toolbar></gp-toolbar>
+  <gp-toolbar flex-order="1"></gp-toolbar>
 
 
   <!-- Primary Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <md-content class="main" layout="row" layout-wrap flex>
+  <md-content class="main md-scroll-y" 
+              layout="row" layout-wrap 
+              flex flex-order-sm="3" flex-order-gt-sm="2">
   
 
     <!-- Left Column
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– 
     <md-sidenav class="site-sidenav md-sidenav-left"
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
@@ -71,7 +73,7 @@
       <md-content layout-fill>
       </md-content>
     </md-sidenav>
-
+    -->
 
     <!-- Video Iframe
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -96,10 +98,9 @@
     <!-- Playlist Row
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section class="schedule"
+             ng-include="'app/components/playlist/schedule.html'"
              layout-fill
              flex-sm="100" flex-md="33" flex-gt-md="100">      
-      <md-content class="md-padding">
-      </md-content>
     </section>
 
 
@@ -110,7 +111,8 @@
   <!-- Footer Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <footer ng-include="'app/components/layout/footer/footer.html'">
+  <footer ng-include="'app/components/footer/footer.html'"
+          flex-order-sm="2" flex-order-gt-sm="3">
   </footer>
 
 

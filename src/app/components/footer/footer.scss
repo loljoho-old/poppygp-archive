@@ -1,0 +1,52 @@
+footer {
+
+  .md-small,
+  .md-medium {
+
+    @include palette-primary(); 
+    padding-bottom: 2px;
+
+    .md-toolbar-tools {
+
+      @include palette-primary();  
+
+      .md-button.md-icon-button {
+
+        line-height: 36px;
+        height: 36px;
+        width: 36px;
+
+
+        >md-icon {
+          line-height: 18px;
+          &.fa {
+            line-height: 24px;
+            font-size: 20px;
+          }
+        }
+      }
+
+    }
+  }
+/*
+  .md-icon-button {
+    .fa {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1.33333333em;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      vertical-align: -7.5%;
+      display: inline-block;
+      word-wrap: normal;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .ion {
+      vertical-align: text-bottom;
+    }
+  }
+*/
+}

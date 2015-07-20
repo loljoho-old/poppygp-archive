@@ -6,20 +6,20 @@
     overflow-y: hidden;
   }
 */
-  .main {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    .site-sidenav {
-      @include absolute-width(10%);
-    }
-    .leftcol {
-
-    }
-    .sidebar {
-
-    }
-    .schedule {
-      overflow-y: hidden;
-      overflow-x: auto;
-    }
+.main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .site-sidenav {
+    @include absolute-width(10%);
   }
+  .leftcol {
+
+  }
+  .sidebar {
+
+  }
+  .schedule {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+}
