@@ -6,6 +6,10 @@
   color: #fff;
   background-color: $dark-primary;
 }
+@mixin palette-secondary() {
+  color: #fff;
+  background-color: $dark-secondary;
+}
 
 // Sizing
 // ------------------------------

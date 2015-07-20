@@ -19,7 +19,10 @@
       // ------------------------------
 
 
-      //$mdIconProvider
+      $mdIconProvider
+        .icon('close',          './assets/icons/ic_close_white_24px.svg')
+        .icon('arrow-left',     './assets/icons/ic_arrow_back_white_24px.svg')
+        .icon('arrow-right',    './assets/icons/ic_arrow_forward_white_24px.svg');
         //.icon('more-h',         './assets/icons/more-h.svg')
         //.icon('more-v',         './assets/icons/more-v.svg')
         //.icon('webchat',        './assets/icons/webchat.svg')

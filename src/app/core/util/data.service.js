@@ -1,22 +1,15 @@
 (function() {
   'use strict';
-
-  /** 
-   * @ngdoc factory
-   * @name dataservice
-   * @module poppyGP.core
-   * @description
-   * Core generic dataservice using $resource
-   *
-   */  
+  
   angular.module('poppyGP.core')
     .factory('dataservice', dataservice);
 
-  dataservice.$inject = ['$resource'];
+  /* @ngInject */
   function dataservice($resource) {
     var service = {
-      schedule  : getSchedule,
-      current   : getCurrent
+      schedule    : getSchedule,
+      current     : getCurrent,
+      getPrevious : getPrevious
     };
     return service;
 
