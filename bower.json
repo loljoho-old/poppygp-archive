@@ -16,20 +16,21 @@
     "url": "https://github.com/gpquery/poppygp"
   },
   "dependencies": {
+    "animate.css": "~3.3.0",
     "angular": "~1.4.3",
     "angular-animate": "~1.4.3",
     "angular-aria": "~1.4.3",
     "angular-resource": "~1.4.3",
-    "angular-material": "~0.10.0",
-    "angular-ui-router": "~0.2.15",
-    "modernizr": "~2.8.3",
     "angular-sanitize": "~1.4.3",
+    "angular-material": "~0.10.0",
+    "angular-xml": "~2.1.1",
+    "angular-ui-router": "~0.2.15",
+    "angular-moment": "~0.10.1",
+    "modernizr": "~2.8.3",
+    "moment": "~2.10.3",
     "font-awesome": "~4.3.0",
     "ionicons": "~2.0.1",
-    "moment": "~2.10.3",
-    "angular-moment": "~0.10.1",
-    "angular-xml": "~2.1.1",
-    "animate.css": "~3.3.0"
+    "foundation-apps": "~1.1.0"
   },
   "ignore": [
     "**/.*",
