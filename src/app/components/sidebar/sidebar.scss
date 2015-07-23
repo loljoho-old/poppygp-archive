@@ -1,48 +1,45 @@
-aside {
-  .sidebar-container {
-    .tabs-container {
-      md-tabs-wrapper {
-        md-tabs-canvas {
-          @include palette-primary();
-          md-pagination-wrapper {
+
+.sidebar-container {
+  .tabs-container {
+    md-tabs-wrapper {
+      md-tabs-canvas {
+        @include palette-primary();
+        md-pagination-wrapper {
+        }
+        md-tab-item.md-tab,
+        md-tab-item.md-tab.md-tab-active,
+        md-tab-item.md-tab.md-tab-focused {
+          span {
+            color: rgba(255, 255, 255, 0.87);
+            font-size: 1.0em;
           }
-          md-tab-item.md-tab,
-          md-tab-item.md-tab.md-tab-active,
-          md-tab-item.md-tab.md-tab-focused {
-            span {
-              color: rgba(255, 255, 255, 0.87);
-              font-size: 1.0em;
-            }
-            md-icon {
-              color: rgba(255, 255, 255, 0.87);
-              font-size: 1.5em;
-              &.fa {
-                //font-size: 20px;
-                &.fa-reddit {
-                  //font-size: 18px;
-                }
+          md-icon {
+            color: rgba(255, 255, 255, 0.87);
+            font-size: 1.5em;
+            &.fa {
+              //font-size: 20px;
+              &.fa-reddit {
+                //font-size: 18px;
               }
             }
           }
         }
       }
-      md-tabs-content-wrapper {
-        /*
-        @include absolute-height(100%);
-        @include absolute-width(100%);
-        */
-        md-tab-content {
-          >div {
+    }
+    md-tabs-content-wrapper {
+      /*
+      @include absolute-height(100%);
+      @include absolute-width(100%);
+      */
+      md-tab-content {
+        >div {
+          height: 100%;
+          .tab-content {
             height: 100%;
-            .tab-content {
-              overflow-x: hidden;
-              overflow-y: hidden;
+            iframe.webchat {
+              width: 100%;
               height: 100%;
-              iframe.webchat {
-                width: 100%;
-                height: 100%;
-                border: 0px none;
-              }
+              border: 0px none;
             }
           }
         }
@@ -50,3 +47,4 @@ aside {
     }
   }
 }
+

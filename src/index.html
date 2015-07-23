@@ -51,14 +51,15 @@
 
   <!-- Header Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <gp-toolbar flex-order="1"></gp-toolbar>
+  <header class="gp-toolbar" ng-include="'app/components/toolbar/toolbar.html'"></header>
 
 
   <!-- Primary Content
   –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <md-content class="main md-scroll-y" 
               layout="row"
-              flex flex-order-sm="3" flex-order-gt-sm="2">
+              flex 
+              flex-order-sm="3" flex-order-gt-sm="2">
   
 
     <!--
@@ -67,29 +68,30 @@
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
                 layout="column" layout-fill
-                flex="10">
-      <md-toolbar class="md-medium">
-      </md-toolbar>
-      <md-content layout-fill>
-      </md-content>
+                flex="10"
+                ng-include="'app/components/playlist/playlist.html'">
     </md-sidenav>
 
 
     <!-- Video Iframe
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– 
     <section class="video-col"
-             layout="column" flex-sm="100" 
-             flex="60"
+             layout="column"
+             flex="60" flex-sm="100" flex-md="100"
              ng-include="'app/components/video/video.html'">
-    </section>
+    </section>-->
+
+    <gp-player layout="column"
+               flex="60" flex-sm="100" flex-md="100">
+    </gp-player>
     
 
     <!-- Sidebar
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section class="sidebar"
              ng-controller="Sidebar as vmm"
-             layout="column" flex-sm="100" 
-             flex="30"
+             layout="column"
+             flex="30" flex-sm="100" flex-md="100" 
              ng-include="'app/components/sidebar/sidebar.html'">
     </section>
 

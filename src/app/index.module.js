@@ -21,10 +21,10 @@
       // Feature Area Modules
       // ------------------------------
 
-      'poppyGP.playlist',
-      'poppyGP.layout',
+      //'poppyGP.playlist',
+      //'poppyGP.layout',
       'poppyGP.sidebar',
-      'poppyGP.panel'
+      //'poppyGP.panel'
 
     ]);
 

@@ -6,26 +6,23 @@
     .controller('View', View);
 
   /* @ngInject */
-  function View(firebaseService, $mdUtil, $log) {
+  function View(dataservice, $mdUtil, $log) {
     var vm = this;
     vm.title = '';
+
+    vm.playlist = '';
 
     activate();
 
     function activate() {
-      $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.');
-      firebaseService;
+      $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.'); 
+      vm.playlist = getXspf();
     }
-      /*
-      return dataservice.current().then(function(response) {
-          vm.title = response.year + ' ' + response.title;
-          return vm.title;
-        }, function(errorMsg) {
-          vm.title = errorMsg;
-          return vm.title;
-        });
-      */
     
+    function getXspf() {
+      return dataservice.getXspf();
+    }
 
   }
+
 })();
