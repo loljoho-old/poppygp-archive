@@ -22,9 +22,7 @@
       // ------------------------------
 
       //'poppyGP.playlist',
-      //'poppyGP.layout',
       'poppyGP.sidebar',
-      //'poppyGP.panel'
 
     ]);
 

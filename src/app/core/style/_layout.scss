@@ -6,15 +6,16 @@ body {
     overflow: hidden;
   }
 }
-
-md-sidenav.site-sidenav {
-  >md-toolbar {
-    @include palette-primary();  
-    .md-toolbar-tools {
-      @include palette-primary();
+md-content.main {
+  md-sidenav.site-sidenav.md-sidenav-left {
+    >md-toolbar {
+      @include palette-primary();  
+      .md-toolbar-tools {
+        @include palette-primary();
+      }
     }
+    @include absolute-width(15%);
   }
-  
 }
 
 md-toolbar {
