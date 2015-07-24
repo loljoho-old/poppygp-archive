@@ -1,0 +1,20 @@
+
+/* Bower Styles Dependencies
+   ========================================================================== */
+// run `gulp wiredep` to automatically populate bower styles dependencies
+// bower:scss
+// endbower
+
+/* Core Style 
+   ========================================================================== */
+@import 'core/style/variables';     // Variables
+@import 'core/style/mixins';        // Mixins
+@import 'core/style/fonts';         // Variables
+@import 'core/style/typography';    // Typography
+@import 'core/style/structure';     // Structure
+
+/* Custom Compiled
+   ========================================================================== */
+// run `gulp inject` to automatically compile custom stylesheets
+// injector
+// endinjector

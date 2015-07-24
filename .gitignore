@@ -2,11 +2,6 @@
 # GLOBAL GITIGNORE #
 ####################
 *ignore*
-server/
-client/README.md
-client/assets/partials/*/
-client/data/
-client/styles/build/
 
 # bower and npm #
 #################
@@ -34,6 +29,7 @@ node_modules
 #################
 !.gitkeep
 tmp
+.tmp/
 .DS_STORE
 .DS_Store?
 ._*
@@ -44,3 +40,4 @@ Thumbs.db
 .idea
 app/jspm_packages
 *.lnk
+*.sublime-workspace

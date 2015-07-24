@@ -1,0 +1,18 @@
+header {
+
+  .gp-toolbar {
+
+    @include palette-secondary();
+
+    >md-toolbar {
+
+      background-color: transparent;
+
+      >.md-toolbar-tools {
+
+        @extend md-toolbar;
+        
+      }
+    }
+  }
+}

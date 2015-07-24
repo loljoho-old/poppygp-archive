@@ -1,0 +1,31 @@
+footer {
+
+  .md-small,
+  .md-medium {
+
+    @include palette-secondary(); 
+    padding-bottom: 2px;
+
+    .md-toolbar-tools {
+
+      @include palette-secondary();  
+
+      .md-button.md-icon-button {
+
+        line-height: 36px;
+        height: 36px;
+        width: 36px;
+
+
+        >md-icon {
+          line-height: 18px;
+          &.fa {
+            line-height: 24px;
+            font-size: 20px;
+          }
+        }
+      }
+
+    }
+  }
+}

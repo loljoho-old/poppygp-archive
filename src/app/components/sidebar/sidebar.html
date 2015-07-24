@@ -1,0 +1,37 @@
+
+<md-toolbar class="md-small">
+  <div class="md-toolbar-tools">
+
+  </div>
+</md-toolbar>
+
+<md-content class="sidebar-container"
+            layout="column" flex>
+
+  <!-- Tabs Container Directive
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <md-tabs class="tabs-container" flex
+           md-selected="vmm.activeTab" 
+           md-stretch-tabs="always"
+           md-dynamic-height="false"
+           md-swipe-content="true">
+
+    <!-- Video Iframe
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <md-tab ng-repeat="tab in vmm.tabs">
+
+      <md-tab-label>
+        <md-icon class="fa fw fa-lg" ng-class="tab.icon"></md-icon>
+        <span hide-sm hide-md>{{tab.name}}</span>
+      </md-tab-label>
+      <md-tab-body layout="row" layout-fill>
+        <md-content class="tab-content"
+                    ng-bind-html="tab.body">
+        </md-content>
+      </md-tab-body>
+
+    </md-tab>
+
+  </md-tabs>
+
+</md-content>

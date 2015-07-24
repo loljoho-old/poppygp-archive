@@ -26,3 +26,5 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
 [git-clone]:http://git-scm.com/docs/git-clone
 [jp-style]:https://github.com/johnpapa/angular-styleguide
 [jp-modular]:https://github.com/johnpapa/ng-demos/tree/master/modular
+
+**Copyright © 2014-2015 Jonathan Ho**
