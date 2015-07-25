@@ -6,6 +6,11 @@ body {
     overflow: hidden;
   }
 }
+
+
+// Main Sidenav
+// ------------------------------
+
 md-content.main {
   md-sidenav.site-sidenav.md-sidenav-left {
     >md-toolbar {
@@ -17,6 +22,10 @@ md-content.main {
     @include absolute-width(15%);
   }
 }
+
+
+// Small/Medium md-toolbar
+// ------------------------------
 
 md-toolbar {
   &.md-small {

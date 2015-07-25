@@ -2,6 +2,7 @@
 # GLOBAL GITIGNORE #
 ####################
 *ignore*
+src/api
 
 # bower and npm #
 #################
