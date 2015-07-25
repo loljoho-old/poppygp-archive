@@ -1,39 +1,39 @@
 
 
-  <md-toolbar class="md-medium">
+<md-toolbar class="md-medium">
 
-    <div class="md-toolbar-tools">
+  <div class="md-toolbar-tools">
 
-      <span flex></span>
+    <md-button class="md-icon-button"
+               ng-click="vm.openSidenav()" 
+               aria-label="Show Schedule">
+      <md-icon class="material-icons">&#xE5C4;</md-icon>
+      <!-- <&#xE5D2;> -->
+    </md-button>
 
-      <!--
-      <md-button class="md-icon-button"
-                 ng-click="vm.openSidenav()" 
-                 aria-label="Show Schedule"
-                 hide-gt-sm>
-        <md-icon md-svg-icon="navbar"></md-icon>
-      </md-button>
-      -->
+    <h3>{{ vmm.datetime }}</h3>
 
-      <span class="brand stripes">
-        <svg height="32" width="30">
-          <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
-        </svg>
-        <svg height="32" width="30">
-          <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
-        </svg>
-        <svg height="32" width="30">
-          <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
-        </svg>
-      </span>
+    <span flex></span>
 
-      <h1 class="site-name">poppyGP</h1>
+    <span class="brand stripes">
+      <svg height="32" width="30">
+        <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+      </svg>
+      <svg height="32" width="30">
+        <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+      </svg>
+      <svg height="32" width="30">
+        <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+      </svg>
+    </span>
 
-      <md-button class="md-icon-button">
-        <md-icon md-svg-icon="arrow-right" class="material-icons"></md-icon>
-      </md-button>
-      
-    </div>
+    <h1 class="site-name">poppyGP</h1>
 
-  </md-toolbar>
+    <md-button class="md-icon-button">
+      <md-icon class="material-icons">&#xE5D2;</md-icon>
+    </md-button>
+    
+  </div>
+
+</md-toolbar>
 

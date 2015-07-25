@@ -6,7 +6,7 @@
     .controller('View', View);
 
   /* @ngInject */
-  function View(dataservice, $mdUtil, $log) {
+  function View(dataservice, moment, $mdUtil, $log) {
     var vm = this;
     vm.title = '';
 

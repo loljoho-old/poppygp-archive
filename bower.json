@@ -1,7 +1,7 @@
 {
   "name": "poppyGP",
   "private": true,
-  "version": "1.11.3",
+  "version": "1.13.2",
   "description": "Community-centered video stream and webchat single-page application in AngularJS.",
   "homepage": "https://github.com/gpquery/poppygp",
   "authors": [
