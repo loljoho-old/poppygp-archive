@@ -69,14 +69,8 @@
     </md-sidenav>
 
 
-    <!-- Video Iframe
-    –––––––––––––––––––––––––––––––––––––––––––––––––– 
-    <section class="video-col"
-             layout="column"
-             flex="60" flex-sm="100" flex-md="100"
-             ng-include="'app/components/video/video.html'">
-    </section>-->
-
+    <!-- Video Player
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <gp-player layout="column"
                flex="60" flex-sm="100" flex-md="100">
     </gp-player>
@@ -107,11 +101,12 @@
 
 
   <!-- Footer Bar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
   <footer ng-include="'app/components/footer/footer.html'"
           flex-order-sm="2" flex-order-gt-sm="3">
-  </footer>
+  </footer>-->
+  <gp-footer flex-order-sm="2" flex-order-gt-sm="3">
+  </gp-footer>
 
 
 

@@ -1,18 +1,27 @@
 <md-toolbar class="md-small">
 
   <div class="md-toolbar-tools">
+    <span ng-if="vm.alert">
+      {{vm.alert}}
+    </span>
 
     <span flex></span>
     
-    <md-button class="md-icon-button" aria-label="Donate via PayPal">
+    <md-button class="md-icon-button" 
+               aria-label="Donate via PayPal"
+               ng-click="vm.showDialog('PayPal')">
       <md-icon class="fa fa-fw fa-paypal"></md-icon>
     </md-button>
 
-    <md-button class="md-icon-button" aria-label="Donate via BTC">
+    <md-button class="md-icon-button" 
+               aria-label="Donate via BTC"
+               ng-click="vm.showDialog('Bitcoin')">
       <md-icon class="ion ion-social-bitcoin"></md-icon>
     </md-button>
 
-    <md-button class="md-icon-button" aria-label="View on GitHub">
+    <md-button class="md-icon-button" 
+               aria-label="View on GitHub"
+               ng-click="vm.showDialog('Github')">
       <md-icon class="ion ion-social-github"></md-icon>
     </md-button>
 
