@@ -8,12 +8,6 @@
   /* @ngInject */
   function View(dataservice, moment, $mdSidenav, $mdUtil, $timeout, $log) {
     var vm = this;
-
-
-    function toggleLeft() {
-      $mdSidenav('left').open();
-    }
-
     vm.title = '';
     vm.playlist = '';
     
