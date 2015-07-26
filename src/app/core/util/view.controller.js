@@ -6,11 +6,17 @@
     .controller('View', View);
 
   /* @ngInject */
-  function View(dataservice, moment, $mdUtil, $log) {
+  function View(dataservice, moment, $mdSidenav, $mdUtil, $timeout, $log) {
     var vm = this;
-    vm.title = '';
 
+
+    function toggleLeft() {
+      $mdSidenav('left').open();
+    }
+
+    vm.title = '';
     vm.playlist = '';
+    
 
     activate();
 
@@ -18,7 +24,6 @@
       $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.'); 
       vm.playlist = getXspf();
     }
-    
     function getXspf() {
       return dataservice.getXspf();
     }

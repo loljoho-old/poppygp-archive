@@ -23,7 +23,6 @@
       // Third Party & Cross-App Modules
       // ------------------------------
       'firebase',
-      'ui.bootstrap',
       //'foundation.core',
       //'foundation.common',
       'xml'
