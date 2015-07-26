@@ -1,6 +1,8 @@
 poppyGP
 =======
 
+https://travis-ci.org/GPQuery/poppygp.svg?branch=master
+
 > A community-centered video stream and webchat single-page AngularJS web application.
 
 This repository is for the current __poppyGP__ project.  For development on the upcoming release entitled __poppyGP-Player__, refer to the new repository [GPQuery / poppyGP-Player](//github.com/GPQuery/poppyGP-player).
