@@ -9,8 +9,6 @@
 </md-toolbar>
 <md-content md-scroll-y
             ng-controller="PlaylistController as vmm">
-  
-  {{vmm.trackList  }}
 
   ---
 
@@ -18,9 +16,9 @@
 
   {{vmm.playlist}}
 
-  <md-divider></md-divider>
 
 
+  <md-subheader>Durations</md-subheader>
   <md-list>
     <md-list-item ng-repeat="track in vm.tracks">
       {{track.duration}}

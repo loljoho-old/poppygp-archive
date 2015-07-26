@@ -17,15 +17,15 @@
 
       function activate() {
         playlistService.get().$promise.then(function(response) {
-          vm.trackList = response.playlist.trackList;
-          vm.playlist = response;
+          vm.trackList = response.playlist.trackList.track;
         });
+
+        vm.playlist = _.filter(_.omit(vm.trackList, 'extension'));
         //vm.trackList = vm.playlist.trackList;
 
         angular.forEach(vm.tracklist, function(key, track) {
           vm.tracks.push({duration: track.duration});
         });
-        vm.trackstring = angular.toJson(vm.trackList);
       }
 
     }

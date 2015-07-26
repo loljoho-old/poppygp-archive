@@ -14,17 +14,20 @@ branches:
   only:
     - master
 
-before_script:
-  - git fetch --tags
+before_install:
   - npm install bower -g
   - npm install gulp -g
-  - sleep 1 # give server time to start
+
+install:
+  - npm install
+  - bower install
+
+before_script:
+  - gulp build
 
 script:
-- npm install
-- bower install
   - gulp test
-  - gulp protractor
+  - gulp protractor:dist
 
 cache:
   directories:
