@@ -30,10 +30,13 @@
   <!-- endinject -->
   <!-- endbuild -->
   
-  <!-- Modernizr
+  <!-- Modernizr and Lodash
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js(src) scripts/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <!-- build:js(src) scripts/lodash.js -->
+  <script src="../bower_components/lodash/lodash.js"></script>
   <!-- endbuild -->
 </head>
 
@@ -48,14 +51,17 @@
   <header class="gp-toolbar" 
           ng-include="'app/components/toolbar/toolbar.html'">
   </header>-->
-  <gp-toolbar></gp-toolbar>
+  <gp-toolbar>
+  </gp-toolbar>
 
 
   <!-- Primary Content
   –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <md-content class="main md-scroll-y" 
               layout="row"
-              flex flex-order-sm="3" flex-order-gt-sm="2">
+              flex 
+              flex-order-sm="3" 
+              flex-order-gt-sm="2">
   
 
     <!-- Sidenav (locked gt-md)
@@ -64,7 +70,6 @@
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
                 layout="column" layout-fill
-                flex="10"
                 ng-include="'app/components/playlist/playlist.html'">
     </md-sidenav>
 
@@ -72,7 +77,10 @@
     <!-- Video Player
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <gp-player layout="column"
-               flex="60" flex-sm="100" flex-md="100">
+               flex-sm="100" 
+               flex-md="100"
+               flex-lg="60"
+               flex-gt-lg="60">
     </gp-player>
     
 
@@ -85,7 +93,10 @@
              ng-include="'app/components/sidebar/sidebar.html'">
     </section>-->
     <gp-content layout="column"
-             flex="25" flex-sm="100" flex-md="100">
+                flex-sm="100" 
+                flex-md="100"
+                flex-lg="25"
+                flex-gt-lg="25">
     </gp-content>
 
 
@@ -108,7 +119,8 @@
   <footer ng-include="'app/components/footer/footer.html'"
           flex-order-sm="2" flex-order-gt-sm="3">
   </footer>-->
-  <gp-footer flex-order-sm="2" flex-order-gt-sm="3">
+  <gp-footer flex-order-sm="2" 
+             flex-order-gt-sm="3">
   </gp-footer>
 
 

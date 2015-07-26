@@ -12,14 +12,24 @@ body {
 // ------------------------------
 
 md-content.main {
+
   md-sidenav.site-sidenav.md-sidenav-left {
+
     >md-toolbar {
+
       @include palette-primary();  
+
       .md-toolbar-tools {
-        @include palette-primary();
+        @extend md-toolbar;
       }
     }
+
     @include absolute-width(15%);
+
+    @media (max-width: 600px) {
+      @include absolute-width(75%);
+    }
+
   }
 }
 

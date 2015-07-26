@@ -31,7 +31,8 @@
     "font-awesome": "~4.3.0",
     "ionicons": "~2.0.1",
     "foundation-apps": "~1.1.0",
-    "angularfire": "~1.1.2"
+    "angularfire": "~1.1.2",
+    "lodash": "~3.10.0"
   },
   "ignore": [
     "**/.*",

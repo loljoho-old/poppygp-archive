@@ -7,10 +7,23 @@
 
   </div>
 </md-toolbar>
-<md-content>
+<md-content md-scroll-y
+            ng-controller="PlaylistController as vmm">
+  
+  {{vmm.trackList  }}
+
+  ---
+
+  <md-divider></md-divider>
+
+  {{vmm.playlist}}
+
+  <md-divider></md-divider>
+
+
   <md-list>
-    <md-list-item class="md-3-line" 
-                  ng-repeat="track in playlist.trackList">
+    <md-list-item ng-repeat="track in vm.tracks">
+      {{track.duration}}
     </md-list-item>
   </md-list>
 </md-content>

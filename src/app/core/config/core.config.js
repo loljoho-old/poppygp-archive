@@ -10,13 +10,12 @@
    *
    */  
   var core = angular.module('poppyGP.core');
-
-
+  
   core.config(coreConfig);
 
   /* @ngInject */
-  function coreConfig() {
-    
+  function coreConfig($httpProvider) {
+    $httpProvider.interceptors.push('xmlHttpInterceptor');
   }
 
 
