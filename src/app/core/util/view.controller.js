@@ -6,21 +6,16 @@
     .controller('View', View);
 
   /* @ngInject */
-  function View(dataservice, moment, $mdUtil, $log) {
+  function View(moment, $mdSidenav, $mdUtil, $timeout, $log) {
     var vm = this;
     vm.title = '';
-
     vm.playlist = '';
+    
 
     activate();
 
     function activate() {
       $log.warn('Natürlich ist Hans nass, er steht unter einem Wasserfall.'); 
-      vm.playlist = getXspf();
-    }
-    
-    function getXspf() {
-      return dataservice.getXspf();
     }
 
   }

@@ -1,9 +1,10 @@
-/* global moment:false */
+/* global moment:false, _:false */
 (function() {
   'use strict';
 
   angular
-    .module('poppyGP')
-    .constant('moment', moment);
+    .module('poppyGP.core')
+    .constant('moment', moment)
+    .constant('_', window._);
 
 })();
