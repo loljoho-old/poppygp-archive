@@ -1,0 +1,37 @@
+/*
+.schedule {
+  background-color: #ffcfcf;
+  max-height: 15vh;
+  >.schedule-content {
+   background-color: #cfcfcf;
+   height: 128px;
+  }
+}
+*/
+.site-sidenav {
+  md-content {
+    
+  }
+}
+
+#vertical-container {
+  width: 400px;
+  height: 100%;
+}
+.repeated-item {
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  //height: 40px;
+  padding-top: 10px; 
+}
+md-virtual-repeat-container {
+  border: solid 1px grey; 
+}
+.md-virtual-repeat-container .md-virtual-repeat-offsetter {
+  padding-left: 16px; 
+}
+md-virtual-repeat-container {
+  div {
+    //@include absolute-height(48px);
+  }
+}
