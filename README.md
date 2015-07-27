@@ -26,21 +26,21 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
 
  * [Yeoman][yo] scaffolding tool to restructure the application
  * Full-featured [Gulp][gulp] capabilities provided by [generator-gulp-angular][gulp-ng]:
-   - Improved `serve` and `watch` tasks over my pre-existing [Browser-Sync][bs] setup
-   - Automated `index.html` injection of Bower dependencies, project stylesheets, and Javascript files
-   - A vastly superior `build` system including:
-     - AngularJS-specific automation with `gulp` plugins:
-       - `angular-templatecache`
-       - `angular-filesort`
-       - `ng-annotate`
-     - Bower dependencies handled with `main-bower-files` plugins
-     - Static asset revisioning à la `gulp-rev` plugin
-     - Improved `scss` compilation and `css` optimisation
-     - Improved `js` code linting, optimisation, and minification
+   * Improved `serve` and `watch` tasks over my pre-existing [Browser-Sync][bs] setup
+   * Automated `index.html` injection of Bower dependencies, project stylesheets, and Javascript files
+   * A vastly superior `build` system including:
+     * AngularJS-specific automation with `gulp` plugins:
+       * `angular-templatecache`
+       * `angular-filesort`
+       * `ng-annotate`
+     * Bower dependencies handled with `main-bower-files` plugins
+     * Static asset revisioning à la `gulp-rev` plugin
+     * Improved `scss` compilation and `css` optimisation
+     * Improved `js` code linting, optimisation, and minification
  * Automated testing and continuous integration (__work in progress__)
-   - [Travis-CI][travis] continuous integration
-   - [Protractor][protractor] end-to-end testing
-   - [Karma][karma] unit testing
+   * [Travis-CI][travis] continuous integration
+   * [Protractor][protractor] end-to-end testing
+   * [Karma][karma] unit testing
 
 
 ## Front-End UI/UX Components
@@ -48,11 +48,11 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
 __AngularJS & Modules__
 
  * [AngularJS 1.4.x][ng] - Javascript application framework
-   - Angular-Animate
-   - Angular-Aria
-   - Angular-Resource
-   - Angular-Sanitize
-   - ~~Angular-Touch~~
+   * Angular-Animate
+   * Angular-Aria
+   * Angular-Resource
+   * Angular-Sanitize
+   * ~~Angular-Touch~~
  * [Angular-Material][ngMaterial] - official Angular implementation of Google's [Material design specification][md]
  * [Angular-XML][ngXML] - module supplying [X2JS][x2js] for XML to JSON conversion
  * [AngularFire][ngFire] - module for interaction with [Firebase][firebase] realtime cloud database
