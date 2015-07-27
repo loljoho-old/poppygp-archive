@@ -20,58 +20,58 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
  * [Node.js][node] provides the environment in which application development is done
  * [npm][npm] manages development tool dependencies
  * [Bower][bower] is used to manage front-end dependencies including Angular modules, Javascript libraries, icon fonts, etc
- * [Gulp.js][gulp] * streaming build system and workflow automation
+ * [Gulp.js][gulp] - streaming build system and workflow automation
 
 *After the __1.0.0__ release, I adopted a number of [best practices and recommendations][dev-psi] to improve performance and further streamline workflow, which was accomplished with the tools listed below.*
 
  * [Yeoman][yo] scaffolding tool to restructure the application
  * Full-featured [Gulp][gulp] capabilities provided by [generator-gulp-angular][gulp-ng]:
-   * Improved `serve` and `watch` tasks over my pre-existing [Browser-Sync][bs] setup
-   * Automated `index.html` injection of Bower dependencies, project stylesheets, and Javascript files
-   * A vastly superior `build` system including:
-     * AngularJS-specific automation with `gulp` plugins:
-       * `angular-templatecache`
-       * `angular-filesort`
-       * `ng-annotate`
-     * Bower dependencies handled with `main-bower-files` plugins
-     * Static asset revisioning à la `gulp-rev` plugin
-     * Improved `scss` compilation and `css` optimisation
-     * Improved `js` code linting, optimisation, and minification
+   - Improved `serve` and `watch` tasks over my pre-existing [Browser-Sync][bs] setup
+   - Automated `index.html` injection of Bower dependencies, project stylesheets, and Javascript files
+   - A vastly superior `build` system including:
+     - AngularJS-specific automation with `gulp` plugins:
+       - `angular-templatecache`
+       - `angular-filesort`
+       - `ng-annotate`
+     - Bower dependencies handled with `main-bower-files` plugins
+     - Static asset revisioning à la `gulp-rev` plugin
+     - Improved `scss` compilation and `css` optimisation
+     - Improved `js` code linting, optimisation, and minification
  * Automated testing and continuous integration (__work in progress__)
-   * [Travis-CI][travis] continuous integration
-   * [Protractor][protractor] end-to-end testing
-   * [Karma][karma] unit testing
+   - [Travis-CI][travis] continuous integration
+   - [Protractor][protractor] end-to-end testing
+   - [Karma][karma] unit testing
 
 
 ## Front-End UI/UX Components
 
 __AngularJS & Modules__
 
- * [AngularJS 1.4.x][ng] * Javascript application framework
-   * Angular-Animate
-   * Angular-Aria
-   * Angular-Resource
-   * Angular-Sanitize
-   * ~~Angular-Touch~~
- * [Angular-Material][ngMaterial] * official Angular implementation of Google's [Material design specification][md]
- * [Angular-XML][ngXML] * module supplying [X2JS][x2js] for XML to JSON conversion
- * [AngularFire][ngFire] * module for interaction with [Firebase][firebase] realtime cloud database
- * ~~[Angular-UI-Router][ui-router] * third-party Angular routing module~~
+ * [AngularJS 1.4.x][ng] - Javascript application framework
+   - Angular-Animate
+   - Angular-Aria
+   - Angular-Resource
+   - Angular-Sanitize
+   - ~~Angular-Touch~~
+ * [Angular-Material][ngMaterial] - official Angular implementation of Google's [Material design specification][md]
+ * [Angular-XML][ngXML] - module supplying [X2JS][x2js] for XML to JSON conversion
+ * [AngularFire][ngFire] - module for interaction with [Firebase][firebase] realtime cloud database
+ * ~~[Angular-UI-Router][ui-router] - third-party Angular routing module~~
 
 
  __JS Libraries__
 
- * [Moment.js][moment] * Javascript library for date/time parsing
- * [Modernizr][modernizr] * Javascript library for HTML5/CSS3 browser feature detection
- * [lodash][lodash] * Javascript utility library
+ * [Moment.js][moment] - Javascript library for date/time parsing
+ * [Modernizr][modernizr] - Javascript library for HTML5/CSS3 browser feature detection
+ * [lodash][lodash] - Javascript utility library
 
 
 __Fonts, Icons, etc.__
 
- * [Google Fonts][gfont] * provides the [Source Sans Pro][sourcesanspro] font face
- * [Font-Awesome][fa] * icon library and font toolkit
- * [Ionicons][ion] * icon library for [Ionic Framework][ionic]
- * [Material Design Icons][mdIcons] * icon library for Material Design
+ * [Google Fonts][gfont] - provides the [Source Sans Pro][sourcesanspro] font face
+ * [Font-Awesome][fa] - icon library and font toolkit
+ * [Ionicons][ion] - icon library for [Ionic Framework][ionic]
+ * [Material Design Icons][mdIcons] - icon library for Material Design
 
 
 
@@ -122,4 +122,4 @@ Kindly send me a message if you're interested in contributing--I'd love the help
 
 ## License
 
-Copyright © 2013 * 2015 Jonathan Ho
+Copyright © 2013 - 2015 Jonathan Ho
