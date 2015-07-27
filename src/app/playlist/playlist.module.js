@@ -2,6 +2,7 @@
   'use strict';
 
   angular
-    .module('poppyGP.playlist', []);
+    .module('poppyGP.playlist', [
+    ]);
 
 })();

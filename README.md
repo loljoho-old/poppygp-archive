@@ -1,7 +1,7 @@
 poppyGP
 =======
 
-https://travis-ci.org/GPQuery/poppygp.svg?branch=master
+![Travis Build](https://travis-ci.org/GPQuery/poppygp.svg?branch=master)
 
 > A community-centered video stream and webchat single-page AngularJS web application.
 
@@ -13,6 +13,96 @@ This repository is for the current __poppyGP__ project.  For development on the 
 __poppyGP__ is a community-centered, single-page, video stream and webchat application built with [AngularJS][ng].  It features a bespoke cross-platform, cross-browser, mobile-first, responsive UI/UX based on [Angular-Material][ngMaterial] with additional styling done via [Sass][sass].
 
 
+
+## APPLICATION MODULES
+
+__poppyGP__ utilises a modular structure inspired in part by the [Angular Style Gudie by @john_papa](https://github.com/johnpapa/angular-styleguide) as well as the [Angular-Material](https://github.com/angular/material) project's structure.
+
+```
+poppyGP
+├── poppyGP.core            --> Core Module
+│   ├┄┄ ngAnimate
+│   ├┄┄ ngAria
+│   ├┄┄ ngMaterial
+│   ├┄┄ ngResource
+│   ├┄┄ ngSanitize
+│   ├┄┄ firebase
+│   └┄┄ xml
+│   
+├── poppyGP.components      --> Page Components
+│   ├── content             --> Right Side Content
+│   ├── footer              --> Footer Toolbar
+│   ├── player              --> Video Player
+│   └── toolbar             --> Site Main Toolbar
+│   
+├── poppyGP.playlist        --> Playlist Module
+│   ├── 
+│   ├── 
+│   └── 
+│   
+├── poppyGP.
+│   
+├── poppyGP.webchat             --> IRC Webchat
+│   
+├── 
+│   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
+│   └── 
+│   
+└── 
+```
+
+## APPLICATION STRUCTURE
+
+```
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── content/
+│   │   ├── footer/
+│   │   ├── player/
+│   │   ├── sidebar/
+│   │   ├── toolbar/
+│   │   ├── webchat/
+│   │   └── components.module.js
+│   │
+│   ├── core/
+│   │   ├── scripts/
+│   │   │   ├── 
+│   │   │   └── 
+│   │   ├── style/
+│   │   │   ├── _fonts.scss
+│   │   │   ├── _layout.scss
+│   │   │   ├── _mixins.scss
+│   │   │   ├── _typography.scss
+│   │   │   └── _variables.scss
+│   │   │
+│   │   └── core.module.js
+│   │
+│   ├── playlist/
+│   │   ├── 
+│   │   └── playlist.module.js
+│   │
+│   ├── index.module.js
+│   └── index.scss
+│
+├── assets/
+│   ├── images/
+│   │   ├── touch/
+│   │   └── 
+│   ├── svg/
+│   │   ├──
+│   │   └── 
+│   └── 
+│
+├── favicon.ico
+├── index.html
+├── robots.txt
+└── 
+```
 
 [ng]:http://angularjs.org
 [ngMaterial]:http://material.angularjs.org/
@@ -29,5 +119,5 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
 [git-clone]:http://git-scm.com/docs/git-clone
 [jp-style]:https://github.com/johnpapa/angular-styleguide
 [jp-modular]:https://github.com/johnpapa/ng-demos/tree/master/modular
-
+  
 **Copyright © 2014-2015 Jonathan Ho**

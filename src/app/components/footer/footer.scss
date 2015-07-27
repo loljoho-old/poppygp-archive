@@ -19,9 +19,13 @@ gp-footer {
 
         >md-icon {
           line-height: 18px;
-          &.fa {
+          &.fa,
+          &.ion {
             line-height: 24px;
             font-size: 20px;
+            &.fa-paypal {
+              font-size: 18px;
+            }
           }
         }
       }

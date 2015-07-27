@@ -1,0 +1,52 @@
+
+<!--       ng-controller="PlaylistController">-->
+<md-toolbar class="md-medium">
+  <div class="md-toolbar-tools">
+    <span ng-controller="ClockController as vmm">
+      {{ vmm.currentTime }}
+    </span>
+    <span flex></span>
+  </div>
+</md-toolbar>
+
+<md-content md-scroll-y flex
+            ng-controller="PlaylistController as vmm">
+<!--
+  <md-virtual-repeat-container id="vertical-container"
+                               layout-fill flex>
+    <div md-virtual-repeat="track in vmm.tracks" 
+         flex
+         class="repeated-item">
+      {{track.year}} {{track.round}} {{track.title}}
+    </div>
+  </md-virtual-repeat-container>
+-->
+  <md-list>
+    <md-list-item class="md-3-line" ng-repeat="track in vmm.tracks">
+      <div class="md-list-item-text">
+        <h3>{{track.year}} Rnd {{track.round}}</h3>
+        <h4>{{track.title}}</h4>
+        <p>{{track.time | date:'HH:mm:ss - dd MMM'}}</p>
+      </div>
+    </md-list-item>
+  </md-list>
+
+
+
+  <!--
+
+  <md-divider></md-divider>
+
+  {{vmm.trackList}}
+
+
+
+  <md-subheader>Durations</md-subheader>
+  <md-list>
+    <md-list-item ng-repeat="track in vm.tracks">
+      {{track.duration}}
+    </md-list-item>
+  </md-list>
+  -->
+</md-content>
+
