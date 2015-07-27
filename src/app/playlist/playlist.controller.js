@@ -1,8 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('poppyGP.schedule.playlist')
+  angular.module('poppyGP.playlist')
     .controller('PlaylistController', PlaylistController);
 
     /** @ngInject */

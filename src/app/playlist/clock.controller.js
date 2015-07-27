@@ -1,8 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('poppyGP.schedule.clock')
+  angular.module('poppyGP.playlist')
     .controller('ClockController', ClockController);
 
     /** @ngInject */

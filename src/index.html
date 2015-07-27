@@ -8,13 +8,31 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
   <title ng-bind-template="{{vm.title}} · poppyGP Player">poppyGP Player</title>
 
-  <!-- Favicons
+  
+  <!-- Web Application Manifest & Favicons/Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="manifest" href="manifest.json">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="poppyGP Player">
+  <link rel="icon" sizes="192x192" href="assets/icons/touch/android-chrome-192x192.png">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="poppyGP Player">
+  <link rel="apple-touch-icon" href="assets/icons/touch/apple-touch-icon-152x152.png">
+
+  <meta name="msapplication-TileImage" content="assets/icons/touch/mstile-144x144">
+  <meta name="msapplication-TileColor" content="#cc0000">
+
 
   <!-- Vendor Stylesheets
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -30,14 +48,18 @@
   <!-- endinject -->
   <!-- endbuild -->
   
-  <!-- Modernizr and Lodash
+  <!-- Modernizr
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js(src) scripts/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
+
+  <!-- Lodash
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js(src) scripts/lodash.js -->
   <script src="../bower_components/lodash/lodash.js"></script>
   <!-- endbuild -->
+
 </head>
 
 <body layout="column">
@@ -51,8 +73,7 @@
   <header class="gp-toolbar" 
           ng-include="'app/components/toolbar/toolbar.html'">
   </header>-->
-  <gp-toolbar>
-  </gp-toolbar>
+  <gp-toolbar></gp-toolbar>
 
 
   <!-- Primary Content
@@ -70,7 +91,7 @@
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-md')"
                 layout="column" layout-fill
-                ng-include="'app/components/playlist/playlist.html'">
+                ng-include="'app/playlist/playlist.html'">
     </md-sidenav>
 
 
