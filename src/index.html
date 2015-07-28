@@ -47,18 +47,6 @@
   <!-- inject:css -->
   <!-- endinject -->
   <!-- endbuild -->
-  
-  <!-- Modernizr
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- build:js(src) scripts/modernizr.js -->
-  <script src="../bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
-
-  <!-- Lodash
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- build:js(src) scripts/lodash.js -->
-  <script src="../bower_components/lodash/lodash.js"></script>
-  <!-- endbuild -->
 
 </head>
 
@@ -69,10 +57,7 @@
 
 
   <!-- Header Bar
-  –––––––––––––––––––––––––––––––––––––––––––––––––––– 
-  <header class="gp-toolbar" 
-          ng-include="'app/components/toolbar/toolbar.html'">
-  </header>-->
+  –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <gp-toolbar></gp-toolbar>
 
 
@@ -106,13 +91,7 @@
     
 
     <!-- Sidebar
-    –––––––––––––––––––––––––––––––––––––––––––––––––– 
-    <section class="sidebar"
-             ng-controller="Sidebar as vmm"
-             layout="column"
-             flex="25" flex-sm="100" flex-md="100" 
-             ng-include="'app/components/sidebar/sidebar.html'">
-    </section>-->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <gp-content layout="column"
                 flex-sm="100" 
                 flex-md="100"
@@ -121,25 +100,11 @@
     </gp-content>
 
 
-
-    <!-- Playlist Row
-    –––––––––––––––––––––––––––––––––––––––––––––––––– 
-    <section class="schedule"
-             ng-include="'app/components/playlist/schedule.html'"
-             layout-fill
-             flex-sm="100" flex-md="33" flex-gt-md="100">      
-    </section>
-    -->
-
-
   </md-content>
 
 
   <!-- Footer Bar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– 
-  <footer ng-include="'app/components/footer/footer.html'"
-          flex-order-sm="2" flex-order-gt-sm="3">
-  </footer>-->
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <gp-footer flex-order-sm="2" 
              flex-order-gt-sm="3">
   </gp-footer>
