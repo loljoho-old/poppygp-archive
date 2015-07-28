@@ -20,17 +20,17 @@
       {{track.year}} {{track.round}} {{track.title}}
     </div>
   </md-virtual-repeat-container>
--->
+
+  -->
   <md-list>
-    <md-list-item class="md-3-line" ng-repeat="track in vmm.tracks">
+    <md-list-item class="md-3-line" ng-repeat="track in vmm.playlist">
       <div class="md-list-item-text">
-        <h3>{{track.year}} Rnd {{track.round}}</h3>
-        <h4>{{track.title}}</h4>
-        <p>{{track.time | date:'HH:mm:ss - dd MMM'}}</p>
+        <h3>{{track.title}}</h3>
+        <h4>{{track.duration}}</h4>
+        <p>{{track.location}}</p>
       </div>
     </md-list-item>
   </md-list>
-
 
 
   <!--
