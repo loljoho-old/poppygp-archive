@@ -24,10 +24,16 @@ md-content.main {
       }
     }
 
-    @include absolute-width(15%);
+    @media (min-width: 960px) {
+      //@include absolute-width(20%);
+    }
 
-    @media (max-width: 600px) {
-      @include absolute-width(75%);
+    @media (min-width: 600px) and (max-width: 959px) {
+      //@include absolute-width(25%);
+    }
+
+    @media (max-width: 599px) {
+      //@include absolute-width(75%);
     }
 
   }
