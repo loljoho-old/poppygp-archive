@@ -7,15 +7,15 @@ poppyGP
 
 
 
-
-
-## Overview
+Overview
+--------
 
 __poppyGP__ is a community-centered, single-page, video stream and webchat application built with [AngularJS][ng].  It features a Sass-styled bespoke cross-platform, cross-browser, mobile-first, responsive UI/UX based on the [Angular-Material][ngMaterial] implementation.
 
 
-## Development Tools
 
+Development Tools
+-----------------
 
  * [Node.js][node] provides the environment in which application development is done
  * [npm][npm] manages development tool dependencies
@@ -29,10 +29,7 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
    * Improved `serve` and `watch` tasks over my pre-existing [Browser-Sync][bs] setup
    * Automated `index.html` injection of Bower dependencies, project stylesheets, and Javascript files
    * A vastly superior `build` system including:
-     * AngularJS-specific automation with `gulp` plugins:
-       * `angular-templatecache`
-       * `angular-filesort`
-       * `ng-annotate`
+     * AngularJS-specific automation with `gulp` plugins `angular-templatecache` `angular-filesort` and `ng-annotate`
      * Bower dependencies handled with `main-bower-files` plugins
      * Static asset revisioning à la `gulp-rev` plugin
      * Improved `scss` compilation and `css` optimisation
@@ -43,7 +40,9 @@ __poppyGP__ is a community-centered, single-page, video stream and webchat appli
    * [Karma][karma] unit testing
 
 
-## Front-End UI/UX Components
+
+Front-End UI/UX Components
+--------------------------
 
 __AngularJS & Modules__
 
@@ -75,12 +74,19 @@ __Fonts, Icons, etc.__
 
 
 
-## Contributing
+Contributing
+------------
 
 Due to a considerable dearth in willing and qualified developers in the community, this section has not yet been written.
 
 Kindly send me a message if you're interested in contributing--I'd love the help!
 
+
+
+License
+-------
+
+Copyright © 2013 - 2015 Jonathan Ho
 
 
 [ng]://angularjs.org
@@ -119,7 +125,3 @@ Kindly send me a message if you're interested in contributing--I'd love the help
 [karma]://karma-runner.github.io
 [protractor]://angular.github.io/protractor/
 [travis]://travis-ci.org
-
-## License
-
-Copyright © 2013 - 2015 Jonathan Ho
