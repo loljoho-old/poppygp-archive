@@ -1,7 +1,7 @@
 {
   "name": "poppyGP",
   "private": true,
-  "version": "1.18.0",
+  "version": "1.20.0",
   "description": "Community-based video stream and IRC single-page web application.",
   "author": {
     "name": "Jonathan Ho",
@@ -38,7 +38,7 @@
     "gulp-jshint": "~1.11.0",
     "gulp-load-plugins": "~0.10.0",
     "gulp-minify-html": "~1.0.3",
-    "gulp-ng-annotate": "~1.0.0",
+    "gulp-ng-annotate": "^1.1.0",
     "gulp-protractor": "~1.0.0",
     "gulp-rename": "~1.2.2",
     "gulp-replace": "~0.5.3",
