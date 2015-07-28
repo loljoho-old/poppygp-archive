@@ -5,13 +5,14 @@
     .controller('ClockController', ClockController);
 
     /** @ngInject */
-    function ClockController(moment, $timeout) {
+    function ClockController(moment) {
       var vm = this;
-      vm.currentTime = moment().format('HH:mm:ss');
+      vm.updateTime = updateTime;
+      
+      vm.currentTime = moment().format('ddd D MMM HH:mm:ss');
 
       function updateTime() {
-        vm.currentTime = moment().format('HH:mm:ss');
-        $timeout(updateTime(), 1000);
+        vm.currentTime = moment().format('ddd D MMM HH:mm:ss');
       }
     }
 

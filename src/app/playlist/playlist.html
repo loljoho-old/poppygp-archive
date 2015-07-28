@@ -1,27 +1,20 @@
 
 <!--       ng-controller="PlaylistController">-->
 <md-toolbar class="md-medium">
-  <div class="md-toolbar-tools">
-    <span ng-controller="ClockController as vmm">
+  <div class="md-toolbar-tools" ng-controller="ClockController as vmm">
+    <span>
       {{ vmm.currentTime }}
     </span>
     <span flex></span>
+    <md-button class="md-icon-button"
+               ng-click="vmm.updateTime()">
+      <md-icon class="material-icons">&#xE5D5;</md-icon>
+    </md-button>
   </div>
 </md-toolbar>
 
 <md-content md-scroll-y flex
             ng-controller="PlaylistController as vmm">
-<!--
-  <md-virtual-repeat-container id="vertical-container"
-                               layout-fill flex>
-    <div md-virtual-repeat="track in vmm.tracks" 
-         flex
-         class="repeated-item">
-      {{track.year}} {{track.round}} {{track.title}}
-    </div>
-  </md-virtual-repeat-container>
-
-  -->
   <md-list>
     <md-list-item class="md-3-line" ng-repeat="track in vmm.playlist">
       <div class="md-list-item-text">

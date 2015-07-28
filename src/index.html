@@ -89,7 +89,8 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <md-sidenav class="site-sidenav md-sidenav-left"
                 md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-md')"
+                md-is-open="vm.isOpen"
+                md-is-locked-open="$mdMedia('gt-md') && vm.isOpen"
                 layout="column" layout-fill
                 ng-include="'app/playlist/playlist.html'">
     </md-sidenav>
@@ -100,8 +101,7 @@
     <gp-player layout="column"
                flex-sm="100" 
                flex-md="100"
-               flex-lg="60"
-               flex-gt-lg="60">
+               flex>
     </gp-player>
     
 

@@ -5,13 +5,13 @@
   <div class="md-toolbar-tools">
 
     <md-button class="md-icon-button"
-               ng-click="vmm.toggleLeft()" 
-               aria-label="Show Schedule">
-      <md-icon class="material-icons">&#xE5C4;</md-icon>
+               ng-click="vm.isOpen = !vm.isOpen" 
+               aria-label="Toggle Schedule">
+      <md-icon class="material-icons">&#xE5D2;</md-icon>
+      <!--&#xE5C4;-->
       <!-- <&#xE5D2;> -->
     </md-button>
 
-    <h3>{{ vmm.datetime }}</h3>
 
     <span flex></span>
 
@@ -28,10 +28,6 @@
     </span>
 
     <h1 class="site-name">poppyGP</h1>
-
-    <md-button class="md-icon-button">
-      <md-icon class="material-icons">&#xE5D2;</md-icon>
-    </md-button>
     
   </div>
 

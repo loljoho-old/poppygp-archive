@@ -9,9 +9,7 @@
   function gpToolbarDirective() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/toolbar/toolbar.html',
-      controller: 'ToolbarController',
-      controllerAs: 'vmm'
+      templateUrl: 'app/components/toolbar/toolbar.html'
     };
 
     return directive;
