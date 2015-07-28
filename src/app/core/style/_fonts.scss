@@ -21,19 +21,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* FontAwesome */
-.fa {
-  font-family: FontAwesome;
-  font-size: 1.25em;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  &.fa-paypal {
-    font-size: 1.45em;
-  }
-}
-
 /* vietnamese */
 @font-face {
   font-family: 'Source Sans Pro';

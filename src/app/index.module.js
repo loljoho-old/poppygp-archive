@@ -1,13 +1,7 @@
 (function() {
   'use strict';
 
-  /** 
-   * @ngdoc module
-   * @name poppyGP
-   * @description
-   * Base module configures all submodules
-   *
-   */  
+
   angular
     .module('poppyGP', [
 
