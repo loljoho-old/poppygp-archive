@@ -116,12 +116,7 @@ Copyright © 2013 - 2015 Jonathan Ho
 [fa]://fortawesome.github.io/Font-Awesome/
 [git]://git-scm.com/
 [bs]://browsersync.io
-
 [dev-psi]://developers.google.com/speed/docs/insights/rules
-
-[jp-style]://github.com/johnpapa/angular-styleguide
-[jp-modular]://github.com/johnpapa/ng-demos/tree/master/modular
-
 [karma]://karma-runner.github.io
 [protractor]://angular.github.io/protractor/
 [travis]://travis-ci.org
