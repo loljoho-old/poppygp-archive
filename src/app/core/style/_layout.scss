@@ -11,33 +11,31 @@ body {
 // Main Sidenav
 // ------------------------------
 
-md-content.main {
-
-  md-sidenav.site-sidenav.md-sidenav-left {
+  md-sidenav.site-sidenav.md-sidenav-left.md-locked-open {
 
     >md-toolbar {
 
-      @include palette-primary();  
+      @include palette-primary();
 
       .md-toolbar-tools {
         @extend md-toolbar;
       }
     }
 
-    @media (min-width: 960px) {
-      //@include absolute-width(20%);
+    @media (min-width: 720px) and (max-width: 799px) {
+      @include absolute-width(275px);
     }
 
-    @media (min-width: 600px) and (max-width: 959px) {
-      //@include absolute-width(25%);
+    @media (min-width: 600px) and (max-width: 719px) {
+      @include absolute-width(250px);
     }
 
     @media (max-width: 599px) {
-      //@include absolute-width(75%);
+      @include absolute-width(75%);
     }
 
   }
-}
+
 
 
 // Small/Medium md-toolbar
