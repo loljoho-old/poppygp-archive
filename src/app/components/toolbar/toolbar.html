@@ -5,9 +5,14 @@
   <div class="md-toolbar-tools">
 
     <md-button class="md-icon-button"
-               ng-click="vm.isOpen = !vm.isOpen" 
+               ng-click="vm.isOpen = !vm.isOpen"
                aria-label="Toggle Schedule">
-      <md-icon class="material-icons">&#xE5D2;</md-icon>
+      <md-icon>
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </md-icon>
       <!--&#xE5C4;-->
       <!-- <&#xE5D2;> -->
     </md-button>
@@ -15,20 +20,39 @@
 
     <span flex></span>
 
-    <span class="brand stripes">
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
-      </svg>
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
-      </svg>
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
-      </svg>
-    </span>
+      <!--
+            HEY!
+            YOU!
+            SOURCE VIEWER!
+            Lemme know if these angles seem off, okay?
+      -->
+      <svg height="24" width="60"
+           class="brand stripes">
 
+        <g class="mercedes">
+          <path d="M24 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#2ab4a5"
+                stroke-width="1"
+                fill="#2ab4a5" />
+        </g>
+        <g class="ferrari">
+          <path d="M40 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#c30000"
+                stroke-width="1"
+                fill="#c30000" />
+        </g>
+        <g class="williams">
+          <path d="M56 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#999999"
+                stroke-width="1"
+                fill="#ffffff" />
+
+      </svg>
     <h1 class="site-name">poppyGP</h1>
-    
+
   </div>
 
 </md-toolbar>

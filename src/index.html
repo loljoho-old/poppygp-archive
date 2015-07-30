@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" 
-      ng-app="poppyGP" 
+<html lang="en"
+      ng-app="poppyGP"
       ng-controller="View as vm">
 
 <head>
@@ -13,24 +13,24 @@
 
   <title ng-bind-template="{{vm.title}} · poppyGP Player">poppyGP Player</title>
 
-  
+
   <!-- Web Application Manifest & Favicons/Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
   <link rel="manifest" href="manifest.json">
-  
+
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="poppyGP Player">
-  <link rel="icon" sizes="192x192" href="assets/icons/touch/android-chrome-192x192.png">
-  
+  <link rel="icon" sizes="192x192" href="assets/images/touch/android-chrome-192x192.png">
+
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="poppyGP Player">
-  <link rel="apple-touch-icon" href="assets/icons/touch/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="assets/images/touch/apple-touch-icon-152x152.png">
 
-  <meta name="msapplication-TileImage" content="assets/icons/touch/mstile-144x144">
+  <meta name="msapplication-TileImage" content="assets/images/touch/mstile-144x144">
   <meta name="msapplication-TileColor" content="#cc0000">
 
 
@@ -63,12 +63,12 @@
 
   <!-- Primary Content
   –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <md-content class="main md-scroll-y" 
+  <md-content class="main md-scroll-y"
               layout="row"
-              flex 
-              flex-order-sm="3" 
+              flex
+              flex-order-sm="2"
               flex-order-gt-sm="2">
-  
+
 
     <!-- Sidenav (locked gt-md)
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -84,16 +84,16 @@
     <!-- Video Player
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <gp-player layout="column"
-               flex-sm="100" 
+               flex-sm="100"
                flex-md="100"
                flex>
     </gp-player>
-    
+
 
     <!-- Sidebar
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <gp-content layout="column"
-                flex-sm="100" 
+                flex-sm="100"
                 flex-md="100"
                 flex-lg="25"
                 flex-gt-lg="25">
@@ -105,8 +105,8 @@
 
   <!-- Footer Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <gp-footer flex-order-sm="2" 
-             flex-order-gt-sm="3">
+  <gp-footer flex-order-sm="2"
+             flex-order-gt-sm="2">
   </gp-footer>
 
 

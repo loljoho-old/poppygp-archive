@@ -1,14 +1,6 @@
 (function() {
   'use strict';
 
-  /** 
-   * @ngdoc config
-   * @name iconConfig
-   * @module poppyGP.core
-   * @description
-   * Configure ngMaterial icons
-   *
-   */  
   angular
     .module('poppyGP.core')
     .config(iconConfig);

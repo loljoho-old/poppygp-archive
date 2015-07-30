@@ -1,5 +1,16 @@
 gp-footer {
 
+  .md-button {
+    &.md-icon-button {
+      md-icon {
+        font-size: 1.75em;
+        &.fa {
+          font-size: 1.60em;
+        }
+      }
+    }
+  }
+
   .md-small,
   .md-medium {
 
