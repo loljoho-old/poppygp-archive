@@ -2,14 +2,16 @@
   'use strict';
 
   angular
-    .module('poppyGP.components')
+    .module('poppyGP.content')
     .directive('gpContent', gpContentDirective);
 
   /* @ngInject */
   function gpContentDirective() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/content/content.html'
+      templateUrl: 'app/content/content.html',
+      controller: 'ContentController',
+      controllerAs: 'vmm'
     };
     return directive;
 

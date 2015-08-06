@@ -31,7 +31,8 @@
     "foundation-apps": "~1.1.0",
     "angularfire": "~1.1.2",
     "lodash": "~3.10.0",
-    "fontawesome": "~4.4.0"
+    "fontawesome": "~4.4.0",
+    "v-accordion": "~1.2.7"
   },
   "ignore": [
     "**/.*",

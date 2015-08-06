@@ -7,6 +7,7 @@
 
       'poppyGP.core',
 
+      'poppyGP.content',
       'poppyGP.components',
       'poppyGP.playlist'
 

@@ -16,6 +16,7 @@
       // Third Party & Cross-App Modules
       // ------------------------------
       'firebase',
+      'vAccordion',
       //'foundation.core',
       //'foundation.common',
       'xml'

@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-    .module('poppyGP.components')
-    .controller('Sidebar', Sidebar);
+    .module('poppyGP.content')
+    .controller('ContentController', ContentController);
 
 
     /** @ngInject */
-    function Sidebar($sce) {
+    function ContentController($sce) {
 
       var vm  = this;
       vm.tabs         = [];
@@ -16,7 +16,7 @@
       activate();
 
       function activate() {
-        vm.tabs = setTabConfig();
+        //vm.tabs = setTabConfig();
       }
 
       function setTabConfig() {
