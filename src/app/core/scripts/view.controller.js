@@ -58,15 +58,6 @@
         });
       }, 300);
     }
-    /*
-    function openSidenav() {
-      $mdSidenav('left').open();
-    }
-    function closeSidenav() {
-      $mdSidenav('left').close();
-      vm.isOpen = false;
-    }
-    */
   }
 
 })();
