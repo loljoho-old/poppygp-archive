@@ -1,0 +1,26 @@
+.site-toolbar {
+  //@include absolute-height(42px);
+
+
+  .md-toolbar-tools {
+
+    //@include palette-secondary();
+
+    .md-button.md-icon-button {
+
+      line-height: 36px;
+      height: 36px;
+      width: 36px;
+
+
+      >md-icon {
+        line-height: 18px;
+        &.fa,
+        &.ion {
+          line-height: 24px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,15 +1,31 @@
 
 <!--       ng-controller="PlaylistController">-->
-<md-toolbar class="md-medium">
+<md-toolbar class="md-short">
   <div class="md-toolbar-tools" ng-controller="ClockController as vmm">
-    <span>
+    <h5>
       {{ vmm.currentTime }}
-    </span>
+    </h5>
     <span flex></span>
+
     <md-button class="md-icon-button"
                ng-click="vmm.updateTime()">
+<!--
       <md-icon class="material-icons">&#xE5D5;</md-icon>
+-->
+      <md-icon class="ion ion-refresh"></md-icon>
+      <md-tooltip>Refresh Playlist</md-tooltip>
     </md-button>
+
+<!--
+    <md-button class="md-icon-button"
+               ng-click="vm.isOpen = !vm.isOpen"
+               aria-label="Toggle Schedule">
+      <md-icon class="fa fa-fw"
+               ng-class="{ 'ion-arrow-left-c' : vm.isOpen, 'ion-navicon-round' : !vm.isOpen }">
+      </md-icon>
+    </md-button>
+-->
+
   </div>
 </md-toolbar>
 

@@ -11,15 +11,15 @@ gp-footer {
     }
   }
 
-  .md-small,
+  .md-short,
   .md-medium {
 
-    @include palette-secondary(); 
+    @include palette-secondary();
     padding-bottom: 2px;
 
     .md-toolbar-tools {
 
-      @include palette-secondary();  
+      @include palette-secondary();
 
       .md-button.md-icon-button {
 
