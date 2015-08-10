@@ -1,0 +1,75 @@
+
+<!-- Content Toolbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<md-toolbar class="md-short">
+  <div class="md-toolbar-tools">
+
+    <md-button class="md-icon-button">
+
+      <md-icon class="ion ion-android-expand">
+      </md-icon>
+
+    </md-button>
+
+    <span flex></span>
+
+  </div>
+</md-toolbar>
+
+<md-content class="sidebar-container"
+            layout="column"
+            flex>
+<!--
+https://github.com/LukaszWatroba/v-accordion
+-->
+
+<v-accordion class="vAccordion--default">
+
+  <v-pane expanded>
+    <v-pane-header>
+      Header
+    </v-pane-header>
+    <v-pane-content>
+      Content
+    </v-pane-content>
+  </v-pane>
+
+
+  <v-pane>
+    <v-pane-header>
+      Pane header #2
+    </v-pane-header>
+
+    <v-pane-content>
+      Pane content #2
+    </v-pane-content>
+  </v-pane>
+
+
+</v-accordion>
+<!--
+  <md-tabs class="tabs-container"
+           flex
+           md-selected="vmm.activeTab"
+           md-stretch-tabs="always"
+           md-dynamic-height="false"
+           md-swipe-content="true">
+
+    <md-tab ng-repeat="tab in vmm.tabs">
+
+      <md-tab-label>
+        <md-icon class="fa fw fa-lg" ng-class="tab.icon"></md-icon>
+        <span hide-sm hide-md>{{tab.name}}</span>
+      </md-tab-label>
+      <md-tab-body layout="row" layout-fill>
+        <md-content class="tab-content"
+                    ng-bind-html="tab.body">
+        </md-content>
+      </md-tab-body>
+
+    </md-tab>
+
+  </md-tabs>
+-->
+</md-content>
+

@@ -1,0 +1,61 @@
+
+<!--       ng-controller="PlaylistController">-->
+<md-toolbar class="md-short">
+  <div class="md-toolbar-tools" ng-controller="ClockController as vmm">
+    <h5>
+      {{ vmm.currentTime }}
+    </h5>
+    <span flex></span>
+
+    <md-button class="md-icon-button"
+               ng-click="vmm.updateTime()">
+<!--
+      <md-icon class="material-icons">&#xE5D5;</md-icon>
+-->
+      <md-icon class="ion ion-refresh"></md-icon>
+      <md-tooltip>Refresh Playlist</md-tooltip>
+    </md-button>
+
+<!--
+    <md-button class="md-icon-button"
+               ng-click="vm.isOpen = !vm.isOpen"
+               aria-label="Toggle Schedule">
+      <md-icon class="fa fa-fw"
+               ng-class="{ 'ion-arrow-left-c' : vm.isOpen, 'ion-navicon-round' : !vm.isOpen }">
+      </md-icon>
+    </md-button>
+-->
+
+  </div>
+</md-toolbar>
+
+<md-content md-scroll-y flex
+            ng-controller="PlaylistController as vmm">
+  <md-list>
+    <md-list-item class="md-3-line" ng-repeat="track in vmm.playlist">
+      <div class="md-list-item-text">
+        <h3>{{track.title}}</h3>
+        <h4>{{track.duration}}</h4>
+        <p>{{track.location}}</p>
+      </div>
+    </md-list-item>
+  </md-list>
+
+
+  <!--
+
+  <md-divider></md-divider>
+
+  {{vmm.trackList}}
+
+
+
+  <md-subheader>Durations</md-subheader>
+  <md-list>
+    <md-list-item ng-repeat="track in vm.tracks">
+      {{track.duration}}
+    </md-list-item>
+  </md-list>
+  -->
+</md-content>
+

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('poppyGP')
+    .module('poppyGP.components')
     .controller('FooterController', FooterController)
     .controller('DialogController', DialogController);
 

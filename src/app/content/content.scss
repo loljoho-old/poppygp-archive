@@ -1,0 +1,49 @@
+gp-content {
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  &.closed {
+    display: none;
+  }
+  &.closed-add,
+  &.closed-remove {
+    display: flex;
+    transition: 0s all;
+  }
+
+  &.closed-add.closed-add-active,
+  &.closed-remove.closed-remove-active {
+    transition: $swift-ease-out;
+  }
+
+  &.open,
+  &.open.closed,
+  &.open-remove.closed {
+    position: static;
+    display: flex;
+  }
+  &.open-remove-active {
+    transition: width $swift-ease-in-duration $swift-ease-in-timing-function,
+                min-width $swift-ease-in-duration $swift-ease-in-timing-function;
+    width: 0;
+    min-width: 0;
+  }
+
+  &.closed.open-add {
+    width: 0;
+    min-width: 0;
+  }
+
+  &.closed.open-add-active {
+    transition: width $swift-ease-in-duration $swift-ease-in-timing-function,
+                min-width $swift-ease-in-duration $swift-ease-in-timing-function;
+  }
+
+}

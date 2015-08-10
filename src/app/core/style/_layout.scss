@@ -11,34 +11,38 @@ body {
 // Main Sidenav
 // ------------------------------
 
-md-content.main {
+md-sidenav.site-sidenav.md-sidenav-left.md-locked-open {
 
-  md-sidenav.site-sidenav.md-sidenav-left {
+  >md-toolbar {
 
-    >md-toolbar {
+    @include palette-primary();
 
-      @include palette-primary();  
-
-      .md-toolbar-tools {
-        @extend md-toolbar;
-      }
+    .md-toolbar-tools {
+      @extend md-toolbar;
     }
-
-    @include absolute-width(15%);
-
-    @media (max-width: 600px) {
-      @include absolute-width(75%);
-    }
-
   }
+
+  @media (min-width: 720px) and (max-width: 799px) {
+    @include absolute-width(275px);
+  }
+
+  @media (min-width: 600px) and (max-width: 719px) {
+    @include absolute-width(250px);
+  }
+
+  @media (max-width: 599px) {
+    @include absolute-width(75%);
+  }
+
 }
+
 
 
 // Small/Medium md-toolbar
 // ------------------------------
 
 md-toolbar {
-  &.md-small {
+  &.md-short {
     @include absolute-height(36px);
     .md-toolbar-tools {
       @include absolute-height(36px);
@@ -50,6 +54,23 @@ md-toolbar {
       @include absolute-height(48px);
     }
   }
+
+    .md-button.md-icon-button {
+
+      line-height: 36px;
+      height: 36px;
+      width: 36px;
+
+
+      >md-icon {
+        line-height: 18px;
+        &.fa,
+        &.ion {
+          line-height: 24px;
+          font-size: 20px;
+        }
+      }
+    }
 }
 
 .md-whiteframe-glow-z1 {

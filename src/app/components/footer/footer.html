@@ -1,4 +1,4 @@
-<md-toolbar class="md-small">
+<md-toolbar class="md-short">
 
   <div class="md-toolbar-tools">
     <span ng-if="vm.alert">
@@ -6,25 +6,34 @@
     </span>
 
     <span flex></span>
-    
-    <md-button class="md-icon-button" 
+
+    <md-button class="md-icon-button"
                aria-label="Donate via PayPal"
                ng-click="vm.showDialog('PayPal')">
-      <md-icon class="fa fa-fw fa-paypal"></md-icon>
+<!--
+      <md-icon md-font-icon="font-awesome"
+               class="fa fa-fw fa-paypal">
+-->
+      <md-icon class="ion ion-social-usd">
+      </md-icon>
       <md-tooltip>Contribute via PayPal</md-tooltip>
     </md-button>
 
-    <md-button class="md-icon-button" 
+    <md-button class="md-icon-button"
                aria-label="Donate via BTC"
                ng-click="vm.showDialog('Bitcoin')">
-      <md-icon class="ion ion-social-bitcoin"></md-icon>
+      <md-icon md-font-icon="ionicons"
+               class="ion ion-social-bitcoin">
+      </md-icon>
       <md-tooltip>Contribute via BTC</md-tooltip>
     </md-button>
 
-    <md-button class="md-icon-button" 
+    <md-button class="md-icon-button"
                aria-label="View on GitHub"
                ng-click="vm.showDialog('Github')">
-      <md-icon class="ion ion-social-github"></md-icon>
+      <md-icon md-font-icon="ionicons"
+               class="ion ion-social-github">
+      </md-icon>
       <md-tooltip>Contribute on GitHub</md-tooltip>
     </md-button>
 

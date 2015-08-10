@@ -6,10 +6,12 @@
 'use strict';
 
 var MainPage = function() {
-  this.jumbEl       = element(by.css('.panel'));
-  this.h1El         = this.jumbEl.element(by.css('h1'));
-  this.imgEl        = this.jumbEl.element(by.css('img'));
-  this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in main.awesomeThings'));
+  this.toolbarEl    = element(by.css('gp-toolbar'));
+  this.mainEl       = element(by.css('.main'));
+  this.sidenavEl    = this.mainEl.element(by.css('md-sidenav'));
+  this.playerEl     = this.mainEl.element(by.css('gp-player'));
+  this.contentEl    = this.mainEl.element(by.css('gp-content'));
+  this.footerEl     = element(by.css('gp-footer'));
 };
 
 module.exports = new MainPage();

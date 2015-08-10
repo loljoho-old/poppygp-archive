@@ -1,38 +1,60 @@
 
 
-<md-toolbar class="md-medium">
+<md-toolbar class="site-toolbar md-short">
 
   <div class="md-toolbar-tools">
 
     <md-button class="md-icon-button"
-               ng-click="vmm.toggleLeft()" 
-               aria-label="Show Schedule">
-      <md-icon class="material-icons">&#xE5C4;</md-icon>
-      <!-- <&#xE5D2;> -->
+               ng-click="vm.isOpen = !vm.isOpen"
+               aria-label="Toggle Schedule">
+      <md-icon class="fa fa-fw"
+               ng-class="{ 'ion-arrow-left-c' : vm.isOpen, 'ion-navicon-round' : !vm.isOpen }">
+      </md-icon>
+      <md-tooltip ng-show="vm.isOpen"
+                  md-direction="right">
+        Hide Schedule
+      </md-tooltip>
+      <md-tooltip ng-show="!vm.isOpen"
+                  md-direction="right">
+        Show Schedule
+      </md-tooltip>
     </md-button>
-
-    <h3>{{ vmm.datetime }}</h3>
 
     <span flex></span>
 
-    <span class="brand stripes">
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
-      </svg>
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
-      </svg>
-      <svg height="32" width="30">
-        <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
-      </svg>
-    </span>
+      <!--
+            HEY!
+            YOU!
+            SOURCE VIEWER!
+            Lemme know if these angles seem off, okay?
+      -->
+      <svg height="24" width="60"
+           class="brand stripes">
 
+        <g class="mercedes">
+          <path d="M24 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#2ab4a5"
+                stroke-width="1"
+                fill="#2ab4a5" />
+        </g>
+        <g class="ferrari">
+          <path d="M40 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#c30000"
+                stroke-width="1"
+                fill="#c30000" />
+        </g>
+        <g class="williams">
+          <path d="M56 0
+                   h-8 l-14 24 h8 Z"
+                stroke="#999999"
+                stroke-width="1"
+                fill="#ffffff" />
+
+      </svg>
     <h1 class="site-name">poppyGP</h1>
 
-    <md-button class="md-icon-button">
-      <md-icon class="material-icons">&#xE5D2;</md-icon>
-    </md-button>
-    
   </div>
 
 </md-toolbar>

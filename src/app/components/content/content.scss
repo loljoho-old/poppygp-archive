@@ -1,8 +1,0 @@
-.gp-content {
-  md-toolbar {
-    @include palette-primary();
-    .md-toolbar-tools {
-      @extend md-toolbar;
-    }
-  }
-}

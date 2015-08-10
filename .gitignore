@@ -3,6 +3,7 @@
 ####################
 *ignore*
 src/api
+dist/
 
 # bower and npm #
 #################

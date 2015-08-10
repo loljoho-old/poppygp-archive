@@ -1,14 +1,25 @@
 gp-footer {
 
-  .md-small,
+  .md-button {
+    &.md-icon-button {
+      md-icon {
+        font-size: 1.75em;
+        &.fa {
+          font-size: 1.60em;
+        }
+      }
+    }
+  }
+
+  .md-short,
   .md-medium {
 
-    @include palette-secondary(); 
+    @include palette-secondary();
     padding-bottom: 2px;
 
     .md-toolbar-tools {
 
-      @include palette-secondary();  
+      @include palette-secondary();
 
       .md-button.md-icon-button {
 
@@ -19,9 +30,13 @@ gp-footer {
 
         >md-icon {
           line-height: 18px;
-          &.fa {
+          &.fa,
+          &.ion {
             line-height: 24px;
             font-size: 20px;
+            &.fa-paypal {
+              font-size: 18px;
+            }
           }
         }
       }
